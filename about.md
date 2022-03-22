@@ -4,7 +4,7 @@ title: About me
 permalink: /about/
 ---
 
-![](/images/bluejulia.bmp)
+![](/assets/images/bluejulia.bmp)
 *Generated with [Apophysis AV](https://sourceforge.net/projects/apophysis-av/).*
 
 ## Summary
@@ -32,7 +32,7 @@ So let's see how it can work
 4. Now drop things into the buckets, ...
 5. Have fun !
 
-![](/images/pic0.png)
+![](/assets/images/pic0.png)
 <center>Taken from [5].</center>
 
 Tadaa ! There you are, you have a computational device, ready to classify various input data, and capable of performing computation !
@@ -45,7 +45,7 @@ You don't believe me ?! Check this out [6], this is a 2003 study, actually they 
 ## AI or not AI, that is the question !
 Right now you should be wondering what on earth am I doing concretely ? Am I playing with weird physical systems to actually perform computation ? ...
 
-![](/images/pic2.png)
+![](/assets/images/pic2.png)
 *Physical systems that have been successfully used as a reservoir to perform complex computation.*
 
 Well, not really, and before everyone carries its computer within her or his bottle of water, I'd like to say there is still a lot of ongoing improvement with neural networks. The next evolution in AI is currently spiking neural networks. No wonder, they are mimicking real biological ones. They use current only during the short electrical discharge called "action potential,” while their favoured state is silence. The big advantage is that information can be encoded in the time between spikes, the interval of silence between discharges. This is a drastic advantage over the ANN that encodes for rate of discharge in time, which means they require current at each time step !
