@@ -1,5 +1,5 @@
 # Build settings
-#highlighter: pygments
+highlighter: pygments
 
 # Site settings
 title: "Emmanuel Calvet"
@@ -53,14 +53,14 @@ baseurl: "/EmmanuelCalvet/"
 #version: v1.2.0
 
 # Jekyll 3 now only supports Kramdown for Markdown
-markdown: kramdown
-kramdown:
+markdown: maruku
+#kramdown:
   # LaTeX
-  math_engine: mathjax
+  #math_engine: mathjax
   # Use GitHub flavored markdown, including triple backtick fenced code blocks
-  input: GFM
+  #input: GFM
   # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
-  syntax_highlighter: rouge
+  #syntax_highlighter: rouge
   #syntax_highlighter_opts:
     # Use existing pygments syntax highlighting css
     #css_class: 'highlight'
