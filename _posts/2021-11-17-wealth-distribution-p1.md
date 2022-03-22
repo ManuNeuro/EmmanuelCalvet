@@ -135,5 +135,11 @@ Thanks to my colleagues and friends for the review and the valuable comments. Th
 
 ## References
 [1] Victor Yakovenko, (2007, Augst, 22). Computer Animation of Money Exchange Models. Econophysics Research by Victor Yakovenko. Retrieved from http://www.physics.umd.edu/~yakovenk/econophysics/
+
 [2] Max Roser and Esteban Ortiz-Ospina, (2017, March, 27). Global Extreme Poverty. Our World in Data. Retrieved from https://ourworldindata.org/extreme-poverty.
+<<<<<<< Updated upstream
 [3] Tao, Y., Wu, X., Zhou, T. et al. Exponential structure of income inequality: evidence from 67 countries. J Econ Interact Coord 14, 345–376 (2019). https://doi.org/10.1007/s11403-017-0211-6.
+=======
+
+[3] Tao, Y., Wu, X., Zhou, T. et al. Exponential structure of income inequality: evidence from 67 countries. J Econ Interact Coord 14, 345–376 (2019). https://doi.org/10.1007/s11403-017-0211-6.
+>>>>>>> Stashed changes
