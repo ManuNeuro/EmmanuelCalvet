@@ -8,9 +8,9 @@ description: > # this means to ignore newlines until "email:"
    Phd student in the fields of classical and quantum artificial intelligence.
 
 #blog logo
-logo: "/assets/images/sam_yonski_logo.png"
+logo: "/assets/images/mypic.jpg"
 # blog cover
-cover: "/images/coverfractal.png"
+cover: "/assets/images/images/coverfractal.png"
 
 name: 'Emmanuel Calvet'
 author: 'Emmanuel Calvet'
