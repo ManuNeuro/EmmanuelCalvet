@@ -3,6 +3,7 @@ title: "The Physics of Economy: the Surprising Result of a Simple Transaction Mo
 layout: post
 categories: Finance
 image: /assets/article_images/2021-11-17-wealth-distribution-p1/cover.jpg
+use_math: true
 ---
 
 $$
