@@ -6,6 +6,8 @@ image: /assets/article_images/2021-11-17-wealth-distribution-p1/cover.jpg
 use_math: true
 ---
 
+{%- include mathjax.html -%}
+
 $$
 \begin{aligned}
   & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
