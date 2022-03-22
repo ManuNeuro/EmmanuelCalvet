@@ -6,6 +6,20 @@
          <section class="copyright">All content copyright <a href="{{site.baseurl}}{{site.url}}">{{site.author}}</a> &copy; {{ site.time | date: '%Y' }} &bull; All rights reserved.</section>
          <section class="poweredby">Made with <a href="http://jekyllrb.com"> Jekyll</a></section>
     </div>
+  <!-- Parse the Latex divs with Katex-->
+  <script type="text/javascript">
+    $("script[type='math/tex']").replaceWith(
+      function(){
+        var tex = $(this).text();
+        return katex.renderToString(tex, {displayMode: false});
+    });
+
+    $("script[type='math/tex; mode=display']").replaceWith(
+      function(){
+        var tex = $(this).text();
+        return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
+    });
+  </script>
 </footer>
 
 <!-- footer end -->
