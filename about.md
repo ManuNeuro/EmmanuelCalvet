@@ -5,6 +5,8 @@ permalink: /about/
 image: /assets/article_images/about/author_full.jpg
 ---
 
+{%- include mathjax.html -%}
+
 $$
 \begin{align*}
     EX =& (1-2\delta)\frac{\alpha}{\beta} \\
