@@ -5,6 +5,14 @@ permalink: /about/
 image: /assets/article_images/about/author_full.jpg
 ---
 
+$$
+\begin{align*}
+    EX =& (1-2\delta)\frac{\alpha}{\beta} \\
+    Var(X) =&  E_{Gamma}X^2-(E_{Gamma}X)^2= \frac{\alpha(\alpha+1)}{\beta^2}-(1-2\delta)^2\frac{\alpha^2}{\beta^2}\\
+    =&\frac{\alpha}{\beta^2}(\alpha+1-(1-2\delta)^2\alpha)
+\end{align*}
+$$
+
 ## Summary
 *Thesis title* : From circuit to dynamics and performance in tasks, how to design spiking neural networks reservoir without plasticity ?
 
