@@ -1,5 +1,6 @@
 # Build settings
 highlighter: pygments
+markdown: kramdown
 
 # Site settings
 title: "Emmanuel Calvet"
