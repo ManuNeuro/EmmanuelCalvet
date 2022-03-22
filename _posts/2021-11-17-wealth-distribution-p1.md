@@ -77,7 +77,7 @@ The figure shows the money probability distribution for all our *1000* agents at
 
 What is this distribution, might you ask: **it is exponential!**
 
-$$P=e^{a \times m +b}$$
+$$ P=e^{a \times m +b} $$
 <center><i>The probability of having m$</i></center>
 
 
@@ -88,7 +88,7 @@ To confirm this, I displayed the curve with two representations:
 1. First, you will recognize the plot on the left side, as it is the last curve in blue, with the red dotted curve representing the exponential fitting.
 2. On the right side, a logarithmic scaling is applied to the vertical axis. It is equivalent to passing the probability *P(m)* in a 10-base logarithm, such that two numbers, for example, *1000=10³* and *100=10²*, will be spaced by one unit on the axis it is convenient to compress data that spans long-range values. Mathematically, applying a natural log gives a straight line:
 
-$$log(P)=a \times m + b$$
+$$ log(P)=a \times m + b $$
 <center><i>As observed in the plot, the exponential distribution should look like a straight line in logarithmic scaling.</i></center>
 
 The parameter $a$ in the equation is equal to one over the average of money possessed by all agents. By getting rid of the sign, we have $|1/a|=<~m> =106$, which is the approximated average money. This approximation from the exponential fitting is not perfect but close to the initial given value. The average is the sum of all money, divided by the number of participants. Since the total amount of money and number of agents stayed the same throughout the simulation. Whatever the shape of the initial and final distribution, we will still get the same average value. So you understand why the average is tricky to interpret.
