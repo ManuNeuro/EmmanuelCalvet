@@ -2,10 +2,8 @@
 layout: page
 title: About me
 permalink: /about/
+image: /assets/article_images/about/author_full.jpg
 ---
-
-![](/assets/images/bluejulia.bmp)
-*Generated with [Apophysis AV](https://sourceforge.net/projects/apophysis-av/).*
 
 ## Summary
 *Thesis title* : From circuit to dynamics and performance in tasks, how to design spiking neural networks reservoir without plasticity ?
@@ -32,21 +30,19 @@ So let's see how it can work
 4. Now drop things into the buckets, ...
 5. Have fun !
 
-![](/assets/images/pic0.png)
-<center>Taken from [5].</center>
+![*Taken from [5].*](/assets/article_images/about/pic0.png)
 
 Tadaa ! There you are, you have a computational device, ready to classify various input data, and capable of performing computation !
 
 You don't believe me ?! Check this out [6], this is a 2003 study, actually they performed a XOR function with a simple bucket of water and, of course, a computer performing an analysis of the waves pattern at the surface of the water !
 
-![](/images/pic1.png)
-<center>Taken from [5].</center>
+![*Taken from [5].*](/assets/article_images/about/pic1.png)
 
 ## AI or not AI, that is the question !
 Right now you should be wondering what on earth am I doing concretely ? Am I playing with weird physical systems to actually perform computation ? ...
 
-![](/assets/images/pic2.png)
-*Physical systems that have been successfully used as a reservoir to perform complex computation.*
+![*Physical systems that have been successfully used as a reservoir to perform complex computation.*
+](/assets/article_images/about/pic2.png)
 
 Well, not really, and before everyone carries its computer within her or his bottle of water, I'd like to say there is still a lot of ongoing improvement with neural networks. The next evolution in AI is currently spiking neural networks. No wonder, they are mimicking real biological ones. They use current only during the short electrical discharge called "action potential,” while their favoured state is silence. The big advantage is that information can be encoded in the time between spikes, the interval of silence between discharges. This is a drastic advantage over the ANN that encodes for rate of discharge in time, which means they require current at each time step !
 
