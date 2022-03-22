@@ -56,37 +56,62 @@ Surprisingly, after the *50000* iterations, the wealth distribution looks like t
 
 ![The probability P of having the amount of money m; generated in python by the author.](/assets/article_images/2021-11-17-wealth-distribution-p1/pic3.png)
 
-The figure shows the money probability distribution for all our 1000 agents at the last iteration. The vertical axis displays the probability P or the chance that an arbitrary agent possesses the amount of money m associated with the horizontal axis. So by looking precisely at the probabilities, the highest is obtained for m=0$, with a value P(0)~0.045, or 4.5%. As you increase the amount of money, the probability gets lower and lower and converges toward zero.
-What is this distribution, might you ask: it is exponential!
-The probability of having m$
-Assuming b=0, the only remaining parameter to find is a, using scipy.curve_fit we estimated a=-0.00921. On the left side: the distribution in linear scaling. On the right side: the distribution with a logarithmic scaling on the vertical axis; generated in python by the author.
+The figure shows the money probability distribution for all our *1000* agents at the last iteration. The vertical axis displays the probability **P** or the chance that an arbitrary agent possesses the amount of money **m** associated with the horizontal axis. So by looking precisely at the probabilities, the highest is obtained for *m=0$*, with a value *P(0)~0.045*, or *4.5%*. As you increase the amount of money, the probability gets lower and lower and converges toward zero.
+
+What is this distribution, might you ask: **it is exponential!**
+
+$$P=e^{a \times m +b}$$
+<center><i>The probability of having m$</i></center>
+
+
+![Assuming b=0, the only remaining parameter to find is a, using scipy.curve_fit we estimated a=-0.00921. On the left side: the distribution in linear scaling. On the right side: the distribution with a logarithmic scaling on the vertical axis; generated in python by the author.](/assets/article_images/2021-11-17-wealth-distribution-p1/pic4.png)
+
 To confirm this, I displayed the curve with two representations:
-First, you will recognize the plot on the left side, as it is the last curve in blue, with the red dotted curve representing the exponential fitting.
-On the right side, a logarithmic scaling is applied to the vertical axis. It is equivalent to passing the probability P(m) in a 10-base logarithm, such that two numbers, for example, 1000=10³ and 100=10², will be spaced by one unit on the axis it is convenient to compress data that spans long-range values. Mathematically, applying a natural log gives a straight line:
-As observed in the plot, the exponential distribution should look like a straight line in logarithmic scaling.
-The parameter a in the equation is equal to one over the average of money possessed by all agents. By getting rid of the sign, we have |1/a|=<~m> =106, which is the approximated average money. This approximation from the exponential fitting is not perfect but close to the initial given value. The average is the sum of all money, divided by the number of participants. Since the total amount of money and number of agents stayed the same throughout the simulation. Whatever the shape of the initial and final distribution, we will still get the same average value. So you understand why the average is tricky to interpret.
-To get a better sense of how equally the money is distributed, we can use another tool: the cumulative distribution function.
-The probability P that the amount of money M of any agents is inferior or equal to m, displayed in the horizontal axis; generated in python by the author.
+
+1. First, you will recognize the plot on the left side, as it is the last curve in blue, with the red dotted curve representing the exponential fitting.
+2. On the right side, a logarithmic scaling is applied to the vertical axis. It is equivalent to passing the probability *P(m)* in a 10-base logarithm, such that two numbers, for example, *1000=10³* and *100=10²*, will be spaced by one unit on the axis it is convenient to compress data that spans long-range values. Mathematically, applying a natural log gives a straight line:
+
+$$log(P)=a \times m + b$$
+<center><i>As observed in the plot, the exponential distribution should look like a straight line in logarithmic scaling.</i></center>
+
+The parameter $a$ in the equation is equal to one over the average of money possessed by all agents. By getting rid of the sign, we have $|1/a|=<~m> =106$, which is the approximated average money. This approximation from the exponential fitting is not perfect but close to the initial given value. The average is the sum of all money, divided by the number of participants. Since the total amount of money and number of agents stayed the same throughout the simulation. Whatever the shape of the initial and final distribution, we will still get the same average value. So you understand why the average is tricky to interpret.
+
+To get a better sense of how equally the money is distributed, we can use another tool: *the cumulative distribution function*.
+
+![The probability P that the amount of money M of any agents is inferior or equal to m, displayed in the horizontal axis; generated in python by the author.](/assets/article_images/2021-11-17-wealth-distribution-p1/pic5.png)
+
 With this function, we can now ask interesting questions like:
-What is the chance of having less than 200$?
-The answer is straightforward: look at the corresponding point in the vertical axis, and the answer is directly P=0.8 ~80%! You might want to know how many people are under the initial amount of money, 100$, and it is around 60%! As I told you earlier, the average is indeed a bit misleading. You would be better off using the median, which precisely gives the amount of money separating the group in half: 75$. So as you see, this value is significantly lower than the average.
-As a summary, if you run my code you will obtain the 80/20 separation:
+
+> What is the chance of having less than 200$?
+
+The answer is straightforward: look at the corresponding point in the vertical axis, and the answer is directly *P=0.8* ~**80%!** You might want to know how many people are under the initial amount of money, *100$*, and it is around **60%!** As I told you earlier, the average is indeed a bit misleading. You would be better off using the median, which precisely gives the amount of money separating the group in half: **75$**. So as you see, this value is significantly lower than the average.
+
+As a summary, if you run my code you will obtain the *80/20* separation:
+
 > There is 80.4% of people detaining 50.9% of the total wealth, 
 and 19.6% detaining the 49.1% remaining.
 
-How is it relevant?
+## How is it relevant?
 We have seen a model that considered only uniform random transactions, with an equal amount of money given to every agent at the start. The model describes a very utopian society. Not only does it assume a perfectly egalitarian start. But a uniformly random exchange means there are no preferences in any specific directions, which implies a flatland of people’s attention and needs! A picture far from reality, after all, the probability that Jeff Bezos receives your money, is relatively but surely, biased in his favour! This model removes all attractors of attention: Google, Facebook, Tesla, and sorry Jeff, goodbye space travel! Finally, by saying that everyone has an equal chance of exchanging goods, we are by corollary, removing greed and avarice from the picture. But give the model sufficient time, and it ends up following an exponential distribution! This is why the final result seems very odd. It is in contradiction with our mathematical intuition and generalization capability, and we mourn already:
-“Damn it, where is the bell curve?” 
+
+> “Damn it, where is the bell curve?” 
+
 Okay, that’s an inevitable question, and I will try to answer it, but for that, I would need another full article! So instead of going back to the bell curve: imagine a society with a bell curve wealth. First, you would be in the paradise of the middle class. With the Gaussian distribution, the average money represents the most probable amount of money in the population. Second, you would probably end social class clash, too, since the edges of the distribution, e.g., poor and rich, would be equally unlikely events.
-On the other hand, with the exponential distribution, being very poor is the baseline and the most probable state for an agent. You would have half of the population significantly below the average while being rich would be the less likely event. By observing the detailed probability distribution in the log scale, one can note that the probability of being among the richest is of the order 1/N (N being the number of agents). So the bigger the society, the harder it is to get there! In this asymmetrical reality, extreme poverty is the rule, average wealth is a chance, and being rich remains a dream. Yes, this is a fundamentally different reality from the one described by the Bell curve, and honestly, it might look familiar [2], does it?
-Okay, do we find these exponential laws in real-world data? 
-The answer is yes! I asked permission to show you a powerful result from this article [3]. I am sure it will speak for itself:
-Exponential fits on truncated income data for European Union in 2014; taken with permission from [2].
+
+On the other hand, with the exponential distribution, being very poor is the baseline and the most probable state for an agent. You would have half of the population significantly below the average while being rich would be the less likely event. By observing the detailed probability distribution in the log scale, one can note that the probability of being among the richest is of the order *1/N* (*N* being the number of agents). So the bigger the society, the harder it is to get there! In this asymmetrical reality, extreme poverty is the rule, average wealth is a chance, and being rich remains a dream. Yes, this is a fundamentally different reality from the one described by the Bell curve, and honestly, it might look familiar [2], does it?
+
+>Do we find these exponential laws in real-world data? 
+
+The answer is **yes!** I asked permission to show you a powerful result from this article [3]. I am sure it will speak for itself:
+
+![Exponential fits on truncated income data for European Union in 2014; taken with permission from \[2\].](/assets/article_images/2021-11-17-wealth-distribution-p1/pic6.png)
 
 ## Conclusion
-This article shows how a very simple model of uniformly random exchanges can display a very counter-intuitive result, breaking from a common assumption in probability: the central limit theorem. The intuition indeed suggests that the final distribution must be Gaussian, resulting in a very fair distribution of wealth. Surprisingly, it is not! As I showed, the final distribution is exponential: an unfair distribution that is in striking contrast with the choice of a seemingly very utopian model. We chose the initial condition as an equal amount of money for all agents. And we kept a very minimalist dynamic, where no agents could monopolize attention since it assumes uniform random exchanges. Finally, I explained how these two distributions prescribe a very different societal reality. However, an important question remains:
-Why does this model end up with an exponential distribution?
-In the following article of this series: The Physics of Economy, I will try to answer this question, and we will see how using statistical physics, this seemingly odd result suddenly becomes a “trivial” textbook exercise!
+This article shows how a very simple model of uniformly random exchanges can display a very counter-intuitive result, breaking from a common assumption in probability: the central limit theorem. The intuition indeed suggests that the final distribution must be Gaussian, resulting in a very fair distribution of wealth. Surprisingly, **it is not!** As I showed, the final distribution is **exponential**: an unfair distribution that is in striking contrast with the choice of a seemingly very utopian model. We chose the initial condition as an equal amount of money for all agents. And we kept a very minimalist dynamic, where no agents could monopolize attention since it assumes uniform random exchanges. Finally, I explained how these two distributions prescribe a very different societal reality. However, an important question remains:
+
+> Why does this model end up with an exponential distribution?
+
+In the following article of this series: *The Physics of Economy*, I will try to answer this question, and we will see how using statistical physics, this seemingly odd result suddenly becomes a “trivial” textbook exercise!
 
 ## Acknowledgement
 Thanks to my colleagues and friends for the review and the valuable comments. Thanks as well to the publishers for the valuable feedback and insightful questions.
