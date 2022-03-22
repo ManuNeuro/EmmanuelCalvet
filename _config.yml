@@ -53,15 +53,13 @@ baseurl: "/EmmanuelCalvet/"
 #version: v1.2.0
 
 # Jekyll 3 now only supports Kramdown for Markdown
-<<<<<<< Updated upstream
-markdown: maruku
+markdown: katex
 #kramdown:
   # LaTeX
   #math_engine: mathjax
 =======
 
 #kramdown:
->>>>>>> Stashed changes
   # Use GitHub flavored markdown, including triple backtick fenced code blocks
   #input: GFM
   # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
@@ -72,14 +70,9 @@ markdown: maruku
 
 # Use the following plug-ins
 plugins:
-<<<<<<< Updated upstream
   - jekyll-katex
-gems:
-=======
->>>>>>> Stashed changes
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
-  - jekyll-katex
 
 # Exclude these files from your production _site
 exclude:
