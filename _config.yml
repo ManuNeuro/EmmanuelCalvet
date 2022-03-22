@@ -53,7 +53,7 @@ baseurl: "/EmmanuelCalvet/"
 #version: v1.2.0
 
 # Jekyll 3 now only supports Kramdown for Markdown
-markdown: maruku
+markdown: katex
 #kramdown:
   # LaTeX
   #math_engine: mathjax
