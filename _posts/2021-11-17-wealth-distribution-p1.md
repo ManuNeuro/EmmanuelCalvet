@@ -65,7 +65,6 @@ $$
   \LARGE P=e^{a \times m +b}
 \end{aligned}
 $$
-
 <center><i>The probability of having m$</i></center>
 
 
