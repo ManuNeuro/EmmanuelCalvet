@@ -96,21 +96,21 @@ As you see, the state didn't change.
 
 A way to represent the state of one qubit is the `Bloch sphere`.
 
-This map the vector state $\vert\psi\rangle=\alpha\vert0\rangle+e^{i\phi}\beta\vert1\rangle$ with $\alpha, \beta \in \mathbb{R}$
+This maps the vector state $\vert\psi\rangle=\alpha\vert0\rangle+e^{i\phi}\beta\vert1\rangle$ with $\alpha, \beta \in \mathbb{R}$ to a spherical surface.
 
 Since we have the normalization condition imposing $\sqrt{\alpha^2+\beta^2}=1$,
 
-By applying the trigonometry formula $\sqrt{cos(x)^2+sin(x)^2}=1$
-
-And using the half angle formula in order to get $\alpha$ and $\beta$
+We can first apply the trigonometry formula $\sqrt{cos(x)^2+sin(x)^2}=1$,
+and then use the half angle formula in order to get $\alpha$ and $\beta$
 dependant of the same parameter $\theta$, we derive that :
+
 $\vert\psi\rangle=cos(\theta/2)\vert0\rangle+e^{i\phi}sin(\theta/2)\vert1\rangle$
 - $\phi \in [0, 2\pi]$ describes the relative phase
 - $\theta \in [0, \pi]$ describes the probability to measure $\vert0\rangle$ or $\vert1\rangle$.
 
 We can illustrate a state on the surface of a sphere with radius $\vert\vec r\vert=1$, which we call the <mark>Bloch sphere</mark>, with a block vector of polar coordinates : 
 
-$$\vec r = \begin{pmatrix} sin\theta \times cos\phi \\ sin\theta \times sin\phi \\ cos\theta \end{pmatrix}$$
+$$\LARGE \vec r = \begin{pmatrix} sin\theta \times cos\phi \\ sin\theta \times sin\phi \\ cos\theta \end{pmatrix}$$
 
 
 
