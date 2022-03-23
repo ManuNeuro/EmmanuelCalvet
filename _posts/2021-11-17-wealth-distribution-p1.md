@@ -2,6 +2,7 @@
 title: "The Physics of Economy: the Surprising Result of a Simple Transaction Model (Part 1)"
 layout: post
 categories: Finance
+comments: true
 image: /assets/article_images/2021-11-17-wealth-distribution-p1/cover.jpg
 ---
 
