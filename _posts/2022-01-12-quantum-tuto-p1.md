@@ -61,7 +61,7 @@ You can see what's contained in the object `sv`:
 ```python
 sv
 ```
-output:
+#### output:
 ```
 Statevector([1.+0.j, 0.+0.j],
             dims=(2,))
@@ -84,7 +84,7 @@ Once again, you can look at the new statevector by writing
 ```python
 new_sv
 ```
-output:
+#### output:
 ```
 Statevector([1.+0.j, 0.+0.j],
             dims=(2,))
