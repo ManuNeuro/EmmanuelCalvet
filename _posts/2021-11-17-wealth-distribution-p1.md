@@ -5,11 +5,6 @@ categories: Finance
 image: /assets/article_images/2021-11-17-wealth-distribution-p1/cover.jpg
 ---
 
-<link rel="stylesheet" href="{{ site.baseurl }}/css/css.css">
-<script src="{{ site.baseurl }}/js/scripts.js"></script>
-<img src="{{ site.baseurl }}/path/to/img/toto.jpg">
-<a href="{{ site.baseurl }}/linkto/">Link</a>
-
 ## The random transaction model
 A couple of months ago, a colleague and I discussed politics, the economy, and ecology. Beyond our different perspectives, we could agree on one point: it looks like we are screwed. My friend and I are students in artificial intelligence, and we are both interested in understanding underlying reasons, and maybe if, beyond our shared beliefs, we were wrong after all?
 
@@ -21,7 +16,7 @@ It’s your turn not to believe me:
 2. Next, choose randomly and uniformly two agents for a transaction: *agent1* gives a fixed amount to *agent2*, let’s say *1$*.
 3. Now repeat the process over and over.
 
-![](/assets/article_images/2021-11-17-wealth-distribution-p1/pic0.png)
+![]({{ site.baseurl }}/assets/article_images/2021-11-17-wealth-distribution-p1/pic0.png)
 
 So this is it, this is the model! Now you might think: “What can you do with such a model?!” If so, this would be close to my initial reaction! Well, wait for it because first I have a question for you:
 
