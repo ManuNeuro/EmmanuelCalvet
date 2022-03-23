@@ -97,7 +97,7 @@ As you see, the state didn't change.
 
 A way to represent the state of one qubit is the `Bloch sphere`.
 
-This map the vector state $|\psi\rangle=\alpha|0\rangle+e^{i\phi}\beta|1\rangle$ with $\alpha, \beta \in \mathbb{R}$
+This map the vector state $\vert\psi\rangle=\alpha\vert0\rangle+e^{i\phi}\beta\vert1\rangle$ with $\alpha, \beta \in \mathbb{R}$
 
 Since we have the normalization condition imposing $\sqrt{\alpha^2+\beta^2}=1$,
 
