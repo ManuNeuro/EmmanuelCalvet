@@ -69,7 +69,7 @@ Statevector([1.+0.j, 0.+0.j],
 
 A qubit is a vector state is a two-dimensional complex vector :
 
-$$\vert0\rangle = \begin{bmatrix} 1 \\0 \end{bmatrix} $$
+$$\LARGE \vert0\rangle = \begin{bmatrix} 1 \\0 \end{bmatrix} $$
 
 We can now apply the quantum circuit `mycircuit` to this state by using the following:
 
@@ -104,7 +104,7 @@ We can first apply the trigonometry formula $\sqrt{cos(x)^2+sin(x)^2}=1$,
 and then use the half angle formula in order to get $\alpha$ and $\beta$
 dependant of the same parameter $\theta$, we derive that :
 
-$$\vert\psi\rangle=cos(\theta/2)\vert0\rangle+e^{i\phi}sin(\theta/2)\vert1\rangle$$
+$$\LARGE \vert\psi\rangle=cos(\theta/2)\vert0\rangle+e^{i\phi}sin(\theta/2)\vert1\rangle$$
 
 - $\phi \in [0, 2\pi]$ describes the relative phase
 - $\theta \in [0, \pi]$ describes the probability to measure $\vert0\rangle$ or $\vert1\rangle$.
@@ -138,10 +138,10 @@ As you can see, the state $\vert0\rangle$ gets projected on the sphere's north p
 Mathematically, a gate is a matrix; a single qubit matrix applies to the two-dimensional state and transforms this state into a new one; hence it's a $2\times2$ matrix.
 
 Here are is the mathematical definitions of the $X$ gate
-$$\sigma_x= \begin{vmatrix}0 & 1 \\ 1 & 0 \end{vmatrix}=|0\rangle \langle1\vert+\vert1\rangle \langle0\vert$$
+$$\LARGE \sigma_x= \begin{vmatrix}0 & 1 \\ 1 & 0 \end{vmatrix}=|0\rangle \langle1\vert+\vert1\rangle \langle0\vert$$
 
 If we apply the $X$ gate to our initial state $|0\rangle$ we obtain:
-$$\sigma_x\vert0>=\begin{vmatrix}0 & 1 \\ 1 & 0 \end{vmatrix} \cdot \begin{pmatrix}1 \\ 0 \end{pmatrix}= \begin{pmatrix}0 \\ 1 \end{pmatrix}=\vert1>$$
+$$\LARGE \sigma_x\vert0>=\begin{vmatrix}0 & 1 \\ 1 & 0 \end{vmatrix} \cdot \begin{pmatrix}1 \\ 0 \end{pmatrix}= \begin{pmatrix}0 \\ 1 \end{pmatrix}=\vert1>$$
 
 The $X$ gate flips the qubit from the state $\vert0\rangle$ to the state $\vert1\rangle$. We will first create a single-qubit quantum circuit with the $X$ gate to see this:
 
@@ -177,7 +177,7 @@ new_sv
 
 As you can see, the statevector now corresponds to that of the state $\vert1\rangle$. Recall that
 
-$$\vert1\rangle = \begin{bmatrix}0\\1\end{bmatrix}$$
+$$\LARGE \vert1\rangle = \begin{bmatrix}0\\1\end{bmatrix}$$
 
 Recall that the states $\vert0\rangle$ and $\vert1\rangle$ are orthogonal. Therefore, $\langle0\vert1\rangle = 0$. The state can be shown on the `qsphere` by writing
 
@@ -199,13 +199,13 @@ plot_bloch_multivector(new_sv.data)
 These previous states are no different from classical bits.
 
 Now, by applying a Hadamard gate, we will create a state that is only possible in the quantum realm, a superposed state:
-$$\frac{1}{\sqrt{2}}\left(\vert0\rangle + \vert1\rangle\right)$$
+$$\LARGE \frac{1}{\sqrt{2}}\left(\vert0\rangle + \vert1\rangle\right)$$
 
 This state is a linear combination of two possible outcomes, $|0\rangle$ and $|1\rangle$.
 
 
 To create the state, we will need the Hadamard gate, given by the following equations:
-$$
+$$\LARGE
 H=\frac{1}{\sqrt{2}}
 \begin{bmatrix}
 1 & 1 &\\
