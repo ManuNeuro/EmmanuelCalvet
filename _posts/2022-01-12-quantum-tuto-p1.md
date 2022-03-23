@@ -38,8 +38,8 @@ mycircuit.draw('mpl')
 
 
 
-    
-![png]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_8_0.png' | relative_url }})
+#### Outputs:
+![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_8_0.png' | relative_url }})
     
 
 
@@ -166,8 +166,8 @@ plot_bloch_multivector(new_sv.data)
 
 
 
-    
-![png]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_19_0.png' | relative_url }})
+#### Outputs:
+![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_19_0.png' | relative_url }})
     
 
 
@@ -202,8 +202,8 @@ mycircuit.draw('mpl')
 
 
 
-    
-![png](output_22_0.png)
+#### Outputs:
+![](output_22_0.png)
     
 
 
@@ -237,8 +237,8 @@ plot_bloch_multivector(new_sv.data)
 
 
 
-    
-![png]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_27_0.png' | relative_url }})
+#### Outputs:  
+![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_27_0.png' | relative_url }})
     
 
 
@@ -277,8 +277,8 @@ mycircuit.draw('mpl')
 
 
 
-    
-![png]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_29_0.png' | relative_url }})
+#### Outputs:    
+![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_29_0.png' | relative_url }})
     
 
 
@@ -296,9 +296,8 @@ plot_bloch_multivector(new_sv.data)
 
 
 
-
-    
-![png]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_30_1.png' | relative_url }})
+#### Outputs:
+![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_30_1.png' | relative_url }})
     
 
 
@@ -328,9 +327,8 @@ plot_bloch_multivector(new_sv.data)
 
 
 
-
-    
-![png]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_33_1.png' | relative_url }})
+#### Outputs:
+![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_33_1.png' | relative_url }})
     
 
 
@@ -378,8 +376,8 @@ output:
 
 
 
-    
-![png]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_37_1.png' | relative_url }})
+#### Outputs:  
+![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_37_1.png' | relative_url }})
     
 
 
@@ -421,8 +419,8 @@ plot_state_qsphere(sv.data)
 
 
 
-    
-![png]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_40_0.png' | relative_url }})
+#### Outputs:  
+![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_40_0.png' | relative_url }})
     
 
 
@@ -453,8 +451,8 @@ mycircuit.draw('mpl')
 
 
 
-    
-![png]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_43_0.png' | relative_url }})
+#### Outputs:  
+![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_43_0.png' | relative_url }})
     
 
 
@@ -484,8 +482,8 @@ Statevector([0.70710678+0.j, 0.        +0.j, 0.        +0.j,
 
 
 
-    
-![png]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_46_1.png' | relative_url }})
+#### Outputs: 
+![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_46_1.png' | relative_url }})
     
 
 
@@ -508,8 +506,8 @@ mycircuit.draw('mpl')
 
 
 
-    
-![png]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_50_0.png' | relative_url }})
+#### Outputs: 
+![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_50_0.png' | relative_url }})
     
 
 
@@ -536,8 +534,8 @@ plot_histogram(counts)
 
 
 
-    
-![png]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_52_0.png' | relative_url }})
+#### Outputs: 
+![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_52_0.png' | relative_url }})
     
 
 
@@ -565,8 +563,8 @@ qc.draw('mpl')
 
 
 
-    
-![png]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_54_0.png' | relative_url }})
+#### Outputs: 
+![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_54_0.png' | relative_url }})
     
 
 
@@ -627,8 +625,8 @@ plot_error_map(backend)
 
 
 
-    
-![png]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_61_0.png' | relative_url }})
+#### Outputs:
+![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_61_0.png' | relative_url }})
     
 
 
@@ -659,4 +657,5 @@ circ = 1 # Select the circuit you want to display
 plot = plot_histogram(job.result().get_counts(qcs[circ]))
 ```
 
-![png]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_52_0.png' | relative_url }})
+#### Outputs:
+![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_52_0.png' | relative_url }})
