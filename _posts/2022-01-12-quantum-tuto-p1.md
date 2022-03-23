@@ -63,8 +63,8 @@ sv
 ```
 output:
 ```
-    Statevector([1.+0.j, 0.+0.j],
-                dims=(2,))
+Statevector([1.+0.j, 0.+0.j],
+            dims=(2,))
 ```    
 
 A qubit is a vector state is a two-dimensional complex vector :
@@ -86,9 +86,8 @@ new_sv
 ```
 output:
 ```
-    Statevector([1.+0.j, 0.+0.j],
-                dims=(2,))
-    
+Statevector([1.+0.j, 0.+0.j],
+            dims=(2,))
 ```
 
 As you see, the state didn't change.
