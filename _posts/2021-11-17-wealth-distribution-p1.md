@@ -5,6 +5,10 @@ categories: Finance
 image: /assets/article_images/2021-11-17-wealth-distribution-p1/cover.jpg
 ---
 
+<link rel="stylesheet" href="{{ site.baseurl }}/css/css.css">
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<img src="{{ site.baseurl }}/path/to/img/toto.jpg">
+<a href="{{ site.baseurl }}/linkto/">Link</a>
 
 ## The random transaction model
 A couple of months ago, a colleague and I discussed politics, the economy, and ecology. Beyond our different perspectives, we could agree on one point: it looks like we are screwed. My friend and I are students in artificial intelligence, and we are both interested in understanding underlying reasons, and maybe if, beyond our shared beliefs, we were wrong after all?
