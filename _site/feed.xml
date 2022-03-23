@@ -6,28 +6,13 @@
 </description>
     <link>http://localhost:4000/EmmanuelCalvet//</link>
     <atom:link href="http://localhost:4000/EmmanuelCalvet//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 22 Mar 2022 17:06:04 -0400</pubDate>
-    <lastBuildDate>Tue, 22 Mar 2022 17:06:04 -0400</lastBuildDate>
+    <pubDate>Tue, 22 Mar 2022 21:21:36 -0400</pubDate>
+    <lastBuildDate>Tue, 22 Mar 2022 21:21:36 -0400</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
         <title>The Physics of Economy: the Surprising Result of a Simple Transaction Model (Part 1)</title>
-        <description>\[\begin{aligned}
-  &amp;amp; \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
-  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
-  &amp;amp; (x_1, \ldots, x_n) \left( \begin{array}{ccc}
-      \phi(e_1, e_1) &amp;amp; \cdots &amp;amp; \phi(e_1, e_n) \\
-      \vdots &amp;amp; \ddots &amp;amp; \vdots \\
-      \phi(e_n, e_1) &amp;amp; \cdots &amp;amp; \phi(e_n, e_n)
-    \end{array} \right)
-  \left( \begin{array}{c}
-      y_1 \\
-      \vdots \\
-      y_n
-    \end{array} \right)
-\end{aligned}\]
-
-&lt;h2 id=&quot;the-random-transaction-model&quot;&gt;The random transaction model&lt;/h2&gt;
+        <description>&lt;h2 id=&quot;the-random-transaction-model&quot;&gt;The random transaction model&lt;/h2&gt;
 &lt;p&gt;A couple of months ago, a colleague and I discussed politics, the economy, and ecology. Beyond our different perspectives, we could agree on one point: it looks like we are screwed. My friend and I are students in artificial intelligence, and we are both interested in understanding underlying reasons, and maybe if, beyond our shared beliefs, we were wrong after all?&lt;/p&gt;
 
 &lt;p&gt;So he talked to me about some toy model coded by another friend of his. The model was so simple, and the claimed result was so striking I couldn’t believe it. It was so disturbing that I had to check it myself!&lt;/p&gt;
@@ -40,7 +25,7 @@
   &lt;li&gt;Now repeat the process over and over.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/article_images/2021-11-17-wealth-distribution-p1/pic0.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/article_images/about/pic0.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So this is it, this is the model! Now you might think: “What can you do with such a model?!” If so, this would be close to my initial reaction! Well, wait for it because first I have a question for you:&lt;/p&gt;
 
@@ -89,7 +74,10 @@
 
 &lt;p&gt;What is this distribution, might you ask: &lt;strong&gt;it is exponential!&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;\(P=e^{a \times m +b}\)&lt;/p&gt;
+\[\begin{align*}
+    \LARGE P=e^{a \times m +b}
+\end{align*}\]
+
 &lt;center&gt;&lt;i&gt;The probability of having m$&lt;/i&gt;&lt;/center&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/article_images/2021-11-17-wealth-distribution-p1/pic4.png&quot; alt=&quot;Assuming b=0, the only remaining parameter to find is a, using scipy.curve_fit we estimated a=-0.00921. On the left side: the distribution in linear scaling. On the right side: the distribution with a logarithmic scaling on the vertical axis; generated in python by the author.&quot; /&gt;&lt;/p&gt;
@@ -101,7 +89,10 @@
   &lt;li&gt;On the right side, a logarithmic scaling is applied to the vertical axis. It is equivalent to passing the probability &lt;em&gt;P(m)&lt;/em&gt; in a 10-base logarithm, such that two numbers, for example, &lt;em&gt;1000=10³&lt;/em&gt; and &lt;em&gt;100=10²&lt;/em&gt;, will be spaced by one unit on the axis it is convenient to compress data that spans long-range values. Mathematically, applying a natural log gives a straight line:&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;\(log(P)=a \times m + b\)&lt;/p&gt;
+\[\begin{align*}
+    \LARGE log(P)=a \times m + b
+\end{align*}\]
+
 &lt;center&gt;&lt;i&gt;As observed in the plot, the exponential distribution should look like a straight line in logarithmic scaling.&lt;/i&gt;&lt;/center&gt;
 
 &lt;table&gt;

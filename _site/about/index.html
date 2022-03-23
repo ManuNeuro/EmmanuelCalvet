@@ -27,6 +27,17 @@
   <link rel="stylesheet" type="text/css" media="print" href="/EmmanuelCalvet//css/print.css" />
 </head>
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']],
+      }
+    });
+  </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> 
+
+
 
   <body itemscope itemtype="http://schema.org/Article">
     <!-- header start -->
@@ -56,13 +67,7 @@
         
         <section class="post-content">
           <a name="topofpage"></a>
-          \[\begin{align*}
-    EX =&amp; (1-2\delta)\frac{\alpha}{\beta} \\
-    Var(X) =&amp;  E_{Gamma}X^2-(E_{Gamma}X)^2= \frac{\alpha(\alpha+1)}{\beta^2}-(1-2\delta)^2\frac{\alpha^2}{\beta^2}\\
-    =&amp;\frac{\alpha}{\beta^2}(\alpha+1-(1-2\delta)^2\alpha)
-\end{align*}\]
-
-<h2 id="summary">Summary</h2>
+          <h2 id="summary">Summary</h2>
 <p><em>Thesis title</em> : From circuit to dynamics and performance in tasks, how to design spiking neural networks reservoir without plasticity ?</p>
 
 <p>Ph.D student in Electrical and computing engineering (Université de Sherbrooke).</p>
@@ -230,3 +235,18 @@
 
   </body>
 </html>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+	inlineMath: [ ['$','$'], ['\(', '\)'] ],
+	displayMath: [ ['$$','$$'] ],
+	processEscapes: true,
+  },
+  "HTML-CSS": { availableFonts: ["LaTeX"] }
+});
+</script>

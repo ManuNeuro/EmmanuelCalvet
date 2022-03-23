@@ -27,6 +27,17 @@
   <link rel="stylesheet" type="text/css" media="print" href="/EmmanuelCalvet//css/print.css" />
 </head>
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']],
+      }
+    });
+  </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> 
+
+
   <body itemscope itemtype="http://schema.org/Article">
     <!-- header start -->
 
@@ -61,22 +72,7 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          \[\begin{aligned}
-  &amp; \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
-  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
-  &amp; (x_1, \ldots, x_n) \left( \begin{array}{ccc}
-      \phi(e_1, e_1) &amp; \cdots &amp; \phi(e_1, e_n) \\
-      \vdots &amp; \ddots &amp; \vdots \\
-      \phi(e_n, e_1) &amp; \cdots &amp; \phi(e_n, e_n)
-    \end{array} \right)
-  \left( \begin{array}{c}
-      y_1 \\
-      \vdots \\
-      y_n
-    \end{array} \right)
-\end{aligned}\]
-
-<h2 id="the-random-transaction-model">The random transaction model</h2>
+          <h2 id="the-random-transaction-model">The random transaction model</h2>
 <p>A couple of months ago, a colleague and I discussed politics, the economy, and ecology. Beyond our different perspectives, we could agree on one point: it looks like we are screwed. My friend and I are students in artificial intelligence, and we are both interested in understanding underlying reasons, and maybe if, beyond our shared beliefs, we were wrong after all?</p>
 
 <p>So he talked to me about some toy model coded by another friend of his. The model was so simple, and the claimed result was so striking I couldn’t believe it. It was so disturbing that I had to check it myself!</p>
@@ -89,7 +85,7 @@
   <li>Now repeat the process over and over.</li>
 </ol>
 
-<p><img src="/assets/article_images/2021-11-17-wealth-distribution-p1/pic0.png" alt="" /></p>
+<p><img src="/assets/article_images/about/pic0.png" alt="" /></p>
 
 <p>So this is it, this is the model! Now you might think: “What can you do with such a model?!” If so, this would be close to my initial reaction! Well, wait for it because first I have a question for you:</p>
 
@@ -138,7 +134,10 @@
 
 <p>What is this distribution, might you ask: <strong>it is exponential!</strong></p>
 
-<p>\(P=e^{a \times m +b}\)</p>
+\[\begin{align*}
+    \LARGE P=e^{a \times m +b}
+\end{align*}\]
+
 <center><i>The probability of having m$</i></center>
 
 <p><img src="/assets/article_images/2021-11-17-wealth-distribution-p1/pic4.png" alt="Assuming b=0, the only remaining parameter to find is a, using scipy.curve_fit we estimated a=-0.00921. On the left side: the distribution in linear scaling. On the right side: the distribution with a logarithmic scaling on the vertical axis; generated in python by the author." /></p>
@@ -150,7 +149,10 @@
   <li>On the right side, a logarithmic scaling is applied to the vertical axis. It is equivalent to passing the probability <em>P(m)</em> in a 10-base logarithm, such that two numbers, for example, <em>1000=10³</em> and <em>100=10²</em>, will be spaced by one unit on the axis it is convenient to compress data that spans long-range values. Mathematically, applying a natural log gives a straight line:</li>
 </ol>
 
-<p>\(log(P)=a \times m + b\)</p>
+\[\begin{align*}
+    \LARGE log(P)=a \times m + b
+\end{align*}\]
+
 <center><i>As observed in the plot, the exponential distribution should look like a straight line in logarithmic scaling.</i></center>
 
 <table>
@@ -340,17 +342,5 @@ and 19.6% detaining the 49.1% remaining.</p>
   </body>
 </html>
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX", "output/HTML-CSS"],
-  tex2jax: {
-	inlineMath: [ ['$','$'], ['\(', '\)'] ],
-	displayMath: [ ['$$','$$'] ],
-	processEscapes: true,
-  },
-  "HTML-CSS": { availableFonts: ["LaTeX"] }
-});
-</script>
+
+
