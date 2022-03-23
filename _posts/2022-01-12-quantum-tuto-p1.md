@@ -3,36 +3,18 @@ title: "Hands on Quantum Computing in Qiskit: programming your first quantum cir
 layout: post
 categories: Finance
 comments: true
-image: /assets/article_images/2022-01-12-quantum-tuto-p1/quantum-cover.jpg
+image: /assets/article_images/2022-01-12-quantum-tuto-p1/quantum-cover-sunscreen.jpg
 ---
 
 # Single-qubit and multi-qubit states, quantum teleportation
 
-
-> Adapted by from Lab 1 of [**Introduction to Quantum Computing and Quantum Hardware**](https://qiskit.org/learn/intro-qc-qh/).
----
-
 In this lab, you will learn how to write `Qiskit` code and investigate single-qubit and multi-qubit states using the `bloch-sphere` and `qpshere` visualization.
 
-
-Before we begin, you will need to install some prerequisites into your environment. Run the cell below to complete these installations. At the end, the cell outputs will be cleared.
-
-
-```python
-from IPython.display import clear_output
-clear_output()
-
-```
-
-
-```python
-# Dependencies
-#!pip install seaborn
-```
+> This tutorial is adapted from Lab 1 of [**Introduction to Quantum Computing and Quantum Hardware**](https://qiskit.org/learn/intro-qc-qh/).
 
 # Single-qubit states
 
-The way we represent a state of a quantum qubit $|\psi\rangle>$ is:
+The way we represent a quantum qubit state $|\psi\rangle>$ is:
 
 $$\sqrt{1-p}\vert0\rangle + e^{i\phi}\sqrt{p}\vert1\rangle$$
 
