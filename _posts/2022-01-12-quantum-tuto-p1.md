@@ -6,17 +6,17 @@ comments: true
 image: /assets/article_images/2022-01-12-quantum-tuto-p1/quantum-cover-sunscreen.jpg
 ---
 
-# Single-qubit and multi-qubit states, quantum teleportation
+# Single-qubit and multi-qubit states
 
 In this lab, you will learn how to write `Qiskit` code and investigate single-qubit and multi-qubit states using the `bloch-sphere` and `qpshere` visualization.
 
-> This tutorial is adapted from Lab 1 of [**Introduction to Quantum Computing and Quantum Hardware**](https://qiskit.org/learn/intro-qc-qh/).
+> This tutorial is adapted from Lab 1 of Qiskit courses: [**Introduction to Quantum Computing and Quantum Hardware**](https://qiskit.org/learn/intro-qc-qh/).
 
 # Single-qubit states
 
-The way we represent a quantum qubit state $|\psi\rangle>$ is:
+We respresen a quantum qubit state as:
 
-$$\sqrt{1-p}\vert0\rangle + e^{i\phi}\sqrt{p}\vert1\rangle$$
+$$|\psi\rangle> = \sqrt{1-p}\vert0\rangle + e^{i\phi}\sqrt{p}\vert1\rangle$$
 
 Here, $p$ is the probability that a measurement of the state in the computational basis $\{\vert0\rangle, \vert1\rangle\}$ will have the outcome $1$, and $\phi$ is the phase between the two computational basis states. 
 
