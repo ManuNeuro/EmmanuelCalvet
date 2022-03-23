@@ -131,7 +131,7 @@ c_2
 = \langle \psi \vert
 $$
 
-So don't be scared about the notation, this is just a different way to represent vectors!
+So don't be scared about the notation, this is just a different way to represent vectors. This notation make it easy to represent matrices as sums of basis vectors!
 
 ## The Bloch sphere
 
