@@ -16,7 +16,7 @@ In this lab, you will learn how to write `Qiskit` code and investigate single-qu
 
 We respresent a quantum qubit state as:
 
-$$\vert\psi\rangle = \sqrt{1-p}\vert0\rangle + e^{i\phi}\sqrt{p}\vert1\rangle$$
+$$\LARGE \vert\psi\rangle = \sqrt{1-p}\vert0\rangle + e^{i\phi}\sqrt{p}\vert1\rangle$$
 
 Here, $p$ is the probability that a measurement of the state in the computational basis $\{\vert0\rangle, \vert1\rangle\}$ will have the outcome $1$, and $\phi$ is the phase between the two computational basis states. 
 
@@ -92,6 +92,47 @@ Statevector([1.+0.j, 0.+0.j],
 
 As you see, the state didn't change.
 
+## Dirac notation
+In the previous section, I implicetely used the [Dirac notation](https://wiki.physics.udel.edu/wiki_phys813/images/0/01/Dirac_notation_and_rules_of_quantum_mechanics.pdf) to represent the vector state $\vert \psi\rangle$. 
+
+In a quantum mechanics textbook, you will find two important notations associated with the way we represent vectors in the Hilbert space:
+
+- The "ket": is a column vector, noted $\vert \psi\rangle$.
+- The "bra": is a raw vector, dual of the other, noted $\langle \psi\vert$.
+
+When I say dual, it means they are related by a mathematical transformation, that transforms one into the other, and reciprocately.
+This mathematic transformation is the transpose conjugate. 
+
+To be more concrete, let's define a $\vert \psi\rangle=c_1\vert1\rangle+ c_2\vert0\rangle$, with $c_1, c_2 \in \mathbb{C}$:
+
+$$\LARGE
+\vert \psi\rangle=
+\begin{bmatrix}
+c_1 \\
+c_2
+\end{bmatrix}
+$$
+
+As you can see, the *bra* of $\psi$ is a column vector.
+
+Now let's take the complex conjugate transpose to get the *ket*:
+
+$$\LARGE
+\vert \psi\rangle^{\dagger}=
+{\begin{bmatrix}
+c_1 \\
+c_2
+\end{bmatrix}}^{\dagger}
+=
+\begin{bmatrix}
+{c_1}^* &&
+{c_2}^*
+\end{bmatrix}
+= \langle \psi \vert
+$$
+
+So don't be scared about the notation, this is just a different way to represent vectors!
+
 ## The Bloch sphere
 
 A way to represent the state of one qubit is the `Bloch sphere`.
@@ -134,6 +175,7 @@ plot_bloch_multivector(new_sv.data)
 As you can see, the state $\vert0\rangle$ gets projected on the sphere's north pole. Notice that the angle $\theta$ is divided by 2. This means that the orthogonal basis $(\vert0\rangle, \vert1\rangle)$ is stretched in the Bloch sphere, and each vector is now separated by an angle of $2\times90=180$ degree.
 
 ## Our first gate!
+
 
 Mathematically, a gate is a matrix; a single qubit matrix applies to the two-dimensional state and transforms this state into a new one; hence it's a $2\times2$ matrix.
 
