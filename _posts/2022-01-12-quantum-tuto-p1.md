@@ -138,12 +138,16 @@ As you can see, the state $\vert0\rangle$ gets projected on the sphere's north p
 Mathematically, a gate is a matrix; a single qubit matrix applies to the two-dimensional state and transforms this state into a new one; hence it's a $2\times2$ matrix.
 
 Here are is the mathematical definitions of the $X$ gate
-$$\LARGE \sigma_x= \begin{vmatrix}0 & 1 \\ 1 & 0 \end{vmatrix}=|0\rangle \langle1\vert+\vert1\rangle \langle0\vert$$
 
-If we apply the $X$ gate to our initial state $|0\rangle$ we obtain:
-$$\LARGE \sigma_x\vert0>=\begin{vmatrix}0 & 1 \\ 1 & 0 \end{vmatrix} \cdot \begin{pmatrix}1 \\ 0 \end{pmatrix}= \begin{pmatrix}0 \\ 1 \end{pmatrix}=\vert1>$$
+$$\LARGE \sigma_x= \begin{vmatrix}0 & 1 \\ 1 & 0 \end{vmatrix}=\vert0\rangle \langle1\vert+\vert1\rangle \langle 0\vert$$
 
-The $X$ gate flips the qubit from the state $\vert0\rangle$ to the state $\vert1\rangle$. We will first create a single-qubit quantum circuit with the $X$ gate to see this:
+If we apply the $X$ gate to our initial state $\vert 0\rangle$ we obtain:
+
+$$\LARGE 
+\sigma_x\vert 0>=\begin{vmatrix}0 & 1 \\ 1 & 0 \end{vmatrix} \cdot \begin{pmatrix}1 \\ 0 \end{pmatrix}= \begin{pmatrix}0 \\ 1 \end{pmatrix}=\vert 1>
+$$
+
+The $X$ gate flips the qubit from the state $\vert0\rangle$ to the state $\vert 1\rangle$. We will first create a single-qubit quantum circuit with the $X$ gate to see this:
 
 
 ```python
@@ -170,16 +174,18 @@ sv = Statevector.from_label('0')
 new_sv = sv.evolve(mycircuit)
 new_sv
 ```
-
-    Statevector([0.+0.j, 1.+0.j],
-                dims=(2,))
+#### Output:
+```
+Statevector([0.+0.j, 1.+0.j],
+            dims=(2,))
+```
     
 
 As you can see, the statevector now corresponds to that of the state $\vert1\rangle$. Recall that
 
 $$\LARGE \vert1\rangle = \begin{bmatrix}0\\1\end{bmatrix}$$
 
-Recall that the states $\vert0\rangle$ and $\vert1\rangle$ are orthogonal. Therefore, $\langle0\vert1\rangle = 0$. The state can be shown on the `qsphere` by writing
+Recall that the states $\vert0\rangle$ and $\vert 1\rangle$ are orthogonal. Therefore, $\langle 0\vert 1\rangle = 0$. The state can be shown on the `qsphere` by writing
 
 
 ```python
@@ -199,18 +205,21 @@ plot_bloch_multivector(new_sv.data)
 These previous states are no different from classical bits.
 
 Now, by applying a Hadamard gate, we will create a state that is only possible in the quantum realm, a superposed state:
-$$\LARGE \frac{1}{\sqrt{2}}\left(\vert0\rangle + \vert1\rangle\right)$$
 
-This state is a linear combination of two possible outcomes, $|0\rangle$ and $|1\rangle$.
+$$\LARGE \frac{1}{\sqrt{2}}\left(\vert 0\rangle + \vert 1\rangle\right)$$
+
+This state is a linear combination of two possible outcomes, $\vert 0\rangle$ and $\vert 1\rangle$.
 
 
 To create the state, we will need the Hadamard gate, given by the following equations:
+
 $$\LARGE
 H=\frac{1}{\sqrt{2}}
 \begin{bmatrix}
 1 & 1 &\\
 1 & -1 &\\
-\end{bmatrix}=\frac{1}{\sqrt{2}}\left(\vert0\rangle\langle0\vert+\vert0\rangle\langle1\vert+\vert1\rangle\langle0\vert-\vert1\rangle\langle1\vert \right)$$
+\end{bmatrix}=\frac{1}{\sqrt{2}}\left(\vert0\rangle\langle0\vert+\vert0\rangle\langle1\vert+\vert1\rangle\langle0\vert-\vert1\rangle\langle1\vert \right)
+$$
 
 
  Here is how we can create this state and visualize it in `Qiskit`:
