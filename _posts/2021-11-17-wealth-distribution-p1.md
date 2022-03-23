@@ -83,7 +83,7 @@ $$
 
 <center><i>As observed in the plot, the exponential distribution should look like a straight line in logarithmic scaling.</i></center>
 
-The parameter $a$ in the equation is equal to one over the average of money possessed by all agents. By getting rid of the sign, we have $|1/a|=<~m> =106$, which is the approximated average money. This approximation from the exponential fitting is not perfect but close to the initial given value. The average is the sum of all money, divided by the number of participants. Since the total amount of money and number of agents stayed the same throughout the simulation. Whatever the shape of the initial and final distribution, we will still get the same average value. So you understand why the average is tricky to interpret.
+The parameter $a$ in the equation is equal to one over the average of money possessed by all agents. By getting rid of the sign, we have $\|1/a\|=<~m> =106$, which is the approximated average money. This approximation from the exponential fitting is not perfect but close to the initial given value. The average is the sum of all money, divided by the number of participants. Since the total amount of money and number of agents stayed the same throughout the simulation. Whatever the shape of the initial and final distribution, we will still get the same average value. So you understand why the average is tricky to interpret.
 
 To get a better sense of how equally the money is distributed, we can use another tool: *the cumulative distribution function*.
 
