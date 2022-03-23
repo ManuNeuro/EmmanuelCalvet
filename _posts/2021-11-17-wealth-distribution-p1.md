@@ -75,6 +75,7 @@ To confirm this, I displayed the curve with two representations:
 
 1. First, you will recognize the plot on the left side, as it is the last curve in blue, with the red dotted curve representing the exponential fitting.
 2. On the right side, a logarithmic scaling is applied to the vertical axis. It is equivalent to passing the probability *P(m)* in a 10-base logarithm, such that two numbers, for example, *1000=10³* and *100=10²*, will be spaced by one unit on the axis it is convenient to compress data that spans long-range values. Mathematically, applying a natural log gives a straight line:
+
 $$
 \begin{aligned}
   \LARGE log(P)=a \times m + b
