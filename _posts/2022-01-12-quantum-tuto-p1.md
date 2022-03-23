@@ -14,9 +14,9 @@ In this lab, you will learn how to write `Qiskit` code and investigate single-qu
 
 # Single-qubit states
 
-We respresen a quantum qubit state as:
+We respresent a quantum qubit state as:
 
-$$|\psi\rangle> = \sqrt{1-p}\vert0\rangle + e^{i\phi}\sqrt{p}\vert1\rangle$$
+$$\vert\psi\rangle = \sqrt{1-p}\vert0\rangle + e^{i\phi}\sqrt{p}\vert1\rangle$$
 
 Here, $p$ is the probability that a measurement of the state in the computational basis $\{\vert0\rangle, \vert1\rangle\}$ will have the outcome $1$, and $\phi$ is the phase between the two computational basis states. 
 
@@ -61,10 +61,11 @@ You can see what's contained in the object `sv`:
 ```python
 sv
 ```
-
+output:
+```
     Statevector([1.+0.j, 0.+0.j],
                 dims=(2,))
-    
+```    
 
 A qubit is a vector state is a two-dimensional complex vector :
 
@@ -83,10 +84,12 @@ Once again, you can look at the new statevector by writing
 ```python
 new_sv
 ```
-
+output:
+```
     Statevector([1.+0.j, 0.+0.j],
                 dims=(2,))
     
+```
 
 As you see, the state didn't change.
 
@@ -102,11 +105,11 @@ By applying the trigonometry formula $\sqrt{cos(x)^2+sin(x)^2}=1$
 
 And using the half angle formula in order to get $\alpha$ and $\beta$
 dependant of the same parameter $\theta$, we derive that :
-$|\psi\rangle=cos(\theta/2)|0\rangle+e^{i\phi}sin(\theta/2)|1\rangle$
+$\vert\psi\rangle=cos(\theta/2)\vert0\rangle+e^{i\phi}sin(\theta/2)\vert1\rangle$
 - $\phi \in [0, 2\pi]$ describes the relative phase
-- $\theta \in [0, \pi]$ describes the probability to measure $|0\rangle$ or $|1\rangle$.
+- $\theta \in [0, \pi]$ describes the probability to measure $\vert0\rangle$ or $\vert1\rangle$.
 
-We can illustrate a state on the surface of a sphere with radius $|\vec r|=1$, which we call the <mark>Bloch sphere</mark>, with a block vector of polar coordinates : 
+We can illustrate a state on the surface of a sphere with radius $\vert\vec r\vert=1$, which we call the <mark>Bloch sphere</mark>, with a block vector of polar coordinates : 
 
 $$\vec r = \begin{pmatrix} sin\theta \times cos\phi \\ sin\theta \times sin\phi \\ cos\theta \end{pmatrix}$$
 
@@ -135,10 +138,10 @@ As you can see, the state $|0\rangle$ gets projected on the sphere's north pole.
 Mathematically, a gate is a matrix; a single qubit matrix applies to the two-dimensional state and transforms this state into a new one; hence it's a $2\times2$ matrix.
 
 Here are is the mathematical definitions of the $X$ gate
-$$\sigma_x= \begin{vmatrix}0 & 1 \\ 1 & 0 \end{vmatrix}=|0\rangle \langle1|+|1\rangle \langle0|$$
+$$\sigma_x= \begin{vmatrix}0 & 1 \\ 1 & 0 \end{vmatrix}=|0\rangle \langle1\vert+\vert1\rangle \langle0\vert$$
 
 If we apply the $X$ gate to our initial state $|0\rangle$ we obtain:
-$$\sigma_x|0>=\begin{vmatrix}0 & 1 \\ 1 & 0 \end{vmatrix} \cdot \begin{pmatrix}1 \\ 0 \end{pmatrix}= \begin{pmatrix}0 \\ 1 \end{pmatrix}=|1>$$
+$$\sigma_x|0>=\begin{vmatrix}0 & 1 \\ 1 & 0 \end{vmatrix} \cdot \begin{pmatrix}1 \\ 0 \end{pmatrix}= \begin{pmatrix}0 \\ 1 \end{pmatrix}=\vert1>$$
 
 The $X$ gate flips the qubit from the state $\vert0\rangle$ to the state $\vert1\rangle$. We will first create a single-qubit quantum circuit with the $X$ gate to see this:
 
