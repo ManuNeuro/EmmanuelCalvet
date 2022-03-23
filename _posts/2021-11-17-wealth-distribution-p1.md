@@ -5,7 +5,6 @@ categories: Finance
 image: /assets/article_images/2021-11-17-wealth-distribution-p1/cover.jpg
 ---
 
-
 ## The random transaction model
 A couple of months ago, a colleague and I discussed politics, the economy, and ecology. Beyond our different perspectives, we could agree on one point: it looks like we are screwed. My friend and I are students in artificial intelligence, and we are both interested in understanding underlying reasons, and maybe if, beyond our shared beliefs, we were wrong after all?
 
@@ -17,7 +16,7 @@ It’s your turn not to believe me:
 2. Next, choose randomly and uniformly two agents for a transaction: *agent1* gives a fixed amount to *agent2*, let’s say *1$*.
 3. Now repeat the process over and over.
 
-![](/assets/article_images/about/pic0.png)
+![]({{ '/assets/article_images/2021-11-17-wealth-distribution-p1/pic0.png' | relative_url }})
 
 So this is it, this is the model! Now you might think: “What can you do with such a model?!” If so, this would be close to my initial reaction! Well, wait for it because first I have a question for you:
 
@@ -25,7 +24,7 @@ So this is it, this is the model! Now you might think: “What can you do with s
 
 If you are familiar with the topics of data science, mathematics, or finance, your answer might be: “**a bell curve!**”
 
-![A typical bell curve; generated in python by the author.](/assets/article_images/2021-11-17-wealth-distribution-p1/pic1.png)
+![A typical bell curve; generated in python by the author.]({{ '/assets/article_images/2021-11-17-wealth-distribution-p1/pic1.png' | relative_url }})
 
 And this is logical because here, **transactions** are *random*. Some of you might recall the central limit theorem, which, by quoting Wikipedia, states: “When <u>independent random variables are added</u>, their […] sum tends toward a <u>normal distribution</u>” i.e., a **bell curve**.
 
@@ -39,7 +38,7 @@ I will run *50000* iterations; *500* random transactions will occur at each iter
 ### Warm-up
 To forge an intuition on how this model works, we start by manually doing the first three iterations. For the sake of simplicity and without loss of generality, we will assume that in each step, the agents are randomly split into two distinct groups: the receivers and the givers. For example, at the first step, *500* agents give *1$*, and the remaining *500* agents receive the given *1$*, and so on:
 
-![The three first iterations of the model, assuming mutually exclusive givers and receivers groups. In green, the amount of $; P stands for probability. The distribution is symmetric with a higher likelihood at the average; Image created by the author.](/assets/article_images/2021-11-17-wealth-distribution-p1/pic2.png)
+![The three first iterations of the model, assuming mutually exclusive givers and receivers groups. In green, the amount of $; P stands for probability. The distribution is symmetric with a higher likelihood at the average; Image created by the author.]({{ '/assets/article_images/2021-11-17-wealth-distribution-p1/pic2.png' | relative_url }})
 
 1. Iteration: the *100$* group of iteration *0* is cut in half, one half receives *1$*, the other gives *1$*, hence a probability *P* of *0.5* for both values, **99$**(*P=0.5*) and **100$**(*P=0.5*).
 2. Iteration : both **99$** and **100$** group of iteration *1* are cut in half: **99**(*P=0.5*) split in a group of **98**(*0.25*) and **100**(*0.25*); the **101**(*0.5*) group split into **100**(*0.25*), and **102**(*0.25*), hence *P*(**100**)=*0.25*+*0.25*=*0.5*.
@@ -54,7 +53,7 @@ Alright, you guessed it: it is not! Otherwise, I would not have written this art
 ## So what is it?
 Surprisingly, after the *50000* iterations, the wealth distribution looks like this :
 
-![The probability P of having the amount of money m; generated in python by the author.](/assets/article_images/2021-11-17-wealth-distribution-p1/pic3.png)
+![The probability P of having the amount of money m; generated in python by the author.]({{ '/assets/article_images/2021-11-17-wealth-distribution-p1/pic3.png' | relative_url }})
 
 The figure shows the money probability distribution for all our *1000* agents at the last iteration. The vertical axis displays the probability **P** or the chance that an arbitrary agent possesses the amount of money **m** associated with the horizontal axis. So by looking precisely at the probabilities, the highest is obtained for *m=0$*, with a value *P(0)~0.045*, or *4.5%*. As you increase the amount of money, the probability gets lower and lower and converges toward zero.
 
@@ -69,7 +68,7 @@ $$
 <center><i>The probability of having m$</i></center>
 
 
-![Assuming b=0, the only remaining parameter to find is a, using scipy.curve_fit we estimated a=-0.00921. On the left side: the distribution in linear scaling. On the right side: the distribution with a logarithmic scaling on the vertical axis; generated in python by the author.](/assets/article_images/2021-11-17-wealth-distribution-p1/pic4.png)
+![Assuming b=0, the only remaining parameter to find is a, using scipy.curve_fit we estimated a=-0.00921. On the left side: the distribution in linear scaling. On the right side: the distribution with a logarithmic scaling on the vertical axis; generated in python by the author.]({{ '/assets/article_images/2021-11-17-wealth-distribution-p1/pic4.png' | relative_url }})
 
 To confirm this, I displayed the curve with two representations:
 
@@ -84,11 +83,11 @@ $$
 
 <center><i>As observed in the plot, the exponential distribution should look like a straight line in logarithmic scaling.</i></center>
 
-The parameter $a$ in the equation is equal to one over the average of money possessed by all agents. By getting rid of the sign, we have $|1/a|=<~m> =106$, which is the approximated average money. This approximation from the exponential fitting is not perfect but close to the initial given value. The average is the sum of all money, divided by the number of participants. Since the total amount of money and number of agents stayed the same throughout the simulation. Whatever the shape of the initial and final distribution, we will still get the same average value. So you understand why the average is tricky to interpret.
+The parameter $a$ in the equation is equal to one over the average of money possessed by all agents. By getting rid of the sign, we have $\|1/a\|=<~m> =106$, which is the approximated average money. This approximation from the exponential fitting is not perfect but close to the initial given value. The average is the sum of all money, divided by the number of participants. Since the total amount of money and number of agents stayed the same throughout the simulation. Whatever the shape of the initial and final distribution, we will still get the same average value. So you understand why the average is tricky to interpret.
 
 To get a better sense of how equally the money is distributed, we can use another tool: *the cumulative distribution function*.
 
-![The probability P that the amount of money M of any agents is inferior or equal to m, displayed in the horizontal axis; generated in python by the author.](/assets/article_images/2021-11-17-wealth-distribution-p1/pic5.png)
+![The probability P that the amount of money M of any agents is inferior or equal to m, displayed in the horizontal axis; generated in python by the author.]({{ '/assets/article_images/2021-11-17-wealth-distribution-p1/pic5.png' | relative_url }})
 
 With this function, we can now ask interesting questions like:
 
@@ -114,7 +113,7 @@ On the other hand, with the exponential distribution, being very poor is the bas
 
 The answer is **yes!** I asked permission to show you a powerful result from this article [3]. I am sure it will speak for itself:
 
-![Exponential fits on truncated income data for European Union in 2014; taken with permission from \[2\].](/assets/article_images/2021-11-17-wealth-distribution-p1/pic6.png)
+![Exponential fits on truncated income data for European Union in 2014; taken with permission from \[2\].]({{ '/assets/article_images/2021-11-17-wealth-distribution-p1/pic6.png' | relative_url }})
 
 ## Conclusion
 This article shows how a very simple model of uniformly random exchanges can display a very counter-intuitive result, breaking from a common assumption in probability: the central limit theorem. The intuition indeed suggests that the final distribution must be Gaussian, resulting in a very fair distribution of wealth. Surprisingly, **it is not!** As I showed, the final distribution is **exponential**: an unfair distribution that is in striking contrast with the choice of a seemingly very utopian model. We chose the initial condition as an equal amount of money for all agents. And we kept a very minimalist dynamic, where no agents could monopolize attention since it assumes uniform random exchanges. Finally, I explained how these two distributions prescribe a very different societal reality. However, an important question remains:
@@ -130,9 +129,8 @@ Thanks to my colleagues and friends for the review and the valuable comments. Th
 [1] Victor Yakovenko, (2007, Augst, 22). Computer Animation of Money Exchange Models. Econophysics Research by Victor Yakovenko. Retrieved from http://www.physics.umd.edu/~yakovenk/econophysics/
 
 [2] Max Roser and Esteban Ortiz-Ospina, (2017, March, 27). Global Extreme Poverty. Our World in Data. Retrieved from https://ourworldindata.org/extreme-poverty.
-<<<<<<< Updated upstream
-[3] Tao, Y., Wu, X., Zhou, T. et al. Exponential structure of income inequality: evidence from 67 countries. J Econ Interact Coord 14, 345–376 (2019). https://doi.org/10.1007/s11403-017-0211-6.
-=======
 
 [3] Tao, Y., Wu, X., Zhou, T. et al. Exponential structure of income inequality: evidence from 67 countries. J Econ Interact Coord 14, 345–376 (2019). https://doi.org/10.1007/s11403-017-0211-6.
->>>>>>> Stashed changes
+
+
+[3] Tao, Y., Wu, X., Zhou, T. et al. Exponential structure of income inequality: evidence from 67 countries. J Econ Interact Coord 14, 345–376 (2019). https://doi.org/10.1007/s11403-017-0211-6.
