@@ -77,7 +77,7 @@ To confirm this, I displayed the curve with two representations:
 2. On the right side, a logarithmic scaling is applied to the vertical axis. It is equivalent to passing the probability *P(m)* in a 10-base logarithm, such that two numbers, for example, *1000=10³* and *100=10²*, will be spaced by one unit on the axis it is convenient to compress data that spans long-range values. Mathematically, applying a natural log gives a straight line:
 $$
 \begin{aligned}
-log(P)=a \times m + b
+  \LARGE log(P)=a \times m + b
 \end{aligned}
 $$
 <center><i>As observed in the plot, the exponential distribution should look like a straight line in logarithmic scaling.</i></center>
