@@ -71,9 +71,9 @@ social:
   - icon:  github
     url: https://github.com/ManuNeuro
     desc:  Fork me on github
-    share_url: https://github.com/ManuNeuro?tab=repositories
-    share_title: ?text="My repo"
-    share_link: "&amp;url="
+    #share_url: https://github.com/ManuNeuro?tab=repositories
+    #share_title: ?text="My repo"
+    #share_link: "&amp;url="
 
 #  - icon:	twitter
 #    url:	https://twitter.com/samyonski
