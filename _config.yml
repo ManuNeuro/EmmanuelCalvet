@@ -6,6 +6,7 @@ title: "Emmanuel Calvet"
 description: > # this means to ignore newlines until "email:"
    Phd student in the fields of classical and quantum artificial intelligence.
 
+email: emmanuel.calvet@usherbrooke.ca
 #blog logo
 logo: "/assets/images/author.jpg"
 # blog cover
@@ -16,22 +17,6 @@ author: 'Emmanuel Calvet'
 author_image: "/assets/images/author.jpg"
 
 paginate:	5
-
-# Includes an icon in the footer for each username you enter
-footer-links:
-  dribbble:
-  email: emmanuel.calvet@usherbrooke.ca
-  facebook:
-  flickr:
-  github: ManuNeuro
-  instagram:
-  linkedin:
-  pinterest:
-  rss: # just type anything here for a working RSS icon
-  twitter: 
-  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  youtube: # channel/<your_long_string> or user/<user-name>
-  googleplus: # anything in your profile username that comes after plus.google.com/
 
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
@@ -79,7 +64,13 @@ exclude:
 
 
 # social icons and sharing options
-#social:
+social:
+  - icon:  github
+    url: https://github.com/ManuNeuro
+    desc:  Fork me on github
+#    share_url:
+#    share_title:
+#    share_link:
 #  - icon:	twitter
 #    url:	https://twitter.com/samyonski
 #    desc: Follow me on twitter
@@ -94,12 +85,7 @@ exclude:
 #    share_title: ?t=
 #    share_link: "&amp;u="
 
-#  - icon:	github
-#    url:	https://github.com/dirkfabisch
-#    desc:	Fork me on github
-#    share_url:
-#    share_title:
-#    share_link:
+
 
 #  - icon:	google-plus
 #    url:	https://google.com/???
