@@ -17,7 +17,7 @@ It’s your turn not to believe me:
 2. Next, choose randomly and uniformly two agents for a transaction: *agent1* gives a fixed amount to *agent2*, let’s say *1$*.
 3. Now repeat the process over and over.
 
-![](/assets/article_images/2021-11-17-wealth-distribution-p1/cover.jpg)
+![](/assets/article_images/about/pic0.png)
 
 So this is it, this is the model! Now you might think: “What can you do with such a model?!” If so, this would be close to my initial reaction! Well, wait for it because first I have a question for you:
 
