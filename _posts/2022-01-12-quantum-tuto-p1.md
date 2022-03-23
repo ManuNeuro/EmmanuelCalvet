@@ -131,7 +131,7 @@ plot_bloch_multivector(new_sv.data)
 
 
 
-As you can see, the state $|0\rangle$ gets projected on the sphere's north pole. Notice that the angle $\theta$ is divided by 2. This means that the orthogonal basis $(|0\rangle, |1\rangle)$ is stretched in the Bloch sphere, and each vector is now separated by an angle of $2\times90=180$ degree.
+As you can see, the state $\vert0\rangle$ gets projected on the sphere's north pole. Notice that the angle $\theta$ is divided by 2. This means that the orthogonal basis $(\vert0\rangle, \vert1\rangle)$ is stretched in the Bloch sphere, and each vector is now separated by an angle of $2\times90=180$ degree.
 
 ## Our first gate!
 
@@ -141,7 +141,7 @@ Here are is the mathematical definitions of the $X$ gate
 $$\sigma_x= \begin{vmatrix}0 & 1 \\ 1 & 0 \end{vmatrix}=|0\rangle \langle1\vert+\vert1\rangle \langle0\vert$$
 
 If we apply the $X$ gate to our initial state $|0\rangle$ we obtain:
-$$\sigma_x|0>=\begin{vmatrix}0 & 1 \\ 1 & 0 \end{vmatrix} \cdot \begin{pmatrix}1 \\ 0 \end{pmatrix}= \begin{pmatrix}0 \\ 1 \end{pmatrix}=\vert1>$$
+$$\sigma_x\vert0>=\begin{vmatrix}0 & 1 \\ 1 & 0 \end{vmatrix} \cdot \begin{pmatrix}1 \\ 0 \end{pmatrix}= \begin{pmatrix}0 \\ 1 \end{pmatrix}=\vert1>$$
 
 The $X$ gate flips the qubit from the state $\vert0\rangle$ to the state $\vert1\rangle$. We will first create a single-qubit quantum circuit with the $X$ gate to see this:
 
@@ -210,7 +210,7 @@ H=\frac{1}{\sqrt{2}}
 \begin{bmatrix}
 1 & 1 &\\
 1 & -1 &\\
-\end{bmatrix}=\frac{1}{\sqrt{2}}\left( |0\rangle\langle0|+|0\rangle\langle1|+|1\rangle\langle0|-|1\rangle\langle1| \right)$$
+\end{bmatrix}=\frac{1}{\sqrt{2}}\left(\vert0\rangle\langle0\vert+\vert0\rangle\langle1\vert+\vert1\rangle\langle0\vert-\vert1\rangle\langle1\vert \right)$$
 
 
  Here is how we can create this state and visualize it in `Qiskit`:
@@ -298,7 +298,7 @@ a modification of their states!
 - First, we use the command `QuantumCircuit(1,1)` to create the circuit. The first argument asks to create a quantum circuit containing one qubit, and the second argument adds one classical bit.
 - Second, note that the `measure` command takes two arguments. The first argument is the set of qubits that will be measured. The second is the set of classical bits that will store the measurement.
 
-*NB: Typically, in QC, the basis you measure is the **z** axis, and you cannot measure a state in superposition. You always project the qubit state with a measurable basis state $|0\rangle$ or $|1\rangle$. If ever you wanted to measure along another axis, you would have to rotate the state with the appropriate gate (for example, measurement along $x$, requires to put an $H$ gate before the measurement)*
+*NB: Typically, in QC, the basis you measure is the **z** axis, and you cannot measure a state in superposition. You always project the qubit state with a measurable basis state $\vert0\rangle$ or $\vert1\rangle$. If ever you wanted to measure along another axis, you would have to rotate the state with the appropriate gate (for example, measurement along $x$, requires to put an $H$ gate before the measurement)*
 
 Finally, you will need to create a `backend` and give it to the `execute` function along with your circuit.
 - We will use `Qiskit`'s built-in `Aer` simulators to run the circuit. To get the measurement counts, we can use the following code:
@@ -320,10 +320,10 @@ job = execute(mycircuit, backend_sim, shots=1000)
 print(job.result().get_counts())
 plot_histogram(job.result().get_counts())
 ```
-
-    {'1': 493, '0': 507}
-    
-
+output:
+```
+{'1': 493, '0': 507}
+```
 
 
 
@@ -335,16 +335,16 @@ plot_histogram(job.result().get_counts())
 
 ## Measuse / projection
 
-<mark>Born Rule</mark> : the probability that a state $|\psi\rangle$ collpases during a projective measurement onto the state $|x\rangle\in \left\{|0\rangle, |1\rangle \right\}$  is given by :
-$$P(x) = {\left| \langle x|\psi\rangle\right|}^2$$
+<mark>Born Rule</mark> : the probability that a state $\vert\psi\rangle$ collpases during a projective measurement onto the state $\vertx\rangle\in \left\{|0\rangle, \vert1\rangle \right\}$  is given by :
+$$P(x) = {\left| \langle x\vert\psi\rangle\right|}^2$$
 with $\sum_i{P(x_i)=1}$.
 
-With the previous example, the state of the qubit is $|\psi\rangle= \frac{1}{\sqrt{2}} (|0\rangle + |1\rangle)$
+With the previous example, the state of the qubit is $|\psi\rangle= \frac{1}{\sqrt{2}} (\vert0\rangle + \vert1\rangle)$
 
 Let's measure the probability of getting the qubit in the state $|0\rangle$ :
-$${\left| \langle 0|\psi\rangle\right|}^2=\frac{1}{2} {\left| \langle 0|(|0\rangle + |1\rangle)\right|}^2$$
-$$=\frac{1}{2} {\left| \langle 0|0\rangle + \cancel{\langle 0|1\rangle})\right|}^2$$
-$$=\frac{1}{2} {\left| 1\right|}^2=\frac{1}{2}$$
+$${\left\| \langle 0\vert\psi\rangle\right|}^2=\frac{1}{2} {\left\| \langle 0\vert(\vert0\rangle + \vert1\rangle)\right\|}^2$$
+$$=\frac{1}{2} {\left\| \langle 0\vert0\rangle + \cancel{\langle 0\vert1\rangle})\right\|}^2$$
+$$=\frac{1}{2} {\left\| 1\right\|}^2=\frac{1}{2}$$
 
 
 # Multi-qubit states
@@ -355,7 +355,7 @@ We will demonstrate below how to create the Bell state, which is the fundamental
 
 $$\frac{1}{\sqrt{2}}\left(\vert00\rangle + \vert11\rangle\right)$$ 
 
-The state $\vert00\rangle$, means the two qubits are $|0\rangle$ on their respective basis, and form a multi-qubit basis. You can have as many qubit as you want in such basis $|00...0\rangle$.
+The state $\vert00\rangle$, means the two qubits are $\vert0\rangle$ on their respective basis, and form a multi-qubit basis. You can have as many qubit as you want in such basis $\vert00...0\rangle$.
 
 We'll start by visualizing the state $\vert00\rangle$ using another tool, the `q-sphere`:
 
@@ -378,7 +378,7 @@ plot_state_qsphere(sv.data)
 
 Next, we use the Hadamard gate described above, along with a controlled-X gate, to create the Bell state.
 
-The controlled-X gate is an X gate, that is applied if and only if the control-bit is in the $|1\rangle$ state. Mathematically this gives:
+The controlled-X gate is an X gate, that is applied if and only if the control-bit is in the $\vert1\rangle$ state. Mathematically this gives:
 
 $$
 CNOT=
@@ -387,7 +387,7 @@ CNOT=
 0 & 1 & 0 & 0\\
 0 & 0 & 0 & 1\\
 0 & 0 & 1 & 0\\
-\end{vmatrix}=|00><00|+|01><01|+|10><11|+|11><10|$$
+\end{vmatrix}=\vert 00\rangle\langle 00\vert+\vert 01\rangle\langle 01\vert+\vert 10\rangle\langle 11\vert+\vert11\rangle\langle10\vert$$
 
 In `qiskit`, here is how you can create a bell state:
 
@@ -414,7 +414,7 @@ Next, you apply a $CNOT$ on the second qubit $1$, controlling it with the qubit 
 Since the second qubit state depends on a qubit in superposition, it becomes entangled with all possible states of the first qubit!
 
 The result of this quantum circuit on the state $\vert00\rangle$ is thus:
- $$|\psi^{00}>=\frac{1}{\sqrt{2}}(|00>+|11>)$$
+ $$\vert\psi^{00}\rangle=\frac{1}{\sqrt{2}}(\vert00\rangle+\vert11\rangle)$$
 
 You can display it by writing:
 
@@ -424,12 +424,12 @@ new_sv = sv.evolve(mycircuit)
 print(new_sv)
 plot_state_qsphere(new_sv.data)
 ```
-
-    Statevector([0.70710678+0.j, 0.        +0.j, 0.        +0.j,
-                 0.70710678+0.j],
-                dims=(2, 2))
-    
-
+#### Output:
+```
+Statevector([0.70710678+0.j, 0.        +0.j, 0.        +0.j,
+             0.70710678+0.j],
+            dims=(2, 2))
+```
 
 
 
@@ -608,4 +608,4 @@ circ = 1 # Select the circuit you want to display
 plot = plot_histogram(job.result().get_counts(qcs[circ]))
 ```
 
-#
+![png]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_52_0.png' | relative_url }})
