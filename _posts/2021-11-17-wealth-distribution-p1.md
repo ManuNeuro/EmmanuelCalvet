@@ -62,7 +62,7 @@ What is this distribution, might you ask: **it is exponential!**
 
 $$
 \begin{aligned}
-P=e^{a \times m +b}
+  \LARGE P=e^{a \times m +b}
 \end{aligned}
 $$
 
