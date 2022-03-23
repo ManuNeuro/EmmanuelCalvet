@@ -135,3 +135,5 @@ Thanks to my colleagues and friends for the review and the valuable comments. Th
 
 
 [3] Tao, Y., Wu, X., Zhou, T. et al. Exponential structure of income inequality: evidence from 67 countries. J Econ Interact Coord 14, 345–376 (2019). https://doi.org/10.1007/s11403-017-0211-6.
+
+{% include disqus.html %}
