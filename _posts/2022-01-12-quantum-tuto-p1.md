@@ -8,28 +8,26 @@ image: /assets/article_images/2022-01-12-quantum-tuto-p1/quantum-cover-sunscreen
 
 # Single-qubit and multi-qubit states
 
-In this lab, you will learn how to write `Qiskit` code and investigate single-qubit and multi-qubit states using the `bloch-sphere` and `qpshere` visualization.
+This lab will teach you how to write `Qiskit` code and investigate single-qubit and multi-qubit states using the `Bloch-sphere` and `qpshere` visualization.
 
 > This tutorial is adapted from Lab 1 of Qiskit courses: [**Introduction to Quantum Computing and Quantum Hardware**](https://qiskit.org/learn/intro-qc-qh/).
 
 # Single-qubit states
 
-We respresent a quantum qubit state as:
+We represent a quantum qubit state as:
 
-$$\LARGE \vert\psi\rangle = \sqrt{1-p}\vert0\rangle + e^{i\phi}\sqrt{p}\vert1\rangle$$
+$$\vert\psi\rangle = \sqrt{1-p}\vert0\rangle + e^{i\phi}\sqrt{p}\vert1\rangle$$
 
-Here, $p$ is the probability that a measurement of the state in the computational basis $\{\vert0\rangle, \vert1\rangle\}$ will have the outcome $1$, and $\phi$ is the phase between the two computational basis states. 
+Here, $p$ is the probability that a measurement of the state in the computational basis $\{ \vert0\rangle, \vert1\rangle \}$ will have the outcome $1$; $\phi$ is the phase between the two computational basis states. 
 
-Single-qubit gates can then be used to manipulate this quantum state by changing either $p$, $\phi$, or both.
+Single-qubit gates can be used to manipulate this quantum state by changing either $p$, $\phi$, or both.
 
 
-Let's begin by creating a single-qubit quantum circuit. We can do this in `Qiskit` using the following:
+Let's begin by creating a single-qubit quantum circuit. We can do this in `Qiskit` using the following code:
 
 
 ```python
 from qiskit import QuantumCircuit
-import warnings
-warnings.filterwarnings('ignore')
 
 mycircuit = QuantumCircuit(1)
 mycircuit.draw('mpl')
@@ -38,15 +36,15 @@ mycircuit.draw('mpl')
 
 
 
-#### Outputs:
+#### Output:
 ![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_8_0.png' | relative_url }})
     
 
 
 
-The above quantum circuit does not contain any gates. Therefore, if you start in any state, say $\vert0\rangle$, applying this circuit to your state doesn't change the state. 
+The above quantum circuit does not contain any gates; therefore, if you start in any state, say $\vert0\rangle$, applying this circuit to your state doesn't change the state. 
 
-To see this clearly, let's create the state vector $\vert0\rangle$. In `Qiskit,` you can do this using the following:
+To see this clearly, let's create the state vector $\vert0\rangle$. In `Qiskit,` you can do this using the following code:
 
 
 ```python
@@ -61,17 +59,17 @@ You can see what's contained in the object `sv`:
 ```python
 sv
 ```
-#### output:
+#### Output:
 ```
 Statevector([1.+0.j, 0.+0.j],
             dims=(2,))
 ```    
 
-A qubit is a vector state is a two-dimensional complex vector :
+A qubit vector state is a two-dimensional complex vector:
 
 $$\LARGE \vert0\rangle = \begin{bmatrix} 1 \\0 \end{bmatrix} $$
 
-We can now apply the quantum circuit `mycircuit` to this state by using the following:
+We can now apply the quantum circuit `mycircuit` to this state by using the `evolve()` method:
 
 
 ```python
@@ -90,20 +88,19 @@ Statevector([1.+0.j, 0.+0.j],
             dims=(2,))
 ```
 
-As you see, the state didn't change.
+As you can see, the state didn't change since we didn't perform any transformation yet.
 
 ## Dirac notation
-In the previous section, I implicetely used the [Dirac notation](https://wiki.physics.udel.edu/wiki_phys813/images/0/01/Dirac_notation_and_rules_of_quantum_mechanics.pdf) to represent the vector state $\vert \psi\rangle$. 
+In the previous section, I implicitly used the [Dirac notation](https://wiki.physics.udel.edu/wiki_phys813/images/0/01/Dirac_notation_and_rules_of_quantum_mechanics.pdf) to represent the vector state $\vert \psi\rangle$. 
 
-In a quantum mechanics textbook, you will find two important notations associated with the way we represent vectors in the Hilbert space:
+In a quantum mechanics textbook, you will find two essential notations associated with the way we represent vectors in the Hilbert space:
 
 - The "ket": is a column vector, noted $\vert \psi\rangle$.
 - The "bra": is a raw vector, dual of the other, noted $\langle \psi\vert$.
 
-When I say dual, it means they are related by a mathematical transformation, that transforms one into the other, and reciprocately.
-This mathematic transformation is the transpose conjugate. 
+When I say dual, it means that both vectors are related by a mathematical transformation that converts one into the other and vice-versa. 
 
-To be more concrete, let's define a $\vert \psi\rangle=c_1\vert1\rangle+ c_2\vert0\rangle$, with $c_1, c_2 \in \mathbb{C}$:
+To be more concrete, let's define a state vector $\vert \psi\rangle=c_1\vert1\rangle+ c_2\vert0\rangle$, with $c_1, c_2 \in \mathbb{C}$:
 
 $$\LARGE
 \vert \psi\rangle=
@@ -113,9 +110,9 @@ c_2
 \end{bmatrix}
 $$
 
-As you can see, the *bra* of $\psi$ is a column vector.
+<center><i>As you can see, the *bra* of $\psi$ is a column vector.</i</center>
 
-Now let's take the complex conjugate transpose to get the *ket*:
+To obtain the dual, *ket*, we need to compute the complex conjugate transpose (denoted dagger: $\dagger$) of the *bra*:
 
 $$\LARGE
 \vert \psi\rangle^{\dagger}=
@@ -131,7 +128,7 @@ c_2
 = \langle \psi \vert
 $$
 
-So don't be scared about the notation, this is just a different way to represent vectors. This notation make it easy to represent matrices as sums of basis vectors!
+Okay, first, don't be scared about the notation; this is just a different way of representing vectors. Second, as you will see in a bit, this notation makes it easy to represent states and gates as the sum of basis vectors.
 
 ## The Bloch sphere
 
