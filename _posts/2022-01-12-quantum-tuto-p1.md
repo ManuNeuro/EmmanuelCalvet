@@ -190,6 +190,7 @@ Now as I told you, we can take advantage of the Dirac notation to make calculati
 $$\LARGE
 \sigma_x=\vert0\rangle \langle1\vert+\vert1\rangle \langle 0\vert
 $$
+
 <center><i>You can make the calculation by hand to convince yourself that the two are equivalents.</i></center>
 
 Now let's apply \sigma_x to \vert 0>:
