@@ -193,7 +193,7 @@ $$
 
 <center><i>You can make the calculation by hand to convince yourself that the two are equivalents.</i></center>
 
-Now let's apply \sigma_x to \vert 0>:
+Now let's apply $\sigma_x$ to $\vert 0>$:
 
 $$\LARGE
 \sigma_x\vert 0>= (\vert0\rangle \langle1\vert+\vert1\rangle \langle 0\vert)\vert0\rangle
