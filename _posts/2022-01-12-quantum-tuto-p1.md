@@ -403,19 +403,19 @@ output:
 
 ## Measuse / projection
 
-<mark>Born Rule</mark> : the probability that a state $\vert\psi\rangle$ collpases during a projective measurement onto the state $\vert x\rangle\in \left\{\vert0\rangle, \vert1\rangle \right\}$  is given by :
+<mark>Born Rule</mark> : the probability that a state $\vert\psi\rangle$ collpases during a projective measurement onto the state $\vert x \rangle \in \left\{\vert 0 \rangle, \vert 1 \rangle \right\}$  is given by :
 
 $$\LARGE P(x) = {\left\| \langle x\vert\psi\rangle\right\|}^2$$
 
 with $\sum_i{P(x_i)=1}$.
 
-With the previous example, the state of the qubit is $|\psi\rangle= \frac{1}{\sqrt{2}} (\vert0\rangle + \vert1\rangle)$
+With the previous example, the state of the qubit is $\|\psi\rangle= \frac{1}{\sqrt{2}} (\vert0\rangle + \vert1\rangle)$
 
 Let's measure the probability of getting the qubit in the state $|0\rangle$ :
 
-$$\LARGE {\left\| \langle 0\vert\psi\rangle\right|}^2=\frac{1}{2} {\left\| \langle 0\vert(\vert0\rangle + \vert1\rangle)\right\|}^2$$
+$$\LARGE {\left\| \langle 0\vert\psi\rangle\right\|}^2=\frac{1}{2} {\left\| \langle 0\vert(\vert0\rangle + \vert1\rangle)\right\|}^2$$
 
-$$\LARGE =\frac{1}{2} {\left\| \langle 0\vert0\rangle + \cancel{\langle 0\vert1\rangle})\right\|}^2$$
+$$\LARGE =\frac{1}{2} {\left\| \langle 0\vert0\rangle + \langle 0\vert1\rangle)\right\|}^2$$
 
 $$\LARGE =\frac{1}{2} {\left\| 1\right\|}^2=\frac{1}{2}$$
 
