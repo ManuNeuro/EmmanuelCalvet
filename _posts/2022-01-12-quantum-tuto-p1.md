@@ -479,7 +479,7 @@ mycircuit.draw('mpl')
 
 
 
-#### Outputs:  
+#### output:  
 ![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_43_0.png' | relative_url }})
     
 
@@ -499,7 +499,8 @@ new_sv = sv.evolve(mycircuit)
 print(new_sv)
 plot_state_qsphere(new_sv.data)
 ```
-#### Output:
+#### output:
+
 ```
 Statevector([0.70710678+0.j, 0.        +0.j, 0.        +0.j,
              0.70710678+0.j],
@@ -528,7 +529,7 @@ mycircuit.draw('mpl')
 
 
 
-#### Outputs: 
+#### output: 
 ![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_50_0.png' | relative_url }})
     
 
@@ -545,7 +546,7 @@ plot_histogram(counts)
 
 
 
-#### Outputs: 
+#### output: 
 ![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_52_0.png' | relative_url }})
     
 
@@ -617,9 +618,10 @@ token = "05f18d5a898e40e07cb51666762a5824fa2209e2a62f36a76737ea5f458d60cb4f7241e
 #IBMQ.save_account(token) # Uncoment the first time !
 provider = IBMQ.load_account()
 ```
-
-    ibmqfactory.load_account:WARNING:2022-03-23 15:19:31,990: Credentials are already in use. The existing account in the session will be replaced.
-    
+#### output:
+```    
+ibmqfactory.load_account:WARNING:2022-03-23 15:19:31,990: Credentials are already in use. The existing account in the session will be replaced.
+``` 
 
 Now we will load a backend with a real quantum computer !
 
@@ -633,10 +635,7 @@ backend = provider.get_backend('ibmq_lima')
 plot_error_map(backend)
 ```
 
-
-
-
-#### Outputs:
+#### output:
 ![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_61_0.png' | relative_url }})
     
 
@@ -655,8 +654,10 @@ job = execute(qcs, backend, shots=1024, initial_layout=[0, 1]) # Add the two qub
 job_monitor(job) # Gives status of the job
 ```
 
-    Job Status: job has successfully run
-    
+#### output: 
+```
+Job Status: job has successfully run
+``` 
 
 If you gave a list of several circuits to be executed, you have to give the circuit as an argument of `get_counts` to get the result of the circuit you want!
 
@@ -668,5 +669,5 @@ circ = 1 # Select the circuit you want to display
 plot = plot_histogram(job.result().get_counts(qcs[circ]))
 ```
 
-#### Outputs:
+#### output:
 ![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_70_0.png' | relative_url }})
