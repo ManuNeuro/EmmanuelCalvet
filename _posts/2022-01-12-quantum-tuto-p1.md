@@ -428,7 +428,7 @@ We will demonstrate below how to create the Bell state, which exploit the fundam
 
 $$\LARGE \frac{1}{\sqrt{2}}\left(\vert00\rangle + \vert 11 \rangle \right)$$ 
 
-<center><i>A bell state: a pair of antangled qubit.</i></center>
+<center><i>A bell state: a pair of entangled qubit.</i></center>
 
 The state $\vert00\rangle$, means the two qubits are in the state $\vert0\rangle$ on their respective basis, and form a multi-qubit basis. You can have as many qubit as you want, such as $\vert00...0\rangle$.
 
