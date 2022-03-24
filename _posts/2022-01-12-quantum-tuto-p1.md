@@ -248,11 +248,11 @@ Statevector([0.+0.j, 1.+0.j],
 ```
     
 
-As you can see, the statevector now corresponds to that of the state $\vert1\rangle$. Recall that:
+As you can see, the statevector now corresponds to that of the state $\vert1\rangle$:
 
 $$\LARGE \vert1\rangle = \begin{bmatrix}0\\1\end{bmatrix}$$
 
-The state can be shown on the `Bloch sphere` by writing
+The state can be shown on the `Bloch sphere` by writing:
 
 
 ```python
@@ -278,7 +278,7 @@ $$\LARGE \frac{1}{\sqrt{2}}\left(\vert 0\rangle + \vert 1\rangle\right)$$
 This state is a linear combination of two possible outcomes, $\vert 0\rangle$ and $\vert 1\rangle$.
 
 
-To create the state, we will need the Hadamard gate, given by the following equations:
+To create the state, we will need the Hadamard gate, given by the following equation:
 
 $$\LARGE
 H=\frac{1}{\sqrt{2}}
@@ -308,7 +308,7 @@ mycircuit.draw('mpl')
 
 
 
-Now it's time ti plot this state on the Bloch sphere:
+Now it's time to plot this state on the Bloch sphere:
 ```python
 new_sv = sv.evolve(mycircuit)
 print(new_sv)
@@ -325,9 +325,7 @@ Statevector([0.70710678+0.j, 0.70710678+0.j],
 
 
 
-As you can see above, the state is now a superposition of both basis vector $\vert0\rangle$ and $\vert1\rangle$, with an equal probability, $p=0.5$. 
-
-The `Hadamard` gate rotated the vector state around the **y** axis, of an angle $\frac{\pi}{2}$.
+As you can see above, the state is now a superposition of both basis vector $\vert0\rangle$ and $\vert1\rangle$, with an equal probability (we will compute it in the next section). 
 
 We can also create other superpositions with different phases. 
 
