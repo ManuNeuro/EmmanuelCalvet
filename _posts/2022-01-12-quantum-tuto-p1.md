@@ -300,26 +300,24 @@ mycircuit.draw('mpl')
 
 
 
-#### Outputs:    
+#### output:    
 ![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_29_0.png' | relative_url }})
     
 
 
 
-
+Now it's time ti plot this state on the Bloch sphere:
 ```python
 new_sv = sv.evolve(mycircuit)
 print(new_sv)
 plot_bloch_multivector(new_sv.data)
 ```
 
-    Statevector([0.70710678+0.j, 0.70710678+0.j],
-                dims=(2,))
-    
-
-
-
-#### Outputs:
+#### output:
+```
+Statevector([0.70710678+0.j, 0.70710678+0.j],
+            dims=(2,))
+``` 
 ![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_30_1.png' | relative_url }})
     
 
@@ -343,14 +341,11 @@ new_sv = sv.evolve(mycircuit)
 print(new_sv)
 plot_bloch_multivector(new_sv.data)
 ```
-
-    Statevector([ 0.70710678+0.j, -0.70710678+0.j],
-                dims=(2,))
-    
-
-
-
-#### Outputs:
+#### output:
+```
+Statevector([ 0.70710678+0.j, -0.70710678+0.j],
+            dims=(2,))
+``` 
 ![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_33_1.png' | relative_url }})
     
 
@@ -430,7 +425,7 @@ We will demonstrate below how to create the Bell state, which exploit the fundam
 
 $$\LARGE \frac{1}{\sqrt{2}}\left(\vert00\rangle + \vert 1 \rangle \right)$$ 
 
-<center><i>A bell state: a pair of antangled qubit.</i><center>
+<center><i>A bell state: a pair of antangled qubit.</i></center>
 
 The state $\vert00\rangle$, means the two qubits are $\vert0\rangle$ on their respective basis, and form a multi-qubit basis. You can have as many qubit as you want in such basis $\vert00...0\rangle$.
 
