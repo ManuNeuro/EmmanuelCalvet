@@ -358,6 +358,26 @@ Other phases can also be created by applying different gates. The $T$ and $S$ ga
 You can play around with the `block-sphere` : [https://javafxpert.github.io/grok-bloch/](https://javafxpert.github.io/grok-bloch/))
 ![](resources/Bloch-sphere.png)
 
+## Measuse / projection
+
+<mark>Born Rule</mark> : the probability that a state $\vert\psi\rangle$ collpases during a projective measurement onto the state $\vert x \rangle \in \left\(\vert 0 \rangle, \vert 1 \rangle \right\)$  is given by :
+
+$$\LARGE P(x) = {\left\| \langle x\vert\psi\rangle\right\|}^2$$
+
+with $\sum_i{P(x_i)=1}$.
+
+With the previous example, the state of the qubit is:
+
+$$\LARGE \vert \psi\rangle = \frac{1}{\sqrt{2}} (\vert 0\rangle + \vert 1\rangle)$$
+
+Let's measure the probability of getting the qubit in the state $\vert0\rangle$ :
+
+$$\LARGE {\left\| \langle 0\vert\psi\rangle\right\|}^2=\frac{1}{2} {\left\| \langle 0\vert(\vert0\rangle + \vert1\rangle)\right\|}^2$$
+
+$$\LARGE =\frac{1}{2} {\left\| \langle 0\vert0\rangle + \langle 0\vert1\rangle)\right\|}^2$$
+
+$$\LARGE =\frac{1}{2} {\left\| 1\right\|}^2=\frac{1}{2}$$
+
 # What happens when we run the circuit?
 
 In Quantum Computing (QC), you cannot directly get information from the qubits; you need to `measure` them, which will cause
@@ -368,8 +388,11 @@ a modification of their states!
 *NB: Typically, in QC, the basis you measure is the **z** axis, and you cannot measure a state in superposition. You always project the qubit state with a measurable basis state $\vert0\rangle$ or $\vert1\rangle$. If ever you wanted to measure along another axis, you would have to rotate the state with the appropriate gate (for example, measurement along $x$, requires to put an $H$ gate before the measurement)*
 
 Finally, you will need to create a `backend` and give it to the `execute` function along with your circuit.
-- We will use `Qiskit`'s built-in `Aer` simulators to run the circuit. To get the measurement counts, we can use the following code:
+- We will use `Qiskit`'s built-in `qasm_simulator` backend simulators to run the circuit.
+- To actually run the circuit we use the function `execute()`, given a number of `shots=1000`, which means the circuit will be run $1000$ times.
+- To get the measurement counts of these shots, we use the method `get_counts()` of the `result()` of the `job`.
 
+We do this by using the following code:
 
 ```python
 from qiskit import Aer, execute
@@ -393,29 +416,7 @@ output:
 ```
 ![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_37_1.png' | relative_url }})
     
-
-
-
-## Measuse / projection
-
-<mark>Born Rule</mark> : the probability that a state $\vert\psi\rangle$ collpases during a projective measurement onto the state $\vert x \rangle \in \left\(\vert 0 \rangle, \vert 1 \rangle \right\)$  is given by :
-
-$$\LARGE P(x) = {\left\| \langle x\vert\psi\rangle\right\|}^2$$
-
-with $\sum_i{P(x_i)=1}$.
-
-With the previous example, the state of the qubit is:
-
-$$\LARGE \vert \psi\rangle = \frac{1}{\sqrt{2}} (\vert 0\rangle + \vert 1\rangle)$$
-
-Let's measure the probability of getting the qubit in the state $\vert0\rangle$ :
-
-$$\LARGE {\left\| \langle 0\vert\psi\rangle\right\|}^2=\frac{1}{2} {\left\| \langle 0\vert(\vert0\rangle + \vert1\rangle)\right\|}^2$$
-
-$$\LARGE =\frac{1}{2} {\left\| \langle 0\vert0\rangle + \langle 0\vert1\rangle)\right\|}^2$$
-
-$$\LARGE =\frac{1}{2} {\left\| 1\right\|}^2=\frac{1}{2}$$
-
+As expected each of the state is obtained close to $50%$ of the time.
 
 # Multi-qubit states
 
@@ -423,11 +424,11 @@ Similar to the discussion above, you can also explore multi-qubit gates in `Qisk
 
 We will demonstrate below how to create the Bell state, which exploit the fundamental adventage of QC: the entanglement of qubits.
 
-$$\LARGE \frac{1}{\sqrt{2}}\left(\vert00\rangle + \vert 1 \rangle \right)$$ 
+$$\LARGE \frac{1}{\sqrt{2}}\left(\vert00\rangle + \vert 11 \rangle \right)$$ 
 
 <center><i>A bell state: a pair of antangled qubit.</i></center>
 
-The state $\vert00\rangle$, means the two qubits are $\vert0\rangle$ on their respective basis, and form a multi-qubit basis. You can have as many qubit as you want in such basis $\vert00...0\rangle$.
+The state $\vert00\rangle$, means the two qubits are in the state $\vert0\rangle$ on their respective basis, and form a multi-qubit basis. You can have as many qubit as you want, such as $\vert00...0\rangle$.
 
 We'll start by visualizing the state $\vert00\rangle$ using another tool, the `q-sphere`:
 
@@ -442,7 +443,7 @@ plot_state_qsphere(sv.data)
 
 
 
-#### Outputs:  
+#### output:  
 ![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_41_0.png' | relative_url }})
     
 
@@ -506,11 +507,13 @@ Statevector([0.70710678+0.j, 0.        +0.j, 0.        +0.j,
 
 
 
-As you will understand, entanglement is really one of the most important properties of quantum computing. While a classical bit can be in one state only, a quantum state with $n$ qubits can be a linear combination of $2^n$ states! In this entangled state might be hiding the solution to your problem. When performing computation, the challenge is thus to apply gates appropriately such that the system's state decoheres to the whished solution.
+As you will understand, entanglement is really one of the most important properties of quantum computing. While a classical bit can be in one state only, a quantum state with $n$ qubits can be a linear combination of $2^n$ states! In this entangled state might be hiding the solution to your problem. When performing computation, the challenge is thus to apply gates appropriately such that the system's state is mesured to the whished solution.
 
 ## Measurements
 
-Here is an example that creates the same Bell state and applies a measurement.
+Here is an example that creates the same Bell state and applies a measurement. In quantum mechanics, we can't directly observe a particle in a superposition or entanglement. The only basis that we can probe is $(\vert 0\rangle, \vert 1\rangle)$. Hence measurements always project the qubits states to the $z$ axis of the Bloch sphere. 
+
+To measure we use the method `mesure()` and provide the indexes of first the qubits, and second the classical bits.
 
 
 ```python
@@ -526,9 +529,8 @@ mycircuit.draw('mpl')
 
 #### output: 
 ![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_50_0.png' | relative_url }})
-    
-
-And now let's plot the histogram of counts:
+   
+Let's plot the histogram of counts:
 
 ```python
 from qiskit import Aer, execute
@@ -540,19 +542,19 @@ plot_histogram(counts)
 
 
 
-
 #### output: 
 ![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_52_0.png' | relative_url }})
     
-
+Again, the respective probability of the states is close to $0.5$.
 
 
 # Parametrized circuit on a real quantum computer
 
-In this example, we will take the same circuit and add a `parameter`, then `execute` it with many values in an actual quantum circuit.
-- We create a parameter $\theta$ with the use of the class `Parameter`.
-- We will use a gate $R_Y$, that performs rotation around the $y$ axis, that will be parametrized by $\theta$
-- Then, we will add the bell state and measurements
+In this example, we will take the same circuit and add a `Parameter`. We then `execute` it with many values in an actual quantum circuit.
+We will exploit this handy feature in the following tutorial when we have trainable parameters.
+1. We create a parameter $\theta$ using the class `Parameter`.
+2. We will use a gate $R_Y$, that performs rotation around the $y$ axis, parametrized by $\theta$.
+3. Then, we will add the bell state and measurements.
 
 
 ```python
@@ -576,7 +578,7 @@ qc.draw('mpl')
 
 
 
-Now we create a list of circuit with all different initialization of the parameter
+Now we create a list of circuit with all different initialization of the parameter:
 
 
 
