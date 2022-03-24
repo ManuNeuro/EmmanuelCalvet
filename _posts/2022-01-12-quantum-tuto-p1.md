@@ -177,12 +177,12 @@ Mathematically, a gate is a matrix; a single qubit matrix applies to the two-dim
 
 Here is the mathematical definition of the $X$ gate, or the quantum equivalent of the classical `NOT` gate:
 
-$$\LARGE \sigma_x= \begin{vmatrix}0 & 1 \\ 1 & 0 \end{vmatrix}$$
+$$\LARGE \sigma_x= \begin{bmatrix}0 & 1 \\ 1 & 0 \end{bmatrix}$$
 
 If we apply the $X$ gate to our initial state $\vert 0\rangle$ we obtain:
 
 $$\LARGE 
-\sigma_x\vert 0>=\begin{vmatrix}0 & 1 \\ 1 & 0 \end{vmatrix} \cdot \begin{pmatrix}1 \\ 0 \end{pmatrix}= \begin{pmatrix}0 \\ 1 \end{pmatrix}=\vert 1\rangle
+\sigma_x\vert 0>=\begin{bmatrix}0 & 1 \\ 1 & 0 \end{bmatrix} \cdot \begin{pmatrix}1 \\ 0 \end{pmatrix}= \begin{pmatrix}0 \\ 1 \end{pmatrix}=\vert 1\rangle
 $$
 
 Now as I told you, we can take advantage of the Dirac notation to make calculation, as the $X$ can also be written:
@@ -455,12 +455,12 @@ The controlled-X gate is an X gate, that is applied if and only if the control-b
 
 $$
 CNOT=
-\begin{vmatrix}
+\begin{bmatrix}
 1 & 0 & 0 & 0\\
 0 & 1 & 0 & 0\\
 0 & 0 & 0 & 1\\
 0 & 0 & 1 & 0\\
-\end{vmatrix}=\vert 00\rangle\langle 00\vert+\vert 01\rangle\langle 01\vert+\vert 10\rangle\langle 11\vert+\vert11\rangle\langle10\vert$$
+\end{bmatrix}=\vert 00\rangle\langle 00\vert+\vert 01\rangle\langle 01\vert+\vert 10\rangle\langle 11\vert+\vert11\rangle\langle10\vert$$
 
 In `qiskit`, you can create a bell state this way:
 
