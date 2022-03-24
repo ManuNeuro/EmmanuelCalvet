@@ -204,7 +204,7 @@ $$\LARGE
 \sigma_x\vert 0>=\vert0\rangle \langle1\vert 0\rangle +\vert1\rangle \langle 0\vert 0\rangle 
 $$
 
-Notice that since they are vectors, $\langle . \vert .\rangle$ is just the dot product. By definition of the dot product, orthonormal vectors will give $0$, while identical vectors will give a $1$:
+Notice that $\langle . \vert .\rangle$ is just the dot product. By definition of the dot product, orthonormal vectors will give $0$, while identical vectors will give $1$:
 
 - $\langle1\vert 0\rangle=0$
 - $\langle 0\vert 0\rangle=1$
