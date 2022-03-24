@@ -182,7 +182,7 @@ $$\LARGE \sigma_x= \begin{bmatrix}0 & 1 \\ 1 & 0 \end{bmatrix}$$
 If we apply the $X$ gate to our initial state $\vert 0\rangle$ we obtain:
 
 $$\LARGE 
-\sigma_x\vert 0>=\begin{bmatrix}0 & 1 \\ 1 & 0 \end{bmatrix} \cdot \begin{pmatrix}1 \\ 0 \end{pmatrix}= \begin{pmatrix}0 \\ 1 \end{pmatrix}=\vert 1\rangle
+\sigma_x\vert 0\rangle=\begin{bmatrix}0 & 1 \\ 1 & 0 \end{bmatrix} \cdot \begin{pmatrix}1 \\ 0 \end{pmatrix}= \begin{pmatrix}0 \\ 1 \end{pmatrix}=\vert 1\rangle
 $$
 
 Now as I told you, we can take advantage of the Dirac notation to make calculation, as the $X$ can also be written:
@@ -190,11 +190,12 @@ Now as I told you, we can take advantage of the Dirac notation to make calculati
 $$\LARGE
 \sigma_x=\vert0\rangle \langle1\vert+\vert1\rangle \langle 0\vert
 $$
+<center><i>You can make the calculation by hand to convince yourself that the two are equivalents.</i></center>
 
-You can check that it matches the matrix formulation:
+Now let's apply \sigma_x to \vert 0>:
 
 $$\LARGE
-\sigma_x\vert 0>= (\vert0\rangle \langle1\vert+\vert1\rangle \langle 0\vert)\vert0\rangle)
+\sigma_x\vert 0>= (\vert0\rangle \langle1\vert+\vert1\rangle \langle 0\vert)\vert0\rangle
 $$
 
 Since it is distributive, you can simplify:
