@@ -209,7 +209,7 @@ Notice that since they are vectors, $\langle . \vert .\rangle$ is just the dot p
 - $\langle 0\vert 0\rangle=1$
 
 $$\LARGE
-\sigma_x \vert 0>=\vert0\rangle \cancel{\langle1\vert 0\rangle} +\vert1\rangle \times 1 = \vert1\rangle
+\sigma_x \vert 0>=\vert0\rangle \times 0 +\vert1\rangle \times 1 = \vert1\rangle
 $$
 
 The $X$ gate flips the qubit from the state $\vert0\rangle$ to the state $\vert 1\rangle$. We will first create a single-qubit quantum circuit with the $X$ gate to see this:
@@ -331,7 +331,7 @@ The `Hadamard` gate rotated the vector state around the **y** axis, of an angle 
 
 We can also create other superpositions with different phases. 
 
-Let's create $$\frac{1}{\sqrt{2}}\left(\vert0\rangle - \vert1\rangle\right)$$ which can be done by applying the Hadamard gate on the state $\vert1\rangle$.
+Let's create $\frac{1}{\sqrt{2}}\left(\vert0\rangle - \vert1\rangle\right)$ which can be done by applying the Hadamard gate on the state $\vert1\rangle$.
 
 
 ```python
@@ -356,7 +356,7 @@ plot_bloch_multivector(new_sv.data)
 
 
 
-This time, the vector was rotated to the phase of $\phi = \pi$. This is because the coefficient of $\vert1\rangle$ in the state $$\frac{1}{\sqrt{2}}\left(\vert0\rangle - \vert1\rangle\right)$$ is $-1$, which is equal to $e^{i\pi}$.
+This time, the vector was rotated of the phase of $\phi = \pi$. This is because the coefficient of $\vert1\rangle$ in the state $\frac{1}{\sqrt{2}}\left(\vert0\rangle - \vert1\rangle\right)$ is $-1$, which is equal to $e^{i\pi}$.
 
 Other phases can also be created by applying different gates. The $T$ and $S$ gates apply phases of $+\pi/4$ and $+\pi/2$, respectively. The widget below helps you see different gates, and their actions on single-qubit quantum states.
 
@@ -396,10 +396,6 @@ output:
 ```
 {'1': 493, '0': 507}
 ```
-
-
-
-#### Outputs:  
 ![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_37_1.png' | relative_url }})
     
 
@@ -407,16 +403,21 @@ output:
 
 ## Measuse / projection
 
-<mark>Born Rule</mark> : the probability that a state $\vert\psi\rangle$ collpases during a projective measurement onto the state $\vert x\rangle\in \left\{|0\rangle, \vert1\rangle \right\}$  is given by :
-$$P(x) = {\left| \langle x\vert\psi\rangle\right|}^2$$
+<mark>Born Rule</mark> : the probability that a state $\vert\psi\rangle$ collpases during a projective measurement onto the state $\vert x\rangle\in \left\{\vert0\rangle, \vert1\rangle \right\}$  is given by :
+
+$$\LARGE P(x) = {\left\| \langle x\vert\psi\rangle\right\|}^2$$
+
 with $\sum_i{P(x_i)=1}$.
 
 With the previous example, the state of the qubit is $|\psi\rangle= \frac{1}{\sqrt{2}} (\vert0\rangle + \vert1\rangle)$
 
 Let's measure the probability of getting the qubit in the state $|0\rangle$ :
-$${\left\| \langle 0\vert\psi\rangle\right|}^2=\frac{1}{2} {\left\| \langle 0\vert(\vert0\rangle + \vert1\rangle)\right\|}^2$$
-$$=\frac{1}{2} {\left\| \langle 0\vert0\rangle + \cancel{\langle 0\vert1\rangle})\right\|}^2$$
-$$=\frac{1}{2} {\left\| 1\right\|}^2=\frac{1}{2}$$
+
+$$\LARGE {\left\| \langle 0\vert\psi\rangle\right|}^2=\frac{1}{2} {\left\| \langle 0\vert(\vert0\rangle + \vert1\rangle)\right\|}^2$$
+
+$$\LARGE =\frac{1}{2} {\left\| \langle 0\vert0\rangle + \cancel{\langle 0\vert1\rangle})\right\|}^2$$
+
+$$\LARGE =\frac{1}{2} {\left\| 1\right\|}^2=\frac{1}{2}$$
 
 
 # Multi-qubit states
