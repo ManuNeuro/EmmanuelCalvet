@@ -88,7 +88,7 @@ Statevector([1.+0.j, 0.+0.j],
             dims=(2,))
 ```
 
-As you can see, the state didn't change since we didn't perform any transformation yet.
+As you can see, the state didn't change since we didn't add any gates yet.
 
 ## Dirac notation
 In the previous section, I implicitly used the [Dirac notation](https://wiki.physics.udel.edu/wiki_phys813/images/0/01/Dirac_notation_and_rules_of_quantum_mechanics.pdf) to represent the vector state $\vert \psi\rangle$. 
@@ -110,7 +110,7 @@ c_2
 \end{bmatrix}
 $$
 
-<center><i>As you can see, the *bra* of $\psi$ is a column vector.</i</center>
+<center><i>As you can see, the *bra* of $\psi$ is a column vector.</i></center>
 
 To obtain the dual, *ket*, we need to compute the complex conjugate transpose (denoted dagger: $\dagger$) of the *bra*:
 
@@ -137,10 +137,9 @@ A way to represent the state of one qubit is the `Bloch sphere`.
 This maps the vector state $\vert\psi\rangle=\alpha\vert0\rangle+e^{i\phi}\beta\vert1\rangle$ with $\alpha, \beta \in \mathbb{R}$ to a spherical surface.
 
 Since we have the normalization condition imposing $\sqrt{\alpha^2+\beta^2}=1$,
-
-We can first apply the trigonometry formula $\sqrt{cos(x)^2+sin(x)^2}=1$,
+we can first apply the trigonometry formula $\sqrt{cos(x)^2+sin(x)^2}=1$,
 and then use the half angle formula in order to get $\alpha$ and $\beta$
-dependant of the same parameter $\theta$, we derive that :
+dependant of the same parameter $\theta$. Finally we get:
 
 $$\LARGE \vert\psi\rangle=cos(\theta/2)\vert0\rangle+e^{i\phi}sin(\theta/2)\vert1\rangle$$
 
@@ -163,7 +162,7 @@ plot_bloch_multivector(new_sv.data)
 
 
 
-#### Outputs:
+#### output:
 ![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_19_0.png' | relative_url }})
     
 
@@ -199,7 +198,7 @@ mycircuit.draw('mpl')
 
 
 
-#### Outputs:
+#### output:
 ![](output_22_0.png)
     
 
