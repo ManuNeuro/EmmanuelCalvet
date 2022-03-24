@@ -1,4 +1,10 @@
-# 02 - Hands on Quantum Computing in Qiskit: programming your first quantum circuit (Part 1)
+---
+title: "Hands on Quantum Computing in Qiskit: programming your first quantum circuit (Part 1)"
+layout: post
+categories: Finance
+comments: true
+image: /assets/article_images/2022-01-12-quantum-tuto-p1/quantum-cover-sunscreen.jpg
+---
 
 # Single-qubit and multi-qubit states
 
