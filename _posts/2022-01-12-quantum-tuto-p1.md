@@ -418,7 +418,7 @@ output:
 ```
 ![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_37_1.png' | relative_url }})
     
-As expected each of the state is obtained close to $50%$ of the time.
+As expected each of the state is obtained close to $50\%$ of the time.
 
 # Multi-qubit states
 
