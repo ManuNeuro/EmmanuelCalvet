@@ -591,12 +591,12 @@ qc_a = qc.assign_parameters(parameter_binds) # A quantum circuit with given para
 thetas = np.linspace(0, 2*np.pi, 11)
 qcs = list() 
 for t in thetas: # You can create a list a circuit with various parameter values
-    qcs.append(qc.assign_parameters({theta : t})) 
+    qcs.append(qc.bind_parameters({theta : t})) 
 ```
 
 ## Several things to note :
-1. We can create a list and put circuits inside it, with various initialization of parameters
-2. ```assign_parameters``` is a QuantumCircuit object method that allows you to give a value for parameters.
+1. We can create a list of circuits, with various initialization of parameters, and provide the list to the `execute()` function.
+2. ```bind_parameters``` is a QuantumCircuit object method that allows you to bind a value to a parameter.
     - The arguments of this method is a ```dict```, of the parameter as a *key*, and given value as *value*.
 
 # Connect to IBMQ
@@ -611,8 +611,8 @@ If you have trouble to connect, check to the qiskit [documentation](https://quan
 ```python
 from qiskit import IBMQ
 
-token = "05f18d5a898e40e07cb51666762a5824fa2209e2a62f36a76737ea5f458d60cb4f7241edcacc72b92cf29c3ca6807983ce94df728772fcafaa37402fef853c9e" # Replace with your token
-#IBMQ.save_account(token) # Uncoment the first time !
+token = "your_token" # Replace with your token
+IBMQ.save_account(token) 
 provider = IBMQ.load_account()
 ```
 #### output:
@@ -656,7 +656,7 @@ job_monitor(job) # Gives status of the job
 Job Status: job has successfully run
 ``` 
 
-If you gave a list of several circuits to be executed, you have to give the circuit as an argument of `get_counts` to get the result of the circuit you want!
+If you gave a list of several circuits to be executed, you have to give the circuit as an argument of the `get_counts()`, to obtain the result of the circuit you want.
 
 
 ```python
@@ -668,3 +668,11 @@ plot = plot_histogram(job.result().get_counts(qcs[circ]))
 
 #### output:
 ![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_70_0.png' | relative_url }})
+
+
+# Conclusion
+This ends the first part of the series *Hands on Quantum Computing with Qiskit". 
+You learned how to create a quantum circuit to make simulations of entangled qubits.
+You learned how to perform the measurement and create a parametrized circuit you can run on a real quantum computer.
+Next time we will see how to use a classical optimization of the parameters of a quantum circuit, so stay tuned!
+
