@@ -1,10 +1,4 @@
----
-title: "Hands on Quantum Computing in Qiskit: programming your first quantum circuit (Part 1)"
-layout: post
-categories: Finance
-comments: true
-image: /assets/article_images/2022-01-12-quantum-tuto-p1/quantum-cover-sunscreen.jpg
----
+# 02 - Hands on Quantum Computing in Qiskit: programming your first quantum circuit (Part 1)
 
 # Single-qubit and multi-qubit states
 
@@ -18,7 +12,7 @@ We represent a quantum qubit state as:
 
 $$\vert\psi\rangle = \sqrt{1-p}\vert0\rangle + e^{i\phi}\sqrt{p}\vert1\rangle$$
 
-Here, $p$ is the probability that a measurement of the state in the computational basis $\{ \vert0\rangle, \vert1\rangle \}$ will have the outcome $1$; $\phi$ is the phase between the two computational basis states. 
+Here, $p$ is the probability that a measurement of the state in the computational basis $( \vert0\rangle, \vert1\rangle )$ will have the outcome $1$; $\phi$ is the phase between the two computational basis states. 
 
 Single-qubit gates can be used to manipulate this quantum state by changing either $p$, $\phi$, or both.
 
@@ -67,7 +61,7 @@ Statevector([1.+0.j, 0.+0.j],
 
 A qubit vector state is a two-dimensional complex vector:
 
-$$\LARGE \vert0\rangle = \begin{bmatrix} 1 \\0 \end{bmatrix} $$
+$$\LARGE \vert0\rangle = \begin{bmatrix} 1 \\0 \end{bmatrix}$$
 
 We can now apply the quantum circuit `mycircuit` to this state by using the `evolve()` method:
 
@@ -110,9 +104,9 @@ c_2
 \end{bmatrix}
 $$
 
-<center><i>As you can see, the *bra* of $\psi$ is a column vector.</i></center>
+<center><i>As you can see, the ket of $\psi$ is a column vector.</i></center>
 
-To obtain the dual, *ket*, we need to compute the complex conjugate transpose (denoted dagger: $\dagger$) of the *bra*:
+To obtain the dual, *bra*, we need to compute the complex conjugate transpose (denoted dagger: $\dagger$) of the *ket*:
 
 $$\LARGE
 \vert \psi\rangle^{\dagger}=
@@ -128,7 +122,7 @@ c_2
 = \langle \psi \vert
 $$
 
-Okay, first, don't be scared about the notation; this is just a different way of representing vectors. Second, as you will see in a bit, this notation makes it easy to represent states and gates as the sum of basis vectors.
+Okay, first, don't be scared by the notation; this is just a different way of representing vectors. Second, as you will see in a bit, this notation makes it easy to represent states and gates as linear combination of basis vectors.
 
 ## The Bloch sphere
 
@@ -168,21 +162,44 @@ plot_bloch_multivector(new_sv.data)
 
 
 
-As you can see, the state $\vert0\rangle$ gets projected on the sphere's north pole. Notice that the angle $\theta$ is divided by 2. This means that the orthogonal basis $(\vert0\rangle, \vert1\rangle)$ is stretched in the Bloch sphere, and each vector is now separated by an angle of $2\times90=180$ degree.
+As you can see, the state $\vert0\rangle$ gets projected on the sphere's north pole. Notice that the angle $\theta$ is divided by 2. This means that the orthogonal basis $(\vert0\rangle, \vert1\rangle)$ is stretched in the Bloch sphere, and an angle of $2\times90=180$ degree now separates each vector.
 
 ## Our first gate!
 
 
 Mathematically, a gate is a matrix; a single qubit matrix applies to the two-dimensional state and transforms this state into a new one; hence it's a $2\times2$ matrix.
 
-Here are is the mathematical definitions of the $X$ gate
+Here is the mathematical definitions of the $X$ gate, or the quantum equivalent of the classical `NOT` gate:
 
-$$\LARGE \sigma_x= \begin{vmatrix}0 & 1 \\ 1 & 0 \end{vmatrix}=\vert0\rangle \langle1\vert+\vert1\rangle \langle 0\vert$$
+$$\LARGE \sigma_x= \begin{vmatrix}0 & 1 \\ 1 & 0 \end{vmatrix}$$
 
 If we apply the $X$ gate to our initial state $\vert 0\rangle$ we obtain:
 
 $$\LARGE 
-\sigma_x\vert 0>=\begin{vmatrix}0 & 1 \\ 1 & 0 \end{vmatrix} \cdot \begin{pmatrix}1 \\ 0 \end{pmatrix}= \begin{pmatrix}0 \\ 1 \end{pmatrix}=\vert 1>
+\sigma_x\vert 0>=\begin{vmatrix}0 & 1 \\ 1 & 0 \end{vmatrix} \cdot \begin{pmatrix}1 \\ 0 \end{pmatrix}= \begin{pmatrix}0 \\ 1 \end{pmatrix}=\vert 1\rangle
+$$
+
+Now as I told you, we can take advantage of the Dirac notation to make calculation, as the $X$ can also be written:
+
+$$\LARG
+\sigma_x=\vert0\rangle \langle1\vert+\vert1\rangle \langle 0\vert
+$$
+
+You can check that it matches the matrix formulation:
+
+$$\LARGE
+\sigma_x\vert 0>= (\vert0\rangle \langle1\vert+\vert1\rangle \langle 0\vert)\vert0\rangle)
+$$
+Since it is distributive, you can simplify:
+$$\LARGE
+\sigma_x\vert 0>=\vert0\rangle \langle1\vert 0\rangle +\vert1\rangle \langle 0\vert 0\rangle 
+$$
+Notice that since they are vectors, $\langle . \vert .\rangle$ is just the dot product. By definition of the dot product, orthonormal vectors will give $0$, while identical vectors will give a $1$:
+- $\langle1\vert 0\rangle=0$
+- $\langle 0\vert 0\rangle=1$
+
+$$\LARGE
+\sigma_x \vert 0>=\vert0\rangle \cancel{\langle1\vert 0\rangle} +\vert1\rangle \times 1 = \vert1\rangle
 $$
 
 The $X$ gate flips the qubit from the state $\vert0\rangle$ to the state $\vert 1\rangle$. We will first create a single-qubit quantum circuit with the $X$ gate to see this:
@@ -212,7 +229,7 @@ sv = Statevector.from_label('0')
 new_sv = sv.evolve(mycircuit)
 new_sv
 ```
-#### Output:
+#### output:
 ```
 Statevector([0.+0.j, 1.+0.j],
             dims=(2,))
@@ -233,7 +250,7 @@ plot_bloch_multivector(new_sv.data)
 
 
 
-#### Outputs:  
+#### output:  
 ![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_27_0.png' | relative_url }})
     
 
@@ -380,7 +397,7 @@ output:
 
 ## Measuse / projection
 
-<mark>Born Rule</mark> : the probability that a state $\vert\psi\rangle$ collpases during a projective measurement onto the state $\vertx\rangle\in \left\{|0\rangle, \vert1\rangle \right\}$  is given by :
+<mark>Born Rule</mark> : the probability that a state $\vert\psi\rangle$ collpases during a projective measurement onto the state $\vert x\rangle\in \left\{|0\rangle, \vert1\rangle \right\}$  is given by :
 $$P(x) = {\left| \langle x\vert\psi\rangle\right|}^2$$
 with $\sum_i{P(x_i)=1}$.
 
