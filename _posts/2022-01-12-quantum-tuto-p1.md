@@ -252,7 +252,7 @@ As you can see, the statevector now corresponds to that of the state $\vert1\ran
 
 $$\LARGE \vert1\rangle = \begin{bmatrix}0\\1\end{bmatrix}$$
 
-The state can be shown on the `qsphere` by writing
+The state can be shown on the `Bloch sphere` by writing
 
 
 ```python
