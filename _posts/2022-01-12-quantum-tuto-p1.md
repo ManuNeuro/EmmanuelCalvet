@@ -411,7 +411,7 @@ with $\sum_i{P(x_i)=1}$.
 
 With the previous example, the state of the qubit is:
 
-$$\LARGE \vert \psi\rangle= \frac{1}{\sqrt{2}} (\vert0\rangle + \vert1\rangle)$$
+$$\LARGE \vert \psi\rangle = \frac{1}{\sqrt{2}} (\vert 0\rangle + \vert 1\rangle)$$
 
 Let's measure the probability of getting the qubit in the state $\vert0\rangle$ :
 
@@ -426,9 +426,11 @@ $$\LARGE =\frac{1}{2} {\left\| 1\right\|}^2=\frac{1}{2}$$
 
 Similar to the discussion above, you can also explore multi-qubit gates in `Qiskit`. 
 
-We will demonstrate below how to create the Bell state, which is the fundamental adventage of QC, entanglement of qubits:
+We will demonstrate below how to create the Bell state, which exploit the fundamental adventage of QC: the entanglement of qubits.
 
 $$\LARGE \frac{1}{\sqrt{2}}\left(\vert00\rangle + \vert 1 \rangle \right)$$ 
+
+<center><i>A bell state: a pair of antangled qubit.</i><center>
 
 The state $\vert00\rangle$, means the two qubits are $\vert0\rangle$ on their respective basis, and form a multi-qubit basis. You can have as many qubit as you want in such basis $\vert00...0\rangle$.
 
@@ -446,7 +448,7 @@ plot_state_qsphere(sv.data)
 
 
 #### Outputs:  
-![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_40_0.png' | relative_url }})
+![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_41_0.png' | relative_url }})
     
 
 
@@ -464,7 +466,7 @@ CNOT=
 0 & 0 & 1 & 0\\
 \end{vmatrix}=\vert 00\rangle\langle 00\vert+\vert 01\rangle\langle 01\vert+\vert 10\rangle\langle 11\vert+\vert11\rangle\langle10\vert$$
 
-In `qiskit`, here is how you can create a bell state:
+In `qiskit`, you can create a bell state this way:
 
 
 ```python
@@ -483,13 +485,11 @@ mycircuit.draw('mpl')
 
 
 
-Here the qubit $0$ is first put in a superposition of states, a linear combination $\frac{1}{\sqrt{2}}\left(\vert0\rangle + \vert1\rangle\right)$. 
-Next, you apply a $CNOT$ on the second qubit $1$, controlling it with the qubit $0$, which is in superposition.
-
-Since the second qubit state depends on a qubit in superposition, it becomes entangled with all possible states of the first qubit!
+First, with the hadamard, the qubit $0$ is in a superposition of states; a linear combination $\frac{1}{\sqrt{2}}\left(\vert0\rangle + \vert1\rangle\right)$. Next, you apply a $CNOT$ on the qubit $1$, controlling it with the qubit $0$. Since the second qubit state depends on a qubit in superposition, it becomes entangled with all possible states of the first qubit!
 
 The result of this quantum circuit on the state $\vert00\rangle$ is thus:
- $$\vert\psi^{00}\rangle=\frac{1}{\sqrt{2}}(\vert00\rangle+\vert11\rangle)$$
+    
+ $$\LARGE \vert\psi^{00}\rangle=\frac{1}{\sqrt{2}}(\vert00\rangle+\vert11\rangle)$$
 
 You can display it by writing:
 
@@ -505,16 +505,12 @@ Statevector([0.70710678+0.j, 0.        +0.j, 0.        +0.j,
              0.70710678+0.j],
             dims=(2, 2))
 ```
-
-
-
-#### Outputs: 
 ![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_46_1.png' | relative_url }})
     
 
 
 
-As you will come to understand, entanglement is really one of the most important properties of quantum mechanics that is harnessed in QC. While a classical bit can remain in one state only, a quantum state with $n$ qubits can be entangled in possibly $2^n$ states. When performing computation, the challenge is to apply gates appropriately such that the output is the solution to your problem.
+As you will understand, entanglement is really one of the most important properties of quantum computing. While a classical bit can be in one state only, a quantum state with $n$ qubits can be a linear combination of $2^n$ states! In this entangled state might be hiding the solution to your problem. When performing computation, the challenge is thus to apply gates appropriately such that the system's state decoheres to the whished solution.
 
 ## Measurements
 
@@ -536,18 +532,7 @@ mycircuit.draw('mpl')
 ![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_50_0.png' | relative_url }})
     
 
-
-
-In this example we used a CNOT gate again, here is the logic table :
-
-|input|output|
-|---|--------|
-|x y| x x $\oplus$ y|
-|0 0| 0  0 |
-|0 1| 0  1 |
-|1 0| 1  1 |
-|1 1| 1  0 |
-
+And now let's plot the histogram of counts:
 
 ```python
 from qiskit import Aer, execute
