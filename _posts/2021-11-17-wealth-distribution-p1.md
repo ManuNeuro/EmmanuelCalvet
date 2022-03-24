@@ -32,7 +32,7 @@ And this is logical because here, **transactions** are *random*. Some of you mig
 ## Let’s play!
 Alright, let’s start to play with this model. Assume we have *1000* agents, and all of them possess *100$* at the start. 
 
-NB: Here is a [link](https://gist.github.com/ManuNeuro/0144bf2c2fcb5a194c2b25b988c179df/) to my code if you want to try it. You will find a lot of parameters to play with, some of which will be discussed in the following articles!
+NB: Here is a [link](https://github.com/ManuNeuro/wealth-distribution.git) to my code if you want to try it. You will find a lot of parameters to play with, some of which will be discussed in the following articles!
 
 I will run *50000* iterations; *500* random transactions will occur at each iteration. For simplicity, we will have a fixed transaction amount of *1$* only. Throughout the article, no debt will be allowed, meaning that an agent will never give anything if its money is *0*.
 
