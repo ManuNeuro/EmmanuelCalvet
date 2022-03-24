@@ -409,9 +409,11 @@ $$\LARGE P(x) = {\left\| \langle x\vert\psi\rangle\right\|}^2$$
 
 with $\sum_i{P(x_i)=1}$.
 
-With the previous example, the state of the qubit is $\vert \psi\rangle= \frac{1}{\sqrt{2}} (\vert0\rangle + \vert1\rangle)$
+With the previous example, the state of the qubit is:
 
-Let's measure the probability of getting the qubit in the state $|0\rangle$ :
+$$\LARGE \vert \psi\rangle= \frac{1}{\sqrt{2}} (\vert0\rangle + \vert1\rangle)$$
+
+Let's measure the probability of getting the qubit in the state $\vert0\rangle$ :
 
 $$\LARGE {\left\| \langle 0\vert\psi\rangle\right\|}^2=\frac{1}{2} {\left\| \langle 0\vert(\vert0\rangle + \vert1\rangle)\right\|}^2$$
 
