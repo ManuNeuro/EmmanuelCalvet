@@ -6,6 +6,9 @@ comments: true
 image: /assets/article_images/2022-01-12-quantum-tuto-p1/quantum-cover-sunscreen.jpg
 ---
 
+# Hands on Quantum Computing in Qiskit
+Welcome to this series of labs to learn the `Qiskit` library for quantum computing. This series will give you the building blocks to understand quantum machine learning. 
+
 # Single-qubit and multi-qubit states
 
 This lab will teach you how to write `Qiskit` code and investigate single-qubit and multi-qubit states using the `Bloch-sphere` and `qpshere` visualization. Finally you will run a program on a real quantum computer!
