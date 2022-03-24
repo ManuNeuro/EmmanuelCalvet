@@ -403,13 +403,13 @@ output:
 
 ## Measuse / projection
 
-<mark>Born Rule</mark> : the probability that a state $\vert\psi\rangle$ collpases during a projective measurement onto the state $\vert x \rangle \in \left\{\vert 0 \rangle, \vert 1 \rangle \right\}$  is given by :
+<mark>Born Rule</mark> : the probability that a state $\vert\psi\rangle$ collpases during a projective measurement onto the state $\vert x \rangle \in \left\(\vert 0 \rangle, \vert 1 \rangle \right\)$  is given by :
 
 $$\LARGE P(x) = {\left\| \langle x\vert\psi\rangle\right\|}^2$$
 
 with $\sum_i{P(x_i)=1}$.
 
-With the previous example, the state of the qubit is $\|\psi\rangle= \frac{1}{\sqrt{2}} (\vert0\rangle + \vert1\rangle)$
+With the previous example, the state of the qubit is $\vert \psi\rangle= \frac{1}{\sqrt{2}} (\vert0\rangle + \vert1\rangle)$
 
 Let's measure the probability of getting the qubit in the state $|0\rangle$ :
 
@@ -426,7 +426,7 @@ Similar to the discussion above, you can also explore multi-qubit gates in `Qisk
 
 We will demonstrate below how to create the Bell state, which is the fundamental adventage of QC, entanglement of qubits:
 
-$$\frac{1}{\sqrt{2}}\left(\vert00\rangle + \vert11\rangle\right)$$ 
+$$\LARGE \frac{1}{\sqrt{2}}\left(\vert00\rangle + \vert 1 \rangle \right)$$ 
 
 The state $\vert00\rangle$, means the two qubits are $\vert0\rangle$ on their respective basis, and form a multi-qubit basis. You can have as many qubit as you want in such basis $\vert00...0\rangle$.
 
