@@ -1,7 +1,7 @@
 ---
 title: "Hands on Quantum Computing in Qiskit: programming your first quantum circuit (Part 1)"
 layout: post
-categories: Finance
+categories: Quantum
 comments: true
 image: /assets/article_images/2022-01-12-quantum-tuto-p1/quantum-cover-sunscreen.jpg
 ---
