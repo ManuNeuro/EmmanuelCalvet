@@ -96,7 +96,7 @@ In the previous section, I implicitly used the [Dirac notation](https://wiki.phy
 In a quantum mechanics textbook, you will find two essential notations associated with the way we represent vectors in the Hilbert space:
 
 - The "ket": is a column vector, noted $\vert \psi\rangle$.
-- The "bra": is a raw vector, dual of the other, noted $\langle \psi\vert$.
+- The "bra": is a row vector, dual of the other, noted $\langle \psi\vert$.
 
 When I say dual, it means that both vectors are related by a mathematical transformation that converts one into the other and vice-versa. 
 
@@ -175,7 +175,7 @@ As you can see, the state $\vert0\rangle$ gets projected on the sphere's north p
 
 Mathematically, a gate is a matrix; a single qubit matrix applies to the two-dimensional state and transforms this state into a new one; hence it's a $2\times2$ matrix.
 
-Here is the mathematical definitions of the $X$ gate, or the quantum equivalent of the classical `NOT` gate:
+Here is the mathematical definition of the $X$ gate, or the quantum equivalent of the classical `NOT` gate:
 
 $$\LARGE \sigma_x= \begin{vmatrix}0 & 1 \\ 1 & 0 \end{vmatrix}$$
 
@@ -187,7 +187,7 @@ $$
 
 Now as I told you, we can take advantage of the Dirac notation to make calculation, as the $X$ can also be written:
 
-$$\LARG
+$$\LARGE
 \sigma_x=\vert0\rangle \langle1\vert+\vert1\rangle \langle 0\vert
 $$
 
@@ -196,11 +196,15 @@ You can check that it matches the matrix formulation:
 $$\LARGE
 \sigma_x\vert 0>= (\vert0\rangle \langle1\vert+\vert1\rangle \langle 0\vert)\vert0\rangle)
 $$
+
 Since it is distributive, you can simplify:
+
 $$\LARGE
 \sigma_x\vert 0>=\vert0\rangle \langle1\vert 0\rangle +\vert1\rangle \langle 0\vert 0\rangle 
 $$
+
 Notice that since they are vectors, $\langle . \vert .\rangle$ is just the dot product. By definition of the dot product, orthonormal vectors will give $0$, while identical vectors will give a $1$:
+
 - $\langle1\vert 0\rangle=0$
 - $\langle 0\vert 0\rangle=1$
 
