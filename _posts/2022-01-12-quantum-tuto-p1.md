@@ -228,7 +228,7 @@ mycircuit.draw('mpl')
 
 
 #### output:
-![](output_22_0.png)
+![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_22_0.png' | relative_url }})
     
 
 
