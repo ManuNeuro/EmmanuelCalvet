@@ -248,11 +248,11 @@ Statevector([0.+0.j, 1.+0.j],
 ```
     
 
-As you can see, the statevector now corresponds to that of the state $\vert1\rangle$. Recall that
+As you can see, the statevector now corresponds to that of the state $\vert1\rangle$. Recall that:
 
 $$\LARGE \vert1\rangle = \begin{bmatrix}0\\1\end{bmatrix}$$
 
-Recall that the states $\vert0\rangle$ and $\vert 1\rangle$ are orthogonal. Therefore, $\langle 0\vert 1\rangle = 0$. The state can be shown on the `qsphere` by writing
+The state can be shown on the `qsphere` by writing
 
 
 ```python
