@@ -453,7 +453,7 @@ plot_state_qsphere(sv.data)
 
 Next, we use the Hadamard gate described above, along with a controlled-X gate, to create the Bell state.
 
-The controlled-X gate is an X gate, that is applied if and only if the control-bit is in the $\vert1\rangle$ state. Mathematically this gives:
+The controlled-X gate is an X gate that is applied if and only if the control-bit is in the $\vert1\rangle$ state. Mathematically this gives:
 
 $$
 CNOT=
