@@ -671,7 +671,7 @@ plot = plot_histogram(job.result().get_counts(qcs[circ]))
 
 
 # Conclusion
-This ends the first part of the series *Hands on Quantum Computing with Qiskit". 
+This ends the first part of the series *Hands on Quantum Computing with Qiskit*. 
 You learned how to create a quantum circuit to make simulations of superposed, and entangled qubits.
 And you have seen how to perform the measurement and create a parametrized circuit that can be run on a real quantum computer.
 
