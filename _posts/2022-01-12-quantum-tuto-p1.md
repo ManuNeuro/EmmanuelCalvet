@@ -8,7 +8,7 @@ image: /assets/article_images/2022-01-12-quantum-tuto-p1/quantum-cover-sunscreen
 
 # Single-qubit and multi-qubit states
 
-This lab will teach you how to write `Qiskit` code and investigate single-qubit and multi-qubit states using the `Bloch-sphere` and `qpshere` visualization.
+This lab will teach you how to write `Qiskit` code and investigate single-qubit and multi-qubit states using the `Bloch-sphere` and `qpshere` visualization. Finally you will run a program on a real quantum computer!
 
 > This tutorial is adapted from Lab 1 of Qiskit courses: [**Introduction to Quantum Computing and Quantum Hardware**](https://qiskit.org/learn/intro-qc-qh/).
 
