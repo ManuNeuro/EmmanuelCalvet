@@ -76,7 +76,7 @@ We can now apply the quantum circuit `mycircuit` to this state by using the `evo
 new_sv = sv.evolve(mycircuit)
 ```
 
-Once again, you can look at the new statevector by writing
+Once again, you can look at the new statevector by writing:
 
 
 ```python
@@ -127,6 +127,8 @@ c_2
 \end{bmatrix}
 = \langle \psi \vert
 $$
+
+<center><i>The * denotes the complex conjugate.</i></center>
 
 Okay, first, don't be scared by the notation; this is just a different way of representing vectors. Second, as you will see in a bit, this notation makes it easy to represent states and gates as linear combination of basis vectors.
 
@@ -233,7 +235,7 @@ mycircuit.draw('mpl')
 
 
 
-Now, we can apply this circuit onto our state by writing
+Now, we can apply this circuit onto our state by writing:
 
 
 ```python
