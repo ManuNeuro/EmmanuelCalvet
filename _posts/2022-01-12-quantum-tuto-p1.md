@@ -669,4 +669,4 @@ plot = plot_histogram(job.result().get_counts(qcs[circ]))
 ```
 
 #### Outputs:
-![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_52_0.png' | relative_url }})
+![]({{ '/assets/article_images/2022-01-12-quantum-tuto-p1/output_70_0.png' | relative_url }})
