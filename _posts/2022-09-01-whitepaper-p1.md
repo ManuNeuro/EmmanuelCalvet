@@ -24,17 +24,21 @@ But this function should not be inversible:
 
 $$F^{-1}(public\_key) \neq private\_key$$
 
-This is because it is a non-injective, surjective function, wich means that the function in not inversible. Put simply, to one public key, might correspond several private keys (see picture below).
+The use of elliptic curves render impossible the task of finding the inverse. This is because it is a non-injective, surjective function. Put simply, it means that to one public key, correspond several private keys (see picture below).
 
 ![Image taken from wikipedia.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/pic1.png' | relative_url }})
 
-Now, there's technically no grounded reason why you would replace elliptic curve with something else, as they are pretty solid. But anyways, I was reading the book, I couldn't help myself, I needed ot try designing this $F$ with neural networks.
+Now, there's technically no grounded reason why you would replace the elliptic curve by something else, as is a pretty solid solution to that problem. But anyways, as I was reading the book, I couldn't help myself, I needed to try to desig this function $F$ with a neural networks, just for the beauty of it.
 
-To design such a function $F$, I had to keep two important properties in mind:
+***
+
+To design such a function, I had to keep two important properties in mind:
 - $F$ needs to be deterministic
 - $F$ needs to be highly non-linear
 
-For me, neural networks are all about non-linearities. Each neuron consist in applying a non-linear function to its inputs (see picture below). But as one clearly see, the function of a neuron is purely deterministic, which is what you want for the design of $F$. However, if you take only one neuron, you can crack it open, as it is completely reversible. Now put them in cascade, as in a deep neural network, and these neurons create an intricate and very complex successions of filters, totally blurring your input space. 
+For me, neural networks are all about non-linearities. Each neuron consist in applying a non-linear function to its inputs. From the picture below, one carn clearly see that the function of a neuron is purely deterministic, which is what you want for the design of $F$. A given input will always give you the same output. However, if you take only one neuron, you can crack it open, as it is completely reversible. To one input, always correspond one input. 
+
+Now let's say the each input (x1, x2, x3) of the previous figure, is itself the output a neuron. And eventually, put many layers of neurons in cascade, to obtain a deep neural network. Well these neurons now create an intricate and very complex successions of filters, which totally blurry your input space. Meaning, you can't deduce the input anymore.
 
 ![The artificial neuron is a mathematical simplification of a biological neuron, composed of an activation function f (here we use the step function). The neuron receive a weighted (W) sum of inputs (x), such that it's output is y=f(x, W). Note that the action of the neuron is completely deterministic. Moreover, one neurone alone is also inversible. Image from the author.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/pic2.png' | relative_url }})
 
