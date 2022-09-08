@@ -10,17 +10,19 @@ As I was reading the book: "Mastering Bitcoin" [1], and seeing how the ECDSA alg
 
 ![Image taken from bitcoin wiki.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/pic0.png' | relative_url }})
 
-So, I wanted to see what I could do, and allow myself to daydream a bit. As I explored this new territory, I decided I will use what I know, to try and do something that I don't. A subject I've been interested in recently, the crypto world.
+So, I wanted to see what I could do, and allow myself to daydream a bit. As I explored this new territory, I decided I will use what I know, to try and do something that I don't. A subject I've been interested in recently: bitcoin.
 
 ***
 
-For those who don't know the ECDSA algorithm, I am going to simplify it as much as I can: in bitcoin, it is an algorithm that create a public from a private key. We can frame it this way, your private key shoul never be known, otherwise anyone can access to your fund, so we need to design a deterministic function $F$, such that:
+For those who don't know the ECDSA algorithm, I am going to simplify it as much as I can. In bitcoin, it is an algorithm that creates a public from a private key. Your private key should never be known by anyone, otherwise anyone could potentially access your funds, and steal from you. So when you are sharing your *public key* to receive some btcoins, this adress should not provide any hint, as to what is the private key. 
 
-$$public key = F(private key)$$
+In other world, when you generate a public key, you need to design a deterministic function $F$, such that:
 
-While the use of elliptic curve render impossible the task of finding the inverse:
+$$public\_key = F(private\_key)$$
 
-$$F^{-1}(public key) = private key$$
+But this function should not be inversible:
+
+$$F^{-1}(public\_key) \neq private\_key$$
 
 This is because it is a non-injective, surjective function, wich means that the function in not inversible. Put simply, to one public key, might correspond several private keys (see picture below).
 
