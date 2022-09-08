@@ -6,7 +6,7 @@ comments: true
 image: /assets/article_images/2022-09-01-whitepaper-p1/whitepaper-cover.jpg
 ---
 
-As I was reading the book: "Mastering Bitcoin" [1], and seeing how the SHA-256 are generated from beautifull elliptic curves (see picture below), I couldn't stop thinking: "I can do that with neural networks!"
+As I was reading the book: "Mastering Bitcoin" [1], and seeing how the ECDSA algorithm is using the beautifull elliptic curves (see picture below), I couldn't stop thinking: "I can do that with neural networks!"
 
 ![Image taken from bitcoin wiki.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/pic0.png' | relative_url }})
 
@@ -14,23 +14,25 @@ So, I wanted to see what I could do, and allow myself to daydream a bit. As I ex
 
 ***
 
-For those who don't know, the hash256 is an algorithm that create public from a private key in bitcoin. More specifically, it allow you to obtain a deterministic function F, such that 
+For those who don't know the ECDSA algorithm, I am going to simplify it as much as I can: in bitcoin, it is an algorithm that create a public from a private key. We can frame it this way, your private key shoul never be known, otherwise anyone can access to your fund, so we need to design a deterministic function $F$, such that:
 
-$$public_key = F(private_key)$$
+$$public key = F(private key)$$
 
-While the use of elliptic curve render impossible the task of finding the inverse 
+While the use of elliptic curve render impossible the task of finding the inverse:
 
-$$F^{-1}$(public_key) = private_key$$
+$$F^{-1}(public key) = private key$$
 
-As it is a non-injective, surjective function. It means that the function in not inversible, as to one public key, might correspond several private key (see picture below).
+This is because it is a non-injective, surjective function, wich means that the function in not inversible. Put simply, to one public key, might correspond several private keys (see picture below).
 
 ![Image taken from wikipedia.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/pic1.png' | relative_url }})
 
-Now, there's technically no grounded reason why you would replace elliptic curve with something else, as they are pretty solid. But anyways, for the design of such a function $F$:
-- It needs to be deterministic
-- It needs to be highly non-linear
+Now, there's technically no grounded reason why you would replace elliptic curve with something else, as they are pretty solid. But anyways, I was reading the book, I couldn't help myself, I needed ot try designing this $F$ with neural networks.
 
-In my mind, neural networks are all about non-linearities. Each neuron consist in applying a non-linear function to its inputs. Put them in cascade, as in deep neural network, and these neurons create an intricate and very complex sort of filtering of your input space. 
+To design such a function $F$, I had to keep two important properties in mind:
+- $F$ needs to be deterministic
+- $F$ needs to be highly non-linear
+
+For me, neural networks are all about non-linearities. Each neuron consist in applying a non-linear function to its inputs (see picture below). But as one clearly see, the function of a neuron is purely deterministic, which is what you want for the design of $F$. However, if you take only one neuron, you can crack it open, as it is completely reversible. Now put them in cascade, as in a deep neural network, and these neurons create an intricate and very complex successions of filters, totally blurring your input space. 
 
 ![The artificial neuron is a mathematical simplification of a biological neuron, composed of an activation function f (here we use the step function). The neuron receive a weighted (W) sum of inputs (x), such that it's output is y=f(x, W). Note that the action of the neuron is completely deterministic. Moreover, one neurone alone is also inversible. Image from the author.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/pic2.png' | relative_url }})
 
