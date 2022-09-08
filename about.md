@@ -10,8 +10,8 @@ image: /assets/article_images/about/author_full.jpg
 
 Ph.D student in Electrical and computing engineering (Université de Sherbrooke).
 
-- Director : Jean Rouat (NECOTIS)
-- Co-director : Bertrand Reulet (IQ)
+- Director : Jean Rouat ([NECOTIS](https://www.gegi.usherbrooke.ca/necotis/?lang=en))
+- Co-director : Bertrand Reulet ([IQ](https://www.usherbrooke.ca/iq/en/))
 
 ## Introduction
 I am a Ph.D. student at the intersection of three disciplines: computational neurosciences, artificial intelligence, and physics. My goal is to use physics concepts to understand better and design machine learning models.
