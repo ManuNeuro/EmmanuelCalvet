@@ -74,6 +74,9 @@ social:
     #share_url: https://github.com/ManuNeuro?tab=repositories
     #share_title: ?text="My repo"
     #share_link: "&amp;url="
+  - icon: linkedin
+    url: https://www.linkedin.com/in/calvet-emmanue-engineer/
+    desc: See me on linkedin
 
 #  - icon:	twitter
 #    url:	https://twitter.com/samyonski
