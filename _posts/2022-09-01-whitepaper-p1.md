@@ -1,5 +1,5 @@
 ---
-title: "White-paper: artificial neural network in crypto (Part 1)"
+title: "White-paper: an exploration of artificial neural network in crypto (Part 1)"
 layout: post
 categories: Quantum, Crypto
 comments: true
