@@ -12,9 +12,11 @@ As I was reading the book: "Mastering Bitcoin" [1], and learning about the ECDSA
 
 So, I wanted to see what I could do, and allow myself to daydream a bit. As I explored this new territory, I decided I will use what I know, to try to do something that I don't, in a subject I've been interested recently: bitcoin.
 
+*NB: in the rest of the article, `bitcoin` will refer to the algoritmic implementation of the `Bitcoin`: the coin used as a mean to exchange some value. 
+
 ***
 
-For those who don't know the ECDSA algorithm, I am going to simplify it as much as I can. In bitcoin, it is an algorithm that creates a *public key*, from a *private key*. Your private key should never be known by anyone, otherwise you funds could be stolen! So when you are sharing your public key to receive some btcoins, this adress should not provide any hint, as to what is your private key. 
+For those who don't know the ECDSA algorithm, I am going to simplify it as much as I can. In bitcoin, it is an algorithm that creates a *public key*, from a *private key*. Your private key should never be known by anyone, otherwise you funds could be stolen! So when you are sharing your public key to receive some Bitcoins, this adress should not provide any hint, as to what is your private key. 
 
 When you generate a public key, you need to design a deterministic function $F$, such that:
 
@@ -24,19 +26,19 @@ This way you can always regenerate your public key. However, this function shoul
 
 $$F^{-1}(public\_key) \neq private\_key$$
 
-One solution adopted for Bitcoin, is the use of the elliptic curve. It renders impossible the task of finding the inverse, because it is a non-injective, surjective function. Even if you know the curveand try to map it back, to one public key always correspond several private keys (see picture below).
+One solution adopted for bitcoin, is the use of the elliptic curve. It renders impossible the task of finding the inverse, because it is a non-injective, surjective function. Even if you know the curveand try to map it back, to one public key always correspond several private keys (see picture below).
 
 ![You can imagine that a desirable public key (set Y) is C. Because then you can't know for sure if the private key (set X) is either 2 or 3. Image taken from wikipedia.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/pic1.png' | relative_url }})
 
 Now, there's technically no grounded reason why you would replace the elliptic curve by something else, as it is a pretty solid solution to the problem. But as I was reading the book, I couldn't help myself, I needed to try to design the function $F$ with a neural networks, just for the beauty of it. 
 
-Okay what about you, you ask. Well their could be one or two reasons why this might be of interest for you too. Let's say I am going to present you artifical neural networks, in a non-trivial way, if you dare going down the rabit whole.
+Okay what about you, you ask. Well their could be one or two reasons why this might be of interest for you too. Let's say that I am going to present you artifical neural networks, in a non-trivial way, if you dare going down the rabit whole.
 
 ***
 
 
-<center> Ready ? Follow the white-paper </center>
-![Honestly, do I have to justify myself if I want to put a Morpheus picture into a scientic vulgarization article?! Image taken from the rabit hole of the internet; More seriously, I can't tell you the source, so I invite you to check it by yourself with TinEye.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/matrix.png' | relative_url }})
+<center> If the backprop is the blue pill, I will red pill you today! Follow the white-paper </center>
+![If the backprop is the blue pill, I will red pill you today! Honestly, do I have to justify myself if I want to put a Morpheus picture into a scientic vulgarization article?! Image taken from the rabit hole of the internet; More seriously, I can't tell you the source, so I invite you to check it by yourself with TinEye.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/matrix.png' | relative_url }})
 
 
 ***
