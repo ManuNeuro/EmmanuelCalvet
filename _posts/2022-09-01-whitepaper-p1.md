@@ -12,7 +12,7 @@ As I was reading the book: "Mastering Bitcoin" [1], and learning about the ECDSA
 
 So, I wanted to see what I could do, and allow myself to daydream a bit. As I explored this new territory, I decided I will use what I know, to try to do something that I don't, in a subject I've been interested recently: bitcoin.
 
-*NB: in the rest of the article, `bitcoin` will refer to the algoritmic implementation of the `Bitcoin`: the coin used as a mean to exchange some value. 
+*NB: in the rest of the article, `bitcoin` will refer to the algoritmic implementation of the `Bitcoin`: the coin used as a mean of value exchange.*
 
 ***
 
@@ -26,22 +26,22 @@ This way you can always regenerate your public key. However, this function shoul
 
 $$F^{-1}(public\_key) \neq private\_key$$
 
-One solution adopted for bitcoin, is the use of the elliptic curve. It renders impossible the task of finding the inverse, because it is a non-injective, surjective function. Even if you know the curveand try to map it back, to one public key always correspond several private keys (see picture below).
+One solution adopted for bitcoin, is the use of the elliptic curve. It renders impossible the task of finding the inverse, because it is a non-injective, surjective function. Even if you know the curve and try to map it back, to one public key always correspond several private keys (see picture below).
 
 ![You can imagine that a desirable public key (set Y) is C. Because then you can't know for sure if the private key (set X) is either 2 or 3. Image taken from wikipedia.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/pic1.png' | relative_url }})
 
 Now, there's technically no grounded reason why you would replace the elliptic curve by something else, as it is a pretty solid solution to the problem. But as I was reading the book, I couldn't help myself, I needed to try to design the function $F$ with a neural networks, just for the beauty of it. 
 
-Okay what about you, you ask. Well their could be one or two reasons why this might be of interest for you too. Let's say that I am going to present you artifical neural networks, in a non-trivial way, if you dare going down the rabit whole.
+Okay what about you, you ask. Well their could be one or two reasons why this might be of interest for you too. Let's say that I am going to present you artifical neural networks, in a very non-orthodox way, if you dare going down the rabit whole.
 
 ***
 
-![Backpropagation is everywhere Neo, it is in predatory journals, and it is in Nature's papers. It is in all of your social media plateforms: it is here when you watch cat videos, it is here when you work, even when you find yourself alone at night. Do you want to know the truth? Backpropagation is the Matrix. Image taken from the rabit hole of the internet; More seriously, I can't tell you the source, so I invite you to check it by yourself with TinEye.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/matrix.png' | relative_url }})
+![Machine Learning is everywhere Neo, it is in predatory journals, and it is in Nature's papers. It is in all of your social media plateforms: it is here when you watch cat videos, it is here when you work, even when you find yourself alone at night. Do you want to know the truth Neo? Machine Learning is the Matrix. Image taken from the rabit hole of the internet; More seriously, I can't tell you the source, so I invite you to check it by yourself with TinEye.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/matrix.png' | relative_url }})
 
 
 ***
 
-# Follow the white-paper, ...
+# Neo: follow the white-paper, ...
 
 To design such a function, I had to keep two important properties in mind:
 - $F$ needs to be deterministic
@@ -58,14 +58,14 @@ At least in theory, one could imagine that with enough neurons and complexity in
 
 In general, the task of the Machine Learning (ML) expert, is in fact to *reduce* this hyperspace. He does that by finding the appropriate parameters $W$ of the model, such that the network outputs match closely the targets. Generally this involves minimizing the error produced by the network reconstruction, through a process called backpropagation. The adapating mechanism tries to find the most efficient way of storing the information in the hyperspace, by filtering out everything that is not related to the input statistical structure. Put simply, it tries to find correlations among the inputs. 
 
-Interstingly, it is the exact opposite thing we need to do. 
+Interstingly, it is the exact opposite thing we need to do here. 
 > We want to design a system that creates an output pattern that is maximally uncorelated from it's input. 
 
 Practically, we could frame the problem as if we wanted the network to "learn by heart" a silly list of gibberish and unintersting words. And who forgot how much difficult is this task?
 
 In order to spice things up though, I am going to restrain myself by not using any ML technics. So no backprop., no minimization of the cost function, nothing adaptative, at all. We are not taking the blue pill this time, sorry. 
 
-To solve this problem, we are going to get our hands dirty, with some obscure percolation theory, riding critical phase transitions, aka the red pill. 
+To solve this problem, we are going to get our hands dirty, with some obscure percolation theory, by riding critical phase transitions, aka the red pill. 
 
 ***
 
