@@ -28,7 +28,16 @@ The use of elliptic curves render impossible the task of finding the inverse. Th
 
 ![Image taken from wikipedia.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/pic1.png' | relative_url }})
 
-Now, there's technically no grounded reason why you would replace the elliptic curve by something else, as is a pretty solid solution to that problem. But anyways, as I was reading the book, I couldn't help myself, I needed to try to desig this function $F$ with a neural networks, just for the beauty of it.
+Now, there's technically no grounded reason why you would replace the elliptic curve by something else, as it is a pretty solid solution to the problem. But as I was reading the book, I couldn't help myself, I needed to try to design the function $F$ with a neural networks, just for the beauty of it. 
+
+Okay what about you, you ask. Well their could be one or two reasons why this might be of interest for you too. I am going to present artifical neural networks, in a non-trivial way, as we are going down the rabit whole.
+
+***
+
+
+Ready to follow me ?
+![Honestly, I should not have to justify myself to put a morpheus picture into a scientic vulgarization article! Image taken from the rabit hole of internet; More seriously, I can't tell you the source, so I invite you to check it yourself with TinEye.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/pic1.png' | relative_url }})
+
 
 ***
 
@@ -44,7 +53,7 @@ Now let's say the each input (x1, x2, x3) of the previous figure, is itself the 
 
 In theory, with enough neurons, you could potentially encode any received informations, no matter how complex it is. The hyperspace, meaning the encoding space resulting of the aggregation of all these neurons, is virtually infinite. 
 
-In general, the task of the Machine Learning (ML) expert, is in fact to *reduce* this hyperspace. He does that by finding the appropriate parameters $W$ of the model, such that the network encode perfectly the inputs. Generally this involves minimizing the error commited by the network, through a process called backpropagation of the error, but this topic will be for another article. 
+In general, the task of the Machine Learning (ML) expert, is in fact to *reduce* this hyperspace. He does that by finding the appropriate parameters $W$ of the model, such that the network encode perfectly the inputs. Generally this involves minimizing the error of the network, through a process called backpropagation, but this is topic for another time. 
 
 ***
 
