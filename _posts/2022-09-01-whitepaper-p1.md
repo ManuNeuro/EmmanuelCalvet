@@ -20,17 +20,17 @@ When you generate a public key, you need to design a deterministic function $F$,
 
 $$public\_key = F(private\_key)$$
 
-But this function should not be inversible, so $F^{-1}$ should not exist:
+This way you can always regenerate your public key. However, this function should not be inversible, meaning that $F^{-1}$ should not exist:
 
-$$F^{-1}(public\_key) = private\_key$$
+$$F^{-1}(public\_key) \neq private\_key$$
 
-The solution adopted for Bitcoin, is the use of the elliptic curve. It renders impossible the task of finding the inverse, because it is a non-injective, surjective function. Even if you know the curve, and try to map back, to one public key, correspond several private keys (see picture below).
+One solution adopted for Bitcoin, is the use of the elliptic curve. It renders impossible the task of finding the inverse, because it is a non-injective, surjective function. Even if you know the curveand try to map it back, to one public key always correspond several private keys (see picture below).
 
-![You can image that a desirable public key is in the set Y, is C. Because then you can't know for sure if the private key in the set X, is either 2 or 3. Image taken from wikipedia.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/pic1.png' | relative_url }})
+![You can imagine that a desirable public key (set Y) is C. Because then you can't know for sure if the private key (set X) is either 2 or 3. Image taken from wikipedia.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/pic1.png' | relative_url }})
 
 Now, there's technically no grounded reason why you would replace the elliptic curve by something else, as it is a pretty solid solution to the problem. But as I was reading the book, I couldn't help myself, I needed to try to design the function $F$ with a neural networks, just for the beauty of it. 
 
-Okay what about you, you ask. Well their could be one or two reasons why this might be of interest for you too. I am going to present artifical neural networks, in a non-trivial way, if you dare going down the rabit whole.
+Okay what about you, you ask. Well their could be one or two reasons why this might be of interest for you too. Let's say I am going to present you artifical neural networks, in a non-trivial way, if you dare going down the rabit whole.
 
 ***
 
