@@ -35,7 +35,7 @@ Okay what about you, you ask. Well their could be one or two reasons why this mi
 ***
 
 
-<center> Ready to follow me ? </center>
+<center> Ready ? Follow the white-paper </center>
 ![Honestly, do I have to justify myself if I want to put a Morpheus picture into a scientic vulgarization article?! Image taken from the rabit hole of the internet; More seriously, I can't tell you the source, so I invite you to check it by yourself with TinEye.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/matrix.png' | relative_url }})
 
 
@@ -45,7 +45,7 @@ To design such a function, I had to keep two important properties in mind:
 - $F$ needs to be deterministic
 - $F$ needs to be highly non-linear
 
-For me, neural networks are all about non-linearities. Each neuron consist in applying a non-linear function to its inputs. From the picture below, we see that a neuron consist in a mathematical functon, $f(x, W)$, displayed as a step function. The neuron receives a sum of inputs, vector $x$, weighted by the matrix $W$. First thing, one carn clearly see that the function of this neuron is purely deterministic. This is good, because it is exactly what you want for the design of $F$. Second, the state of the neuron $y$ is binary, because below a certain value of $x$, it's going to gives $0$, while above this value, it's going to give $1$. This function insures that you have a binary output, while providing you non-inversible function. Because for the two possible output value $y\in\{0, 1\}$, there is litteraly an infinite amount of values for $x$! 
+For me, neural networks are all about non-linearities. Each neuron consist in applying a non-linear function to its inputs. From the picture below, we see that a neuron consist in a mathematical functon, $f(x, W)$, displayed as a step function. The neuron receives a sum of inputs, vector $x$, weighted by the matrix $W$. First thing, one carn clearly see that the function of this neuron is purely deterministic. This is good, because it is exactly what you want for the design of $F$. Second, the state of the neuron $y$ is binary, because below a certain value of $x$, it's going to gives $0$, while above this value, it's going to give $1$. This function insures that you have a binary output, while providing you non-inversible function. Because for the two possible output value $y\in\{ 0, 1 \}$, there is litteraly an infinite amount of possible values $x$! 
 
 ![The artificial neuron is a mathematical simplification of a biological neuron, composed of an activation function f (here we use the step function). The neuron receive a weighted (W) sum of inputs (x), such that it's output is y=f(x, W). Note that the action of the neuron is completely deterministic. Moreover, one neurone alone is also non-inversible. Image made by the author.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/pic2.png' | relative_url }})
 
@@ -58,13 +58,15 @@ In general, the task of the Machine Learning (ML) expert, is in fact to *reduce*
 
 Interstingly, it is the exact opposite thing we need to do. 
 > We want to design a system that creates an output pattern that is maximally uncorelated from it's input. 
-Practically, we could frame the problem as if we wanted the network to "learn by heart" a silly list of jibberish and unintersting words. And who forgot how much difficult is this task?
+
+Practically, we could frame the problem as if we wanted the network to "learn by heart" a silly list of gibberish and unintersting words. And who forgot how much difficult is this task?
 
 In order to spice things up though, I am going to restrain myself by not using any ML technics. So no backprop., no minimization of the cost function, nothing adaptative, at all. 
 
-No, to solve this problem, we are going to get our hands dirty, in some obscure percolation theory: aka critical phase transitions. 
+No, to solve this problem, we are going to get our hands dirty, with some obscure percolation theory: aka critical phase transitions. 
 
 ***
 
+<center> To be continued, ... </center>
 
 
