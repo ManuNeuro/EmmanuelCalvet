@@ -36,7 +36,7 @@ Okay what about you, you ask. Well their could be one or two reasons why this mi
 
 
 <center> Ready to follow me ? <\center>
-![Honestly, I should not have to justify myself to put a morpheus picture into a scientic vulgarization article! Image taken from the rabit hole of internet; More seriously, I can't tell you the source, so I invite you to check it by yourself with TinEye.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/pic1.png' | relative_url }})
+![Honestly, I should not have to justify myself to put a morpheus picture into a scientic vulgarization article! Image taken from the rabit hole of internet; More seriously, I can't tell you the source, so I invite you to check it by yourself with TinEye.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/matrix.png' | relative_url }})
 
 
 ***
