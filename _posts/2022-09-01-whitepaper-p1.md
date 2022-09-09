@@ -36,12 +36,12 @@ Okay what about you, you ask. Well their could be one or two reasons why this mi
 
 ***
 
-
-<center> If the backprop is the blue pill, I will red pill you today! Follow the white-paper </center>
-![If the backprop is the blue pill, I will red pill you today! Honestly, do I have to justify myself if I want to put a Morpheus picture into a scientic vulgarization article?! Image taken from the rabit hole of the internet; More seriously, I can't tell you the source, so I invite you to check it by yourself with TinEye.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/matrix.png' | relative_url }})
+![Backpropagation is everywhere Neo, it is in predatory journals, and it is in Nature's papers. It is in all of your social media plateforms: it is here when you watch cat videos, it is here when you work, even when you find yourself alone at night. Do you want to know the truth? Backpropagation is the Matrix. Image taken from the rabit hole of the internet; More seriously, I can't tell you the source, so I invite you to check it by yourself with TinEye.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/matrix.png' | relative_url }})
 
 
 ***
+
+# Follow the white-paper, ...
 
 To design such a function, I had to keep two important properties in mind:
 - $F$ needs to be deterministic
@@ -63,9 +63,9 @@ Interstingly, it is the exact opposite thing we need to do.
 
 Practically, we could frame the problem as if we wanted the network to "learn by heart" a silly list of gibberish and unintersting words. And who forgot how much difficult is this task?
 
-In order to spice things up though, I am going to restrain myself by not using any ML technics. So no backprop., no minimization of the cost function, nothing adaptative, at all. 
+In order to spice things up though, I am going to restrain myself by not using any ML technics. So no backprop., no minimization of the cost function, nothing adaptative, at all. We are not taking the blue pill this time, sorry. 
 
-No, to solve this problem, we are going to get our hands dirty, with some obscure percolation theory: aka critical phase transitions. 
+To solve this problem, we are going to get our hands dirty, with some obscure percolation theory, riding critical phase transitions, aka the red pill. 
 
 ***
 
