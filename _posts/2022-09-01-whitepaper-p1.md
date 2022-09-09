@@ -16,7 +16,7 @@ So, I wanted to see what I could do and let myself daydream. As I explored this 
 
 ***
 
-For those who don't know the ECDSA algorithm, I will simplify it as much as possible. In bitcoin, it is an algorithm that creates a *public key*, from a *private key*. No one should ever know your private key otherwise, your funds could be stolen! So when you are sharing your public key to receive some Bitcoins, this address should not provide any hint as to what is your private key. 
+For those who don't know the ECDSA algorithm, I will simplify it as much as possible. In bitcoin, it is an algorithm that creates a *public key*, from a *private key*. The private key is like the code to access to your vault. So no one should ever know your private key otherwise your funds could be stolen! So when you are sharing your public key to receive some Bitcoins, this address should not provide any hint as to what is your private key. 
 
 When you generate a public key, you need to design a deterministic function $F$, such that:
 
