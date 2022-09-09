@@ -30,13 +30,13 @@ The use of elliptic curves render impossible the task of finding the inverse. Th
 
 Now, there's technically no grounded reason why you would replace the elliptic curve by something else, as it is a pretty solid solution to the problem. But as I was reading the book, I couldn't help myself, I needed to try to design the function $F$ with a neural networks, just for the beauty of it. 
 
-Okay what about you, you ask. Well their could be one or two reasons why this might be of interest for you too. I am going to present artifical neural networks, in a non-trivial way, as we are going down the rabit whole.
+Okay what about you, you ask. Well their could be one or two reasons why this might be of interest for you too. If that's a good one, I am going to present artifical neural networks, in a non-trivial way, if you dare going down the rabit whole.
 
 ***
 
 
-Ready to follow me ?
-![Honestly, I should not have to justify myself to put a morpheus picture into a scientic vulgarization article! Image taken from the rabit hole of internet; More seriously, I can't tell you the source, so I invite you to check it yourself with TinEye.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/pic1.png' | relative_url }})
+<center> Ready to follow me ? <\center>
+![Honestly, I should not have to justify myself to put a morpheus picture into a scientic vulgarization article! Image taken from the rabit hole of internet; More seriously, I can't tell you the source, so I invite you to check it by yourself with TinEye.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/pic1.png' | relative_url }})
 
 
 ***
@@ -45,15 +45,19 @@ To design such a function, I had to keep two important properties in mind:
 - $F$ needs to be deterministic
 - $F$ needs to be highly non-linear
 
-For me, neural networks are all about non-linearities. Each neuron consist in applying a non-linear function to its inputs. From the picture below, one carn clearly see that the function of a neuron is purely deterministic, which is what you want for the design of $F$. A given input will always give you the same output. However, if you take only one neuron, you can crack it open, as it is completely reversible. To one input, always correspond one input. 
-
-Now let's say the each input (x1, x2, x3) of the previous figure, is itself the output a neuron. And eventually, put many layers of neurons in cascade, to obtain a deep neural network. Well these neurons now create an intricate and very complex successions of filters, which totally blurry your input space. Meaning, you can't deduce the input anymore.
+For me, neural networks are all about non-linearities. Each neuron consist in applying a non-linear function to its inputs. From the picture below, we see that a neuron consist in a mathematical functon, $f(x, W)$, displayed as a step function. The neuron receives a sum of inputs, vector $x$, weighted by the matrix $W$. First thing, one carn clearly see that the function of this neuron is purely deterministic. This is good, because it is exactly what you want for the design of $F$. Second, the state of the neuron $y$ is binary, because below a certain value of $x$, it's going to gives $0$, while above this value, it's going to give $1$. This property assures that you have a binary output, while providing you for a non-inversible function! Because as you can see, you can only two possible value of y, but you can map many values of x! 
 
 ![The artificial neuron is a mathematical simplification of a biological neuron, composed of an activation function f (here we use the step function). The neuron receive a weighted (W) sum of inputs (x), such that it's output is y=f(x, W). Note that the action of the neuron is completely deterministic. Moreover, one neurone alone is also inversible. Image from the author.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/pic2.png' | relative_url }})
 
-In theory, with enough neurons, you could potentially encode any received informations, no matter how complex it is. The hyperspace, meaning the encoding space resulting of the aggregation of all these neurons, is virtually infinite. 
 
-In general, the task of the Machine Learning (ML) expert, is in fact to *reduce* this hyperspace. He does that by finding the appropriate parameters $W$ of the model, such that the network encode perfectly the inputs. Generally this involves minimizing the error of the network, through a process called backpropagation, but this is topic for another time. 
+Now let's assume that each input (x1, x2, x3) of the neuron are in fact the output of three other neurons. Eventually, we can add many layers of neurons in cascade, and we obtain a deep neural network. These neurons now create an intricate and very complex successions of filters, which totally blurry the input space. Meaning, there is no chance to deduce the input.
+
+In theory, with enough neurons, the hyperspace: meaning the encoding space resulting of the aggregation of all these neurons; is virtually infinite. You could potentially create a mapping, from any received informations, to obtain a deterministic mapping of two number, while keeping their resemblance to zero. 
+
+In general, the task of the Machine Learning (ML) expert, is in fact to *reduce* this hyperspace. He does that by finding the appropriate parameters $W$ of the model, such that the network closely the inputs. Generally this involves minimizing the error produced by the network reconstruction, through a process called backpropagation. The algorithm tries to find the most efficient way of storing the information in the hyperspace, by filtering out everything that is not related to the input statistical structure. Put simply, it tries to find correlations. 
+
+Interstingly, it is the exact opposite of what we need here. 
+> We want to design a system that creates an output pattern that is maximally uncorelated from it's input. 
 
 ***
 
