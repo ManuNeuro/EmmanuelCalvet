@@ -71,4 +71,5 @@ To solve this problem, we will get our hands dirty, with some obscure percolatio
 
 <center> To be continued, ... </center>
 
+[1] <div class="csl-entry">Andreas M. Antonopoulos. (2017). Mastering BitCoin Programming the Open Blockchain. In <i>Journal of World Trade</i> (Vol. 50, Issue 4).</div>
 
