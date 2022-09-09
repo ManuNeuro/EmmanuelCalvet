@@ -6,36 +6,36 @@ comments: true
 image: /assets/article_images/2022-09-01-whitepaper-p1/whitepaper-cover.jpg
 ---
 
-As I was reading the book: "Mastering Bitcoin" [1], and seeing how the ECDSA algorithm is using the beautifull elliptic curves (see picture below), I couldn't stop thinking: "I can do that with neural networks!"
+As I was reading the book: "Mastering Bitcoin" [1], and learning about the ECDSA algorithm, I was very captivated by the the elliptic curves (see picture below). I couldn't stop thinking: "I can do that with neural networks!"
 
 ![Image taken from bitcoin wiki.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/pic0.png' | relative_url }})
 
-So, I wanted to see what I could do, and allow myself to daydream a bit. As I explored this new territory, I decided I will use what I know, to try and do something that I don't. A subject I've been interested in recently: bitcoin.
+So, I wanted to see what I could do, and allow myself to daydream a bit. As I explored this new territory, I decided I will use what I know, to try to do something that I don't, in a subject I've been interested recently: bitcoin.
 
 ***
 
-For those who don't know the ECDSA algorithm, I am going to simplify it as much as I can. In bitcoin, it is an algorithm that creates a public from a private key. Your private key should never be known by anyone, otherwise anyone could potentially access your funds, and steal from you. So when you are sharing your *public key* to receive some btcoins, this adress should not provide any hint, as to what is the private key. 
+For those who don't know the ECDSA algorithm, I am going to simplify it as much as I can. In bitcoin, it is an algorithm that creates a *public key*, from a *private key*. Your private key should never be known by anyone, otherwise you funds could be stolen! So when you are sharing your public key to receive some btcoins, this adress should not provide any hint, as to what is your private key. 
 
-In other world, when you generate a public key, you need to design a deterministic function $F$, such that:
+When you generate a public key, you need to design a deterministic function $F$, such that:
 
 $$public\_key = F(private\_key)$$
 
-But this function should not be inversible:
+But this function should not be inversible, so $F^{-1}$ should not exist:
 
-$$F^{-1}(public\_key) \neq private\_key$$
+$$F^{-1}(public\_key) = private\_key$$
 
-The use of elliptic curves render impossible the task of finding the inverse. This is because it is a non-injective, surjective function. Put simply, it means that to one public key, correspond several private keys (see picture below).
+The solution adopted for Bitcoin, is the use of the elliptic curve. It renders impossible the task of finding the inverse, because it is a non-injective, surjective function. Even if you know the curve, and try to map back, to one public key, correspond several private keys (see picture below).
 
 ![Image taken from wikipedia.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/pic1.png' | relative_url }})
 
 Now, there's technically no grounded reason why you would replace the elliptic curve by something else, as it is a pretty solid solution to the problem. But as I was reading the book, I couldn't help myself, I needed to try to design the function $F$ with a neural networks, just for the beauty of it. 
 
-Okay what about you, you ask. Well their could be one or two reasons why this might be of interest for you too. If that's a good one, I am going to present artifical neural networks, in a non-trivial way, if you dare going down the rabit whole.
+Okay what about you, you ask. Well their could be one or two reasons why this might be of interest for you too. I am going to present artifical neural networks, in a non-trivial way, if you dare going down the rabit whole.
 
 ***
 
 
-<center> Ready to follow me ? <\center>
+<center> Ready to follow me ? </center>
 ![Honestly, I should not have to justify myself to put a morpheus picture into a scientic vulgarization article! Image taken from the rabit hole of internet; More seriously, I can't tell you the source, so I invite you to check it by yourself with TinEye.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/matrix.png' | relative_url }})
 
 
