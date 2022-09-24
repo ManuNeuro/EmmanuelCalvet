@@ -6,33 +6,34 @@ comments: true
 image: /assets/article_images/2022-09-01-whitepaper-p1/whitepaper-cover.jpg
 ---
 
-As I was reading the book: "Mastering Bitcoin" [1] and learning about the ECDSA algorithm, I was very captivated by the elliptic curves (see picture below). I couldn't stop thinking: "I can do that with neural networks!"
+As I was reading the book: "Mastering Bitcoin" [1], and learning about the generation of public keys, I was captivated by the elliptic curves (see picture below). I couldn't stop thinking: "I can do that with neural networks!"
 
 ![Image taken from bitcoin wiki.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/pic0.png' | relative_url }})
 
 So, I wanted to see what I could do and let myself daydream. As I explored this new territory, I decided I would use what I know to try to do something that I don't, in a subject I've been interested recently: bitcoin.
 
-*NB: in the rest of the article, `bitcoin` will refer to the algorithmic implementation of the `Bitcoin`: the coin used as means of exchange.*
-
 ***
 
-For those who don't know the ECDSA algorithm, I will simplify it as much as possible. In bitcoin, it is an algorithm that creates a *public key*, from a *private key*. The private key is like the code to access to your vault. So no one should ever know your private key otherwise your funds could be stolen! So when you are sharing your public key to receive some Bitcoins, this address should not provide any hint as to what is your private key. 
+For those who don't know what I am talking about, I will simplify it as much as possible. In bitcoin, a *public key*, is used for transactions and is created from a randomly generated *private key*. No one should ever know the private key because it is the key that allows your funds to be accessed! So the issue here is, how will you verify your identity without compromising your private key? When you use your public key to receive some bitcoins, this must not provide any hint as to what the private key is. Still, it should be uniquely linked to your private key, so only you hold it! 
 
-When you generate a public key, you need to design a deterministic function $F$, such that:
+I would formalize the problem this way: when you generate a public, you need to design a deterministic function $F$, such that:
 
 $$public\_key = F(private\_key)$$
 
-Will gives you a unique public key, that you can always regenerate from your private key. However, this function should not be invertible, meaning that $F^{-1}$ should not exist:
+Ideally, the perfect function would be not-invertible, meaning that $F^{-1}$ does not exist:
 
-$$F^{-1}(public\_key) \neq private\_key$$
+$$F^{-1}(public\_key) \ne private\_key$$
 
-One solution adopted for bitcoin is the use of the elliptic curve. It renders the task of finding the inverse impossible because it is a non-injective, surjective function. Even if you know the curve, one public key will map back to several private keys (see picture below).
+A compromise adopted for Bitcoin, is the elliptic curve. It renders nearly impossible the task of finding the inverse. Now, I am not going to dive into too muc details, but if you are interested, I invite you to check this very detailed [tutorial](https://jeremykun.com/2014/02/24/elliptic-curves-as-python-objects/) by Jeremy Kin. 
+The idea is the following:  using a generator $G$, on the curve (shown above), which is the starting point. The public key is obtained after the multiplication of this point on the curve, $private\_key$ times:
 
-![You can imagine that a desirable public key (set Y) is C. Because then you can't know for sure if the private key (set X) is either 2 or 3. Image taken from wikipedia.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/pic1.png' | relative_url }})
+$$public\_key= private\_key*G$$
 
-There's technically no reason why you would replace the elliptic curve with something else, as it is a pretty solid solution to the problem. But as I was reading the book, I couldn't help myself; I must try to design the function $F$ with a neural network, just for the beauty of it. 
+Now multiplication on the elliptic curve is obtained by adding G to itself iteratively. Additions on elliptic curves are simple geometric operations but iterated many steps, they render a very complex input/output relationship. The point here is that even if you know the generator $G$ and the public key, if you try to map back to obtain the private key, the number of possibilities is so daunting that it's practically impossible to do. Finally, it's a one-way function, which means that one public key always corresponds to one private key. 
 
-Okay, what about you, you ask. Well, there could be one or two reasons why this might interest you too. Let's say I will present artificial neural networks in a very non-orthodox way, if you dare go down the rabbit hole.
+ Consequently, the elliptic curve is an excellent solution to the problem at hand, and many companies have used it without any issues. However, that's no reason to stop the exploration for better or original solutions!
+
+So as I was reading the book, I couldn't stop thinking of using a neural network for encoding $F$. This will be the perfect opportunity to present artificial neural networks in a very non-trivial way, if you dare go down the rabbit hole.
 
 ***
 
