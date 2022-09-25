@@ -6,7 +6,7 @@ comments: true
 image: /assets/article_images/2022-09-24-whitepaper-p2/whitepaper-cover.jpg
 ---
 
-In the previous [article](https://manuneuro.github.io/EmmanuelCalvet//quantum,/crypto/2022/09/01/whitepaper-p1.html), I introduced the concept of elliptic curve and how it can securely produce a *public key* form a *private key*. I also proposed to explore Artificial Neural Network (ANN) as a replacement of the elliptic curve. Now, this is not necessarily the most secure option, but this is more of an excuse to use ANN in a non-trivial way, so let's dive in!
+In the previous [article](https://manuneuro.github.io/EmmanuelCalvet//quantum,/crypto/2022/09/01/whitepaper-p1.html), I introduced the concept of elliptic curve and how it can securely produce a *public key* form a *private key*. I also proposed to explore Artificial Neural Network (ANN) as a replacement of the elliptic curve. We are going to to design an alternative secure public key generator, with the help of ANN, so let's dive in!
 
 I formalized the problem of generating a public key as finding a deterministic function $F$, such that:
 
@@ -16,9 +16,9 @@ With $F$ being not invertible, meaning that $F^{-1}$ does not exist:
 
 $$\LARGE F^{-1}(public\_key) \ne private\_key$$
 
-Unfortunately, invertibility in a neural network is not necessarily easy to obtain. This is because you can train a neural network to map $y=f(x)$, but you can also, in theory, train another neural net to get an approximation of the inverse $x=f'(x)$. However, remember that we gave ourselves the challenge of not using learning in the first part.
+Unfortunately, invertibility in a neural network is not necessarily easy to obtain. This is because, if you can train a neural network to map $y=f(x)$, in theory, you can also train another neural net to approximate the inverse $x=f'(y)$. However, we will deal with this issue in the next article. 
 
-This way, we will dive into a deeper understanding of the properties of ANN!
+Now, you probably remember that we gave ourselves the challenge of not using learning in the first part. This way, we will dive into a deeper understanding of the properties of the ANN!
 
 ***
 
