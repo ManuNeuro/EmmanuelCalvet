@@ -30,13 +30,13 @@ We are going to use a binary activation function, so let me reintroduce an image
 
 I want to design a function $F$ that takes a binary word as input, and outputs a binary number. Using binary neurons is thus an obvious choise. All neuron states are going to be either 1 or 0, depending on the sign of the weighted sum they receive in input:
 
-$$y=f(p)= \left\{ \begin{matrix}
+$$\LARGE y=f(p)= \left\{ \begin{matrix}
  1 \space\space if \space p\ge0\\
  0 \space\space if \space p<0\\
 \end{matrix} \right.
 $$
 
-, , which will be our public key. One thing that is very interesting with ANN, is that we can specify very easily both the size of inputs and output, such that it fits our needs, so for the rest of the article, we will choose $n=100$ bits word, both for the public and private keys. So here is the architecture of our neural network:
+Which will be our public key. One thing that is very interesting with ANN, is that we can specify very easily both the size of inputs and output, such that it fits our needs, so for the rest of the article, we will choose $n=100$ bits word, both for the public and private keys. So here is the architecture of our neural network:
 
 ```python
 # Network    
