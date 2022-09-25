@@ -38,7 +38,7 @@ $$
 
 , , which will be our public key. One thing that is very interesting with ANN, is that we can specify very easily both the size of inputs and output, such that it fits our needs, so for the rest of the article, we will choose $n=100$ bits word, both for the public and private keys. So here is the architecture of our neural network:
 
-```
+```python
 # Network    
 inputSize = 100
 outputSize = 100
