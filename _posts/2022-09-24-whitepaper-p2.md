@@ -67,13 +67,19 @@ The choice of this distribution is not totally arbitrary, as it is a unimodal di
 
 Now before we can decide what parameters are the best for the weight distribution, we are going to build our intuition on the behavior of this ANN. The idea here is to get an understanding of the impact of the distribution parameters on the propagation of the bits layer to layer. Now as I will show in this section, I also choose the binary ANN because it possess a direct analogy with a real physical problem: [percolation](https://introcs.cs.princeton.edu/java/24percolation/).
 
-In physics, percolation is the study of the propagation of a perturbation in a substrate. For example, you can imagine that someone wants to design a material, and evaluate water infiltration inside it. The typical percolation question could be: "How much damage before the water completely infiltrate my system?",or more generally:
+In physics, percolation is the study of the propagation of a perturbation in a substrate. For example, you can imagine that someone wants to design a material, and evaluate water infiltration inside it. The typical percolation question could be: "How much damage before the water completely infiltrate my system?", or more generally:
 
-> What is the point -in parameter space- where the perturbation cross through my system side to side?
+> What is the point -in parameter space- where the perturbation crosses through the system side to side?
 
-Now this analogy is going to be evident by looking at the picture below: I plot all states of each layer as either black (1) or white (0) pixels. The horizontal axis displays the state of neurons at each layer, while the horizontal axis displays the index of the given layer. As such, the index 0 corresponds to the input layer, which is randomly initialized; and the index 101 represent the output of the network; in between indexes represent hidden layers. 
+Now this analogy is going to be evident by looking at the picture below: I plot all states of each layer as either black (1) or white (0) pixels. The horizontal axis displays the state of neurons at each layer, while the horizontal axis is the corresponding index of the layer. As such, the index 0 corresponds to the input layer, which is randomly initialized; and the index 101 represent the output of the network; in between indexes represent hidden layers. 
 
 ![Percolation transition: (left) only the input layer is activated, but no activity in the subsequent layers, due to the negative weight distribution. (center) activity propagate in the hierarchy, but reach an and before it can reach the last output layer. (right) the activity propagates throught the whole network and reaches the output layer.]({{ '/assets/article_images/2022-09-24-whitepaper-p2/percolation.png' | relative_url }})
 
  
-As one can see in the previous picture, the distribution for $\sigma=0.1$ only gave negative weights, thus this is not surprising at all that all layers are zeros. 
+As one can see in the previous picture, the distribution for $\sigma=0.1$ only gave negative weights, thus this is not surprising at all that all layers are zeros, indeed the only way for a neuron to be active, is to receive sum of imputs greater than zero. As we increase the weight variance $\sigma=1.5$, we start to get some positive weight in the distribution, as such, we come to a point where the bits can start propagating in the hierarchy of hidden layers. However, the bit propagation suddenly stop mid way, and the output still remains null. Now as we increase the variance again $\sigma=5$, the distribution have far more positive weights, and we can clearly see that far more neurons are active, and this activity propagate through the whole network up to the output. In that case, we reached what we call: the *percolation threshold*. 
+
+In theory, the percolation threshold is defined as being the point in parameter space, where the the perturbation can propagate at infinity. Here we have $100$ layers, If we wanted to now more precisely the position of this point, we could increase number of hidden layer. For our purpose, $100$ is long enough, so we will just assume that the percolation threshold is reached, when the output is non-zero.
+
+Now I want to stress out that we are randomly generating our weight matrix, and that when we are close to the percolation threshold, different seeds gives very different results! You can observe this fact in the picture below, with the same parameter $\mu=-0.5$ and $\sigma=1.5$ for four different seeds. 
+
+![The effect of the seed: The same experiment, with the same weight distribution parameter gives both percolated and non-percolated outcomes.]({{ '/assets/article_images/2022-09-24-whitepaper-p2/seed.png' | relative_url }})
