@@ -82,4 +82,21 @@ In theory, the percolation threshold is defined as being the point in parameter 
 
 Now I want to stress out that we are randomly generating our weight matrix, and that when we are close to the percolation threshold, different seeds gives very different results! You can observe this fact in the picture below, with the same parameter $\mu=-0.5$ and $\sigma=1.5$ for four different seeds. 
 
-![The effect of the seed: The same experiment, with the same weight distribution parameter gives both percolated and non-percolated outcomes.]({{ '/assets/article_images/2022-09-24-whitepaper-p2/seed.png' | relative_url }})
+![The effect of the seed: The same experiment with the same weight distribution parameter gives both percolated and non-percolated outcomes, when using different seeds.]({{ '/assets/article_images/2022-09-24-whitepaper-p2/seed.png' | relative_url }})
+
+The reason this happens is due to whart is called: the *sensitivity to initial condition*, and that is exactly what we are going to harness in the next part to design the $F$ function in replacement of the elliptic curve. For now, we are going to draw the phase diagram, that explicit the percolation transition, and gives us the best region for choosing our parameter $\sigma$. 
+
+To illustrate this phenomenon, we can simply take the average of the output $<Y>$, obtained for different values of $\sigma$! If all output neurons are zero $<Y>=1/n\sum_i y_i$=0, it means that the system has not percolated. On the other hand, if even one neuron is non zero $<Y> \ne 0$, it means that we reached the percolation threshold. Since, for some parameter regions, we saw there is some variability in the outcomes, we will average over $10$ realizations of the same weight distribution; as a result the curve should be a bit smoother.
+
+To generate the picture below, we took $1000$ points for $\sigma \in \[0.1, 10\]$. As excpected, there is a region of the parameter where the outpout is always zero. The percolation threshold is exactly when the activity starts to be non-zero, so in our case with $\mu=-0.5$, it is around $\sigma~1.4$. Above the percolation threshold, we have more and more activity in the network, and consequently, the output has more and more non-zero values, hence the average output increases. 
+
+![Percolation transition]({{ '/assets/article_images/2022-09-24-whitepaper-p2/output.png' | relative_url }})
+
+
+***
+
+Okay time to wrap it up: ANN with a step function activation are equivalent to a percolation model. In our case, we have seen that by fixing the mean weight, we could play with the standard deviation of the distribution, and that would be enough for controlling the propagation of bits through the network. We have shown that the parameter $\sigma$ was controlling a phase transition, from totally quiescent, to highly activated. However, sampling from the same distribution is quite noisy, and networks do not behave the same way depending on the seed we choose, something we mentioned as related to the sensitiviy to initial condition. In the next article we are going to explore this in much more detail, as this is exactly what we need to accomplish our objective! 
+
+<center> Stay tuned! </center>
+
+
