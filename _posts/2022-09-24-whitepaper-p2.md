@@ -6,7 +6,7 @@ comments: true
 image: /assets/article_images/2022-09-01-whitepaper-p1/whitepaper-cover.jpg
 ---
 
-In the previous [article]() we introduced the concept of ellipitic curve, and how it allow for producing a *public ke*y form a *private key*. And I proposed to explore Artificial Neural Network (ANN) as a replacement. Now this is not necessary the most secure option, but this is more an excuse to be using ANN in a very non-mainstream way, so let's dive in!
+In the previous [article](https://manuneuro.github.io/EmmanuelCalvet//quantum,/crypto/2022/09/01/whitepaper-p1.html) we introduced the concept of ellipitic curve, and how it allow for producing a *public ke*y form a *private key*. And I proposed to explore Artificial Neural Network (ANN) as a replacement. Now this is not necessary the most secure option, but this is more an excuse to be using ANN in a very non-mainstream way, so let's dive in!
 
 I formalized the problem of generating a public key as finding a deterministic function $F$, such that:
 

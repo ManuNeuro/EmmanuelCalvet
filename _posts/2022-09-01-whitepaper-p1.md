@@ -70,7 +70,7 @@ To solve this problem, we will get our hands dirty, with some obscure percolatio
 
 ***
 
-<center> To be continued, ... </center>
+In the next [part 2](https://manuneuro.github.io/EmmanuelCalvet//2022/09/24/whitepaper-p2.html) we are going to explore how to design an artificial neural network to create the function $F$. 
 
 # References
 [1] Andreas M. Antonopoulos. (2017). Mastering BitCoin Programming the Open Blockchain. In <i>Journal of World Trade</i> (Vol. 50, Issue 4).
