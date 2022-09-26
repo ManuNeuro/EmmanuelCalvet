@@ -115,8 +115,9 @@ NB: I must insist that the step function, and for instance, any positive output 
 ## Conclusion
 Okay, time to wrap it up: we saw that the ANN with a step function activation is analogous to a percolation model. We have seen that by fixing the mean weight, we could play with the standard deviation of the distribution, which would be enough to control the propagation of bits through the network. We have shown that the parameter $\sigma$ controlled a phase transition from totally quiescent to highly activated. This is an interesting feature because the model here possesses $100\times100\times100=1,000,000$ parameters, which we finally reduced to one control parameter! However, sampling from the same distribution is quite noisy, and networks do not behave the same way depending on the seed we choose, which is related to the sensitivity to the initial conditions. In the following article, we will explore this in much more detail, as this is related to chaos theory, which is exactly what we need to accomplish our objective! 
 
-<center>
+<center><markdown>
 ![]({{ '/assets/article_images/2022-09-24-whitepaper-p2/redpill.png' | relative_url }})
+</markdown>
 </center>
 <center> Beware chaos; we go down the rabbit hole! </center>
 
