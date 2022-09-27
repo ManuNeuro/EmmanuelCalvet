@@ -15,7 +15,7 @@ As I was reading the book: "Mastering Bitcoin" [1], and learning about the gener
 
 For those who don't know what I am talking about, I will simplify it as much as possible. In bitcoin, a *public key*, is used for transactions and is created from a randomly generated *private key*. No one should ever know the private key because it is the key that allows your funds to be accessed! So the issue here is, how will you verify your identity without compromising your private key? When you use your public key to receive some bitcoins, this must not provide any hint as to what the private key is. Still, it should be uniquely linked to your private key, so only you hold it! 
 
-I would formalize the problem this way: when you generate a public, you need to design a deterministic function $F$, such that:
+I would formalize the problem this way: when you generate a public key, you need to design a deterministic function $F$, such that:
 
 $$\LARGE public\_key = F(private\_key)$$
 
