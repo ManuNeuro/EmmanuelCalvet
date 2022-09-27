@@ -24,7 +24,7 @@ Ideally, the perfect function would be not-invertible, meaning that $F^{-1}$ doe
 $$\LARGE F^{-1}(public\_key) \ne private\_key$$
 
 A compromise adopted for Bitcoin, is the elliptic curve. It renders nearly impossible the task of finding the inverse. Now, I am not going to dive into too muc details, but if you are interested, I invite you to check this very detailed [tutorial](https://jeremykun.com/2014/02/24/elliptic-curves-as-python-objects/) by Jeremy Kin. 
-The idea is the following:  using a generator $G$, on the curve (shown above), which is the starting point. The public key is obtained after the multiplication of this point on the curve, $private\_key$ times:
+The idea is the following:  using a generator $G$, on the curve (shown above), the public key is obtained after the multiplication of this point on the curve, $private\_key$ times:
 
 $$\LARGE public\_key= private\_key*G$$
 
