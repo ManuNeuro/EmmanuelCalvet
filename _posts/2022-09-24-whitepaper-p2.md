@@ -51,11 +51,11 @@ net = NeuralNetwork(inputSize, hiddenSize, outputSize, nbHiddenLayer)
 
 > For the whole article, the architecture will be constant, and we will play around with the weights of the ANN.
 
-In the following, we assume that the network's input is the vector $X \in (0, 1)^n$ with $n$ the number of bits. The output vector $Y$ of the neural network is given by:
+In the following, we assume that the network's input and output are the vectors $X, Y \in (0, 1)^n$ with $n$ the number of bits. The output vector $Y$ of the neural network is given by:
 
 $$\LARGE Y=F_{net}(X, W)$$
 
-Where $F_{net}(.)$ is the neural network function, receiving input $X$ and parametrized by parameter $W$. 
+Where $F_{net}(.)$ is the neural network function, receiving input $X$ and parametrized by parameter $W$. Note that the network itself is composed of hidden layers, each layer possessing a vector state, this will be important for the next part!
 
 *NB: I uploaded the code for the demonstration on [GitHub](https://github.com/ManuNeuro/whitepaper.git). So I highly encourage you to check and try it by yourself.*
 
