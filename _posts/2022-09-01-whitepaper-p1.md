@@ -62,9 +62,9 @@ Interestingly, it is the exact opposite thing we need to do here.
 
 Practically, we could frame the problem as if we wanted the network to "learn by heart" a silly list of gibberish and uninteresting words. And who forgot how difficult is this task? I do have my lot of bad memory...
 
-To spice things up, though, I will restrain myself by not using any ML techniques. So no backprop., no cost function minimization, and nothing adaptative at all. We are not taking the blue pill this time, sorry. 
+However, to spice things up, I will restrain myself by not using any ML techniques! So no backprop., no cost function minimization, and nothing adaptative at all. We are not taking the blue pill this time, sorry.
 
-To solve this problem, we will get our hands dirty, with some obscure percolation theory, by riding critical phase transitions to end into pure chaos, aka the red pill. 
+To solve this problem, we will get our hands dirty, with some obscure percolation theory, by riding critical phase transitions we will end into pure chaos, aka the red pill. 
 
 ***
 
