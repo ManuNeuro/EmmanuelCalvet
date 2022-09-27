@@ -10,7 +10,6 @@ As I was reading the book: "Mastering Bitcoin" [1], and learning about the gener
 
 ![Image taken from bitcoin wiki.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/pic0.png' | relative_url }})
 
-So, I wanted to see what I could do and let myself daydream. As I explored this new territory, I decided I would use what I know to try to do something that I don't, in a subject I've been interested recently: bitcoin.
 
 ***
 
