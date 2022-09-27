@@ -28,7 +28,7 @@ The idea is the following:  using a generator $G$, on the curve (shown above), t
 
 $$\LARGE public\_key= private\_key*G$$
 
-Now multiplication on the elliptic curve is obtained by adding G to itself iteratively. Additions on elliptic curves are simple geometric operations but iterated many steps, they render a very complex input/output relationship. The point here is that even if you know the generator $G$ and the public key, if you try to map back to obtain the private key, the number of possibilities is so daunting that it's practically impossible to do. Finally, it's a one-way function, which means that one public key always corresponds to one private key. 
+Now multiplication on the elliptic curve is obtained by adding G to itself iteratively. Additions on elliptic curves are simple geometric operations, but iterated many steps, they render a very complex input/output relationship. The point here is that even if you know the generator $G$ and the public key, if you try to map back to obtain the private key, the number of possibilities is so daunting that it's practically impossible to do. Finally, it's a one-way function, which means that one public key always corresponds to one private key. 
 
  Consequently, the elliptic curve is an excellent solution to the problem at hand, and many companies have used it without any issues. However, that's no reason to stop the exploration for better or original solutions!
 
