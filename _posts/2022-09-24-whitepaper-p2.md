@@ -1,5 +1,5 @@
 ---
-title: "White-paper: artificial neural networks and percolation (Part 2)"
+title: "White-paper: Artificial Neural Networks and Percolation (Part 2)"
 layout: post
 categories: Quantum, Crypto
 comments: true

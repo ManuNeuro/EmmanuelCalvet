@@ -1,5 +1,5 @@
 ---
-title: "White-paper: an exploration of artificial neural network in crypto (Part 1)"
+title: "White-paper: an Exploration of Artificial Neural Network in Crypto (Part 1)"
 layout: post
 categories: Quantum, Crypto
 comments: true
@@ -32,7 +32,7 @@ Now multiplication on the elliptic curve is obtained by adding G to itself itera
 
  Consequently, the elliptic curve is an excellent solution to the problem at hand, and many companies have used it without any issues. However, that's no reason to stop the exploration for better or original solutions!
 
-So as I was reading the book, I couldn't stop thinking of using a neural network for encoding $F$. This will be the perfect opportunity to present artificial neural networks in a very non-trivial way, if you dare go down the rabbit hole.
+So as I was reading the book, I couldn't stop thinking of using a neural network for encoding $F$. This will be the perfect opportunity to present artificial neural networks in a very non-trivial way, if you dare going down the rabbit hole.
 
 ***
 
