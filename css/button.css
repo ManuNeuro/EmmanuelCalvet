@@ -2,6 +2,7 @@
 .button-container {
   display: flex;
   gap: 50px; /* Adjust the gap value as per your preference */
+  justify-content: center;
 }
 
 
