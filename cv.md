@@ -2,7 +2,7 @@
 layout: page
 title: CV
 permalink: /CV/
-image: /assets/article_images/about/author_full.jpg
+image: /assets/article_images/cv/resume.jpg
 ---
 
 <head>
@@ -58,6 +58,8 @@ image: /assets/article_images/about/author_full.jpg
 }
 </style>
 </head>
+
+Below you can access to my resume in both french and english:
 
 <form class="button-71" action="https://manuneuro.github.io/EmmanuelCalvet/assets/cv/CV_Emmanuel_Calvet__EN.pdf" method="get" target="_blank"><button type="submit">CV (EN)</button></form>
 <form class="button-71" action="https://manuneuro.github.io/EmmanuelCalvet/assets/cv/CV_Emmanuel_Calvet__FR_.pdf" method="get" target="_blank"><button type="submit">CV (FR)</button></form>
