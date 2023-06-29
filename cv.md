@@ -3,10 +3,7 @@ layout: page
 title: My resume
 permalink: /CV/
 image: /assets/article_images/cv/resume.jpg
-output: 
-  html_document:
-     css: /css/print.css
-     self_contained: no
+
 ---
 
 Below you can access my resume in both *english* and *french*:
