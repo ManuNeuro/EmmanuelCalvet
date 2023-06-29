@@ -7,14 +7,9 @@ image: /assets/article_images/cv/resume.jpg
 ---
 
 $~$
-$~$
-$~$
-$~$
 
 Below you can access my resume in both *english* and *french*:
 
-$~$
-$~$
 $~$
 
 <div class="button-container">
