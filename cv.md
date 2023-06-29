@@ -1,6 +1,6 @@
 ---
 layout: page
-title: CV
+title: My resume
 permalink: /CV/
 image: /assets/article_images/cv/resume.jpg
 ---
