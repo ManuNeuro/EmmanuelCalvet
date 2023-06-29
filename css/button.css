@@ -1,7 +1,7 @@
 /* CSS */
 .button-container {
   display: flex;
-  gap: 10px; /* Adjust the gap value as per your preference */
+  gap: 50px; /* Adjust the gap value as per your preference */
 }
 
 
