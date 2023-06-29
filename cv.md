@@ -11,6 +11,7 @@ output:
 
 Below you can access my resume in both *english* and *french*:
 
-[CV (EN)](https://manuneuro.github.io/EmmanuelCalvet/assets/cv/CV_Emmanuel_Calvet__EN.pdf){: .button-71}
+<a href="https://https://manuneuro.github.io/EmmanuelCalvet/assets/cv/CV_Emmanuel_Calvet__EN.pdf" class="custombutton">CV (EN)</a>
 
-[CV (FR)](https://manuneuro.github.io/EmmanuelCalvet/assets/cv/CV_Emmanuel_Calvet__FR_.pdf){: .button-71}
+<a href="https://https://manuneuro.github.io/EmmanuelCalvet/assets/cv/CV_Emmanuel_Calvet__FR.pdf" class="custombutton">CV (FR)</a>
+

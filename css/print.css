@@ -24,7 +24,7 @@ page-break-after:never
 
 
 /* CSS */
-.button-71 {
+.custombutton {
   background-color: #0078d0;
   border: 0;
   border-radius: 56px;
@@ -45,7 +45,7 @@ page-break-after:never
   touch-action: manipulation;
 }
 
-.button-71:before {
+.custombutton:before {
   background-color: initial;
   background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
   border-radius: 125px;
@@ -59,13 +59,13 @@ page-break-after:never
   width: 92%;
 }
 
-.button-71:hover {
+.custombutton:hover {
   box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
   transform: scale(1.05);
 }
 
 @media (min-width: 768px) {
-  .button-71 {
+  .custombutton {
     padding: 16px 48px;
   }
 }
