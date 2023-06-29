@@ -1,13 +1,15 @@
 /* CSS */
-.button-container {
+.button-container
+.button-container a {
   display: flex;
-  gap: 50px; /* Adjust the gap value as per your preference */
+  /* gap: 50px; /* Adjust the gap value as per your preference */
   justify-content: center;
+  align-items: center;
 }
 
 
-.custombutton,
-.custombutton a {
+.custombutton_blue,
+.custombutton_blue a {
   background-color: #0078d0 !important;
   border: 0;
   border-radius: 56px;
@@ -28,7 +30,7 @@
   touch-action: manipulation;
 }
 
-.custombutton:before {
+.custombutton_blue:before {
   background-color: initial;
   background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
   border-radius: 125px;
@@ -42,13 +44,60 @@
   width: 92%;
 }
 
-.custombutton:hover {
+.custombutton_blue:hover {
   box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
   transform: scale(1.05);
 }
 
 @media (min-width: 768px) {
-  .custombutton {
+  .custombutton_blue {
+    padding: 16px 48px;
+  }
+}
+
+.custombutton_red,
+.custombutton_red a {
+  background-color: #0078d0 !important;
+  border: 0;
+  border-radius: 56px;
+  color: #fff !important;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  outline: 0;
+  padding: 16px 21px;
+  position: relative;
+  text-align: center !important;
+  text-decoration: none !important;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.custombutton_red:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+.custombutton_red:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .custombutton_red {
     padding: 16px 48px;
   }
 }
