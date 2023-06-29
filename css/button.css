@@ -57,7 +57,7 @@
 
 .custombutton_red,
 .custombutton_red a {
-  background-color: #0078d0 !important;
+  background-color: #C0392B !important;
   border: 0;
   border-radius: 56px;
   color: #fff !important;
@@ -79,7 +79,7 @@
 
 .custombutton_red:before {
   background-color: initial;
-  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(#C0392B 0, rgba(192, 57, 43, 0) 100%);
   border-radius: 125px;
   content: "";
   height: 50%;
@@ -92,7 +92,7 @@
 }
 
 .custombutton_red:hover {
-  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  box-shadow: rgba(192, 57, 43, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
   transform: scale(1.05);
 }
 
