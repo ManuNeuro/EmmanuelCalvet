@@ -6,7 +6,7 @@ comments: true
 image: /assets/article_images/2023-05-15-article-submission/cover.png
 ---
 
-Here it is, my [first paper](https://github.com/ManuNeuro/EmmanuelCalvet/tree/42550f62095bfd7e7108882cf4cfd951d65cc5bb/assets/publications/2023_article_emmanuel_calvet_submited.pdf) submission in [Frontiers in Computational Neurosciences](https://www.frontiersin.org/journals/computational-neuroscience), in collaboration with Jean Rouat and Bertrand Reulet. It was a very long path, but I'm proud of the result.
+Here it is, my [first paper](https://ManuNeuro.github.io/EmmanuelCalvet/assets/publications/2023_article_emmanuel_calvet_submited.pdf) submission in [Frontiers in Computational Neurosciences](https://www.frontiersin.org/journals/computational-neuroscience), in collaboration with Jean Rouat and Bertrand Reulet. It was a very long path, but I'm proud of the result.
 
 Here is a brief summary of my contribtion to the great scientific enterprise:
 
