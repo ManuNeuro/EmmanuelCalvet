@@ -1,5 +1,10 @@
-
 /* CSS */
+.button-container {
+  display: flex;
+  gap: 10px; /* Adjust the gap value as per your preference */
+}
+
+
 .custombutton {
   background-color: #0078d0;
   border: 0;
