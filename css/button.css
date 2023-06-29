@@ -5,7 +5,8 @@
 }
 
 
-.custombutton {
+.custombutton,
+.custombutton a {
   background-color: #0078d0 !important;
   border: 0;
   border-radius: 56px;
