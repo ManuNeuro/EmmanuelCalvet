@@ -1,5 +1,5 @@
 ---
-title: "Submitting my first article in Frontiers"
+title: "Submitting my First Article in Frontiers"
 layout: post
 categories: Reservoir Computing
 comments: true
