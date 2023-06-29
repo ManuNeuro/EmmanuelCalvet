@@ -1,14 +1,13 @@
 /* CSS */
 .button-container {
   display: flex;
-  /* gap: 50px; /* Adjust the gap value as per your preference */
+  gap: 50px; /* Adjust the gap value as per your preference */
   justify-content: center;
-  align-items: center;
 }
 
 
-.custombutton-blue,
-.custombuttom-blue a {
+.custombutton,
+.custombuttom a {
   background-color: #0078d0 !important;
   border: 0;
   border-radius: 56px;
@@ -29,7 +28,7 @@
   touch-action: manipulation;
 }
 
-.custombutton-blue:before {
+.custombutton:before {
   background-color: initial;
   background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
   border-radius: 125px;
@@ -43,13 +42,13 @@
   width: 92%;
 }
 
-.custombutton-blue:hover {
+.custombutton:hover {
   box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
   transform: scale(1.05);
 }
 
 @media (min-width: 768px) {
-  .custombutton-blue {
+  .custombutton {
     padding: 16px 48px;
   }
 }
