@@ -16,7 +16,7 @@ name: 'Emmanuel Calvet'
 author: 'Emmanuel Calvet'
 author_image: "/assets/images/author.jpg"
 
-paginate:	5
+paginate:	10
 paginate_path: "/blog/page:num/"
 
 
@@ -54,7 +54,7 @@ kramdown:
 plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
-  - jekyll-paginate # Allow the pagination and multiple pages when more that 5 articles 
+  - jekyll-paginate # Allow the pagination and multiple pages when more that 10 articles 
   
 disqus:
  shortname: https-manuneuro-github-io-emmanuelcalvet # Here's where you put your unique shortname
