@@ -1,14 +1,14 @@
 ---
-title: "Submitting my First Article in Frontiers"
+title: "Publication of my First Article in Frontiers"
 layout: post
 categories: Reservoir Computing
 comments: true
 image: /assets/article_images/2023-05-15-article-submission/cover.png
 ---
 
-Here it is, my [first paper](https://ManuNeuro.github.io/EmmanuelCalvet/assets/publications/2023_article_emmanuel_calvet_submited.pdf) submission in [Frontiers in Computational Neurosciences](https://www.frontiersin.org/journals/computational-neuroscience), in collaboration with Jean Rouat and Bertrand Reulet. It was a very long path, but I'm proud of the result.
+Here it is, my [first paper](https://www.frontiersin.org/articles/10.3389/fncom.2023.1223258/full) publication in *Frontiers in Computational Neurosciences*, in collaboration with Jean Rouat and Bertrand Reulet. It was a long path, but I'm proud of the result.
 
-Here is a brief summary of my contribtion to the great scientific enterprise:
+Here is a brief summary of my contribution to the great scientific enterprise:
 
 Nowadays, the most powerful machine learning models require tens of thousands of GPUs and significant energy consumption to train billions of parameters. As reservoir computers become a time and cost-efficient alternative to traditional learning methods, a systematic approach to network design becomes crucial. 
 
@@ -18,6 +18,6 @@ We identify distinct dynamical attractors and quantify their statistics, reveali
 
 Interestingly, we observe that the intrinsic attractor dynamics have minimal influence on performance but act as a hallmark of criticality. This allows us to give specific recommendations for reducing the computational burden of the random generation process of reservoirs.
 
-Now the process of reviewing has started and hopefully it will get published soon, ...
+In the coming weeks, I am going to submit a paper closely related to this one, 
 
 So stay tuned!
