@@ -8,13 +8,9 @@ image: /assets/article_images/2023-05-15-article-submission/cover.png
 
 Here it is, my [second publication](https://www.frontiersin.org/articles/10.3389/fncom.2024.1348138/full) publication, yet again, in *Frontiers in Computational Neurosciences*, in collaboration with Jean Rouat and Bertrand Reulet. This one is the prolongation of the work initiated in my [first paper](./2023-05-15-article-submission.md).
 
-
-
 Here is the scope of this manuscript:
 
 Reservoir Computing (RC) is a compelling field in artificial intelligence, where only the output of the reservoir is trained, significantly reducing learning time and costs. Constructing cost-efficient neuromorphic chips or physical reservoirs using the Random Boolean Network (RBN) model could mark a significant stride towards more sustainable AI systems. This development is particularly pertinent considering the high costs associated with Large Language Models. While RBN may not directly replace LLMs, it certainly offers a promising direction for achieving lower energy consumption in AI devices. However, the lack of a unifying design theory necessitates empirical design recommendations to deduce reservoir design recipes. Our study contributes to understanding the relationship between these reservoirs' connectivity and topology parameters, by conducting extensive simulations, we provide clear guidelines for optimizing these systems for optimal computation, including memory and prediction of time series.
-
-
 
 And here's the technical abstract:
 
