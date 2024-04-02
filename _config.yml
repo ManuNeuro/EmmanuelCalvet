@@ -4,7 +4,7 @@ highlighter: pygments
 # Site settings
 title: "Emmanuel Calvet"
 description: > # this means to ignore newlines until "email:"
-   Phd student in the fields of classical and quantum artificial intelligence.
+   Engineer, researcher, and entrepreneur, in the fields of artificial intelligence, blockchain, and quantum technology.
 
 email: emmanuel.calvet@usherbrooke.ca
 #blog logo
@@ -16,7 +16,7 @@ name: 'Emmanuel Calvet'
 author: 'Emmanuel Calvet'
 author_image: "/assets/images/author.jpg"
 
-paginate:	10
+paginate:	20
 paginate_path: "/blog/page:num/"
 
 
