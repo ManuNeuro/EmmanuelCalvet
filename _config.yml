@@ -4,7 +4,7 @@ highlighter: pygments
 # Site settings
 title: "Emmanuel Calvet"
 description: > # this means to ignore newlines until "email:"
-   Engineer, researcher, and entrepreneur, in the fields of artificial intelligence, blockchain, and quantum technology.
+   Engineer, researcher, and entrepreneur in artificial intelligence, blockchain, and quantum technology.
 
 email: emmanuel.calvet@usherbrooke.ca
 #blog logo
