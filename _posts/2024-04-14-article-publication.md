@@ -1,5 +1,5 @@
 ---
-title: "Publication of my First Article in Frontiers"
+title: "Publication of my Second Article in Frontiers"
 layout: post
 categories: Reservoir Computing
 comments: true
