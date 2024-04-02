@@ -6,7 +6,7 @@ comments: true
 image: /assets/article_images/2024-03-14-article-publication/cover.png
 ---
 
-Here it is, my [second publication](https://www.frontiersin.org/articles/10.3389/fncom.2024.1348138/full) publication, yet again, in *Frontiers in Computational Neurosciences*, in collaboration with Jean Rouat and Bertrand Reulet. This one is the prolongation of the work initiated in my [first paper](./2023-05-15-article-submission.md).
+Here it is, my [second publication](https://www.frontiersin.org/articles/10.3389/fncom.2024.1348138/full), yet again, in *Frontiers in Computational Neurosciences*, in collaboration with Jean Rouat and Bertrand Reulet. This one is the prolongation of the work initiated in my [first paper](./2023-05-15-article-submission.md).
 
 Here is the scope of this manuscript:
 
