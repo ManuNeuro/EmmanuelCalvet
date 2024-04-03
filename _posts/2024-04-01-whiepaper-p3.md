@@ -34,7 +34,7 @@ The image above was produced by manipulating the variance of a randomly generate
 
 ## Refreshing Our Goal
 
-To refresh our memories kindly, our goal was to design a function $F$ that could establish a deterministic input/output relationship for creating a $public \_ key$ from a given $private \_ key$:
+To refresh our memories kindly, our goal was to design a function $F$ that could establish a deterministic input/output relationship for creating a *public_key* from a given *private_key*:
 
 $$public\_key = F(private\_key)$$
 
