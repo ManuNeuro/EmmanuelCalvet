@@ -156,7 +156,7 @@ Fortunately, a more pragmatic approach exists to attain this symmetry—setting 
 
 #### Empirical Validation
 
-To validate this approach, we extend our exploration of $\sigma(W)$ up to $10^{10}$, comparing the outcomes with those obtained when $\mu(W)=0$. The results, depicted in the forthcoming plot, demonstrate a remarkable alignment between the empirical data and the theoretical expectation. The green dashed line, representing the scenario with $\mu(W)=0$, aligns seamlessly with the asymptotic values observed for $\sigma(W)>10^6$, underscoring the feasibility of achieving output symmetry through careful weight management.
+To validate this approach, we extend our exploration of $\sigma(W)$ up to $10^{10}$, comparing the outcomes with those obtained when $\mu(W)=0$. The results, depicted in the forthcoming plot (upper panel), demonstrate a remarkable alignment between the empirical data and the theoretical expectation. The green dashed line, representing the scenario with $\mu(W)=0$, aligns seamlessly with the asymptotic values observed for $\sigma(W)>10^6$, underscoring the feasibility of achieving output symmetry through careful weight management.
 
 ![]({{ '/assets/article_images/2024-04-01-whitepaper-p3/confusion.png' | relative_url }})
 <center>
@@ -165,19 +165,38 @@ The statistics of the BiEntropy $H_b$ versus the standard deviation of weights $
 
 This empirical evidence not only reinforces the theoretical underpinnings of achieving a symmetric output distribution but also provides a practical roadmap for configuring ANNs in a manner that upholds the integrity and security of cryptographic functions.
 
-## Diffusion
 
-### The Hamming distance
+## Enhancing Cryptographic Security through Diffusion
 
-Now, the reader who is familiar with this stuff might already object: this is not enough to characterize confusion. We also need to study the *diffusion*, which is the relationship between the input and output, to answer the question: are there any correlations, betweem $X$ and $Y$? To do so, another metric that we will use is the trivial *Hamming distance* between the two bit streams:
+In the quest to fortify the cryptographic robustness of artificial neural networks (ANNs), understanding the dynamics of diffusion—how input influences output—is crucial. This section delves into the Hamming distance as a pivotal metric for assessing diffusion and, by extension, the degree of confusion between input and output sequences.
 
-$$D(X, Y) = 1/N \sum_i mod(X_i+Y_i, 2)$$
+### Understanding the Hamming Distance
 
-First, $N$ is the length of the bit stream. Second, remark that inside the sum, $X_i$ and $Y_i$ are binary $\{0, 1\}$, the modulo $2$ will then get you zero each time they are equal, and one when they are different. In turns, $D$ is simply just counting the number of time we have a diffrent bit in the two sequences. This is the simplest measure one can think of to check the difference between bit sequences. Since $D$ is normalized, it will get zero when the two sequences are the NOT of the other, and it will give one, when they are equal. On the other hand, the target goal for uncorrelated sequence is $0.5$. If you think about randomly throwing two binary coin, there's a 50% chance that each coin will be 1, or 0, so equally, there's a 50% chance that they will have the same value. 
+The Hamming distance offers a straightforward yet profound measure for evaluating the similarity between two bit streams, $X$ and $Y$. Defined as:
 
-### Input and output
+$$
+D(X, Y) = \frac{1}{N} \sum_i \mod(X_i+Y_i, 2)
+$$
 
-Now in the previous picture (lower panel), we computed $\langle D(input, output)\rangle$, the average over a hundred trials, of the hamming distance between the input and output of the neural network. Here, for illustration, the input is a fully regular vector filled with only zeros, and we compare this, for values of the control parameter close to the asymptote. As one can see, below $10^2$, the rapidly decreases, which means there some correlation still exist between the input and output. Now the asymptot is nicely poised very close to 50%, which is what you want for a perfectly random relationhsip. Intruigingly, the hamming distance shows that the fully chaotic neural network (solid green line) have some small bias towards flipping a bit more that 50% of the bits. One could make the case that the most desirable value for the parameter is $\sigma$ a bit above $10^2$, which seems closer to $0.5$. And another potentially interesting feature is that you will have a variance there, and not this fixed and predictible value of $0.53$, which could potentially be harnessed by a malicious actor. 
+where $N$ is the length of the bit stream, this metric quantifies the number of differing bits between $X$ and $Y$. A value of $0$ indicates perfect inversion (NOT operation) between the sequences, while a value of $1$ signifies identical sequences. The ideal target for uncorrelated sequences, indicative of optimal diffusion, is $0.5$, representing a perfect 50/50 split between matching and non-matching bits.
+
+#### The Role of Hamming Distance
+
+The **Hamming distance** measures the number of differing bits between two binary sequences. In the context of ANNs for encryption:
+
+- When assessing **diffusion**, the Hamming distance between the input and output can indicate how well the system disperses input characteristics across the output. A Hamming distance close to 50% suggests effective diffusion, as it implies that half of the bits differ between the input and output, indicating a good spread of input influence across the output.
+
+- Regarding **confusion**, while the Hamming distance is not a direct measure, effective diffusion (as indicated by an appropriate Hamming distance) contributes to confusion by complicating the relationship between the input (or plaintext) and output (or ciphertext). When diffusion is effective, it becomes more challenging to identify clear patterns or relationships between the input and output, thereby enhancing confusion.
+
+### Insights from Empirical Analysis
+
+The lower panel of the previously referenced figure illustrates the average Hamming distance as $\sigma(W)$ varies. Notably, the distance decreases below $10^2$, suggesting residual correlations between input and output that diminish as $\sigma(W)$ increases. Approaching an asymptote near 50%, we observe the desired randomness indicative of effective diffusion. However, the fully chaotic regime (solid green line) exhibits a slight bias, flipping just over 50% of the bits—a deviation from the ideal.
+
+This observation suggests that while high levels of chaos (e.g., $\sigma(W)$ above $10^2$) enhance diffusion, there exists a nuanced balance. A parameter setting slightly above $10^2$ may offer the closest approximation to the ideal 50% Hamming distance, potentially providing a more secure cryptographic foundation by avoiding predictable biases.
+
+#### Strategic Implications for Cryptographic Design
+
+The variance observed near the optimal parameter setting underscores the complexity of designing ANNs for cryptography. Rather than a fixed and predictable outcome, a slight variance in the Hamming distance could introduce an additional layer of security, complicating efforts by potential adversaries to decipher or predict the encryption mechanism.
 
 ### Flipping bits
 
