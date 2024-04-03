@@ -142,27 +142,28 @@ The spike in theBiEntropy variance (lower panel) around $\sigma_p$ marks a "crit
 
 To leverage ANNs for robust cryptographic applications, selecting weight statistics that maximize $H_b$ while minimizing its variance is essential. This strategy ensures outputs remain as disordered as possible—enhancing security—while maintaining consistency across network initializations to reduce predictability. So according to our results, the parameter region that is best for encryption if starting from $\sigma > 4$, where the average BiEntropy is the highest, and the variance the lowest, insuring consistency among generaged output. It is important that the variance is low, because we don't a network that suddenly produce a more structured output pattern, since it could leak critical information to reverse engineer the hash function!
 
-### Okay what is happening here ?
+As we venture further into optimizing our artificial neural network (ANN) for cryptographic applications, a critical consideration emerges—the symmetry between 1s and 0s in the output. Achieving a 50/50 distribution of ones and zeros is paramount to ensuring that no bias skews the output, potentially revealing insights into the underlying structure of our hash function.
 
-Remember that we started with a distribution that has a negative mean, $\mu(W)=-0.5$. This initial setting ensures that, at lower values of $\sigma(W)$, the network is predominantly governed by inhibitory synapses, leading to a relatively ordered and predictable output. Initially the weight distribution is only on the negative side. 
+#### The Quest for Balance
 
-Now when the variance of $\sigma(W)$ increases, there's certain value of $\sigma$ where the distribution go above zero, and after whcih you recruit more and more excitatory synapses. Eventually, when $\sigma(W) \rightarrow \infty$, it is reaching as far in the negative than in the positive, and it gives a symetric excitatory-inhibitory balance. In turns, for high weights variance you have a competition between excitation and inhibition of random weights, projceted a in cascades of non-linear activation functions for hundred of neurons in a hundred of layers, hence **chaos**. 
+The key to achieving this symmetry lies in the delicate balance between excitation and inhibition within the network, as influenced by the variance of weights, $\sigma(W)$. Observations from the output average $\langle Y \rangle$ plot against $\sigma(W)$ illuminate a path towards achieving this balance. As $\sigma(W)$ approaches infinity, the average output intriguingly converges towards $0.5$, symbolizing the ideal equilibrium between ones and zeros. This equilibrium is indicative of a network where excitation and inhibition are perfectly balanced, allowing for an unbiased and secure hash function.
 
+#### The Role of Weight Distribution
 
-### What's next ?
+The distribution of positive and negative weights plays a pivotal role in determining the ratio of ones and zeros in the output. Theoretically, the optimal parameter for achieving a symmetric output distribution is when $\sigma(W) \rightarrow \infty$. However, this presents a practical challenge due to the infinite nature of this condition.
 
-Now, the last element that we must analyze is the symmetry of 1's and 0's in the output. Ideally we would like our output word to be composed of 50% of ones, and 0, such to avoid bias in any direction, that could otherwise give hints as to the internal frabric of our hash function. This can be achived again by looking at the plot of output average $\langle Y \rangle$ as a function of $\sigma(W)$ (first figure in the recap section). As one can see, as $\sigma(W) \rightarrow \infty$, the average output seems to converge towards a given value. This value, is in fact $0.5$. This is because, only when a perfect balance between excitation and inhibition is obtained, one can have a perfect symetry of ones and zeros. In fact, we can go further by stating that the ratio of positive and negative weights controls the ratio of ones and zeros in the output. 
+Fortunately, a more pragmatic approach exists to attain this symmetry—setting the mean weight, $\mu(W)$, to zero. This approach leverages the inherent symmetry of the Gaussian distribution, where a mean of zero ensures an equal presence of positive and negative weights, thus facilitating the desired balance in the output.
 
-In theory then, our best parameter is obtained when $\sigma(W) \rightarrow \infty$, which is, well, *problematic*. In practice, however, there is a much simpler way to obtain a symetric distribution, and you probably guessed it already: $\mu(W)=0$. This is obvious since the gaussian distribution is symetric itself, so when the mean is zero, we have the same amount of positive and negative weights on both side. 
+#### Empirical Validation
 
-In fact, we can show that the case $\mu(W)=0$ and $\sigma(W) \rightarrow \infty$ are strictly equal. We do that empirically on the next (upper) plot:
+To validate this approach, we extend our exploration of $\sigma(W)$ up to $10^{10}$, comparing the outcomes with those obtained when $\mu(W)=0$. The results, depicted in the forthcoming plot, demonstrate a remarkable alignment between the empirical data and the theoretical expectation. The green dashed line, representing the scenario with $\mu(W)=0$, aligns seamlessly with the asymptotic values observed for $\sigma(W)>10^6$, underscoring the feasibility of achieving output symmetry through careful weight management.
 
-![]({{ '/assets/article_images/2024-04-01-whitepaper-p3/diffusion.png' | relative_url }})
+![]({{ '/assets/article_images/2024-04-01-whitepaper-p3/confusion.png' | relative_url }})
 <center>
-The statistics of the BiEntropy $H_b$ versus the standard deviation of weights $\sigma(W)$. The BiEntropy is computed on the output $Y$ of the ANNs. (upper) the average over 100 networks output generated with different seeds. (lower) the average over 100 networks of the hamming distance between two outputs, as the inputs have exactly one bit which is flipped; Image generated by the author.
+The statistics of the BiEntropy $H_b$ versus the standard deviation of weights $\sigma(W)$. The BiEntropy is computed on the output $Y$ of the ANNs. (upper) the average over 100 networks output generated with different seeds. (lower) the average over 100 networks of the Hamming distance between two outputs, as the inputs have exactly one bit which is flipped; Image generated by the author.
 </center>
 
-To do so, this time we increased the range of $\sigma(W)$ up to $10^{10}$! The green dashed line represents the values obtained with $\mu(W)=0$, and as you can see, it fit perfectly with the asymptotic values obtained above $\sigma(W)>10^6$. 
+This empirical evidence not only reinforces the theoretical underpinnings of achieving a symmetric output distribution but also provides a practical roadmap for configuring ANNs in a manner that upholds the integrity and security of cryptographic functions.
 
 ## Diffusion
 
