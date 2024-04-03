@@ -231,23 +231,53 @@ This analysis highlights a fascinating dynamic: as the control parameter (the st
 
 The experiment underscores the critical role of chaos in enhancing cryptographic security. By leveraging the inherent sensitivity of chaotic systems to initial conditions, we can design neural networks that treat every bit with paramount importance, ensuring that any alteration in the input fundamentally transforms the output. This approach not only fortifies the cryptographic hash function against potential exploits but also exemplifies the intricate balance between predictability and security in the design of cryptographic systems.
 
-## What about the 256SHA function ?
+## Evaluating ANN Against SHA256: A Comparative Analysis
 
-Okay, so this analysis wouldn't be complete without a proper comparison to at least one of the standard hash function. For this test I'll used the pretty well known SHA256 function, you can find it in the standard library of python. 
+As we draw this comprehensive exploration to a close, it's crucial to juxtapose our chaotic artificial neural network's performance with that of a well-established standard in cryptographic hashing: the SHA256 function. This comparison not only provides a benchmark for our ANN's capabilities but also situates our findings within the broader context of cryptographic technologies.
 
-So, this time we compare the hash function diffusion against the one of a very chaotic artificial neural network. Since my tests showed a very similar BiEntropy value, close to 9.8 with the SHA256, I wanted to show a more interesting analysis, by making an a comparison with more bit flips, and along the way analyze the neural network diffusion when I choose a close to optimal parameter $\sigma=10^3$. 
+### The SHA256 Function: A Benchmark
+
+SHA256 stands as a cornerstone in cryptographic hashing, renowned for its robustness and widespread adoption. By leveraging Python's standard library implementation, we can directly compare its diffusion properties against those of our meticulously tuned ANN.
+
+### Methodology and Observations
+
+In this comparative analysis, we focus on the diffusion aspect, particularly how each system responds to varying numbers of bit flips in the input. Our objective is to assess the uniformity and unpredictability of the output as we introduce incremental changes to the input.
 
 ![]({{ '/assets/article_images/2024-04-01-whitepaper-p3/comparison.jpg' | relative_url }})
 <center>
-The average over 100 networks of the hamming distance $D$ versus the number of bit flip in the input, for the ANN (blue line) and the SHA256 (orange line). Variance is not shown, but is around 0.001 for both hash function.
+The average over 100 networks of the Hamming distance $D$ versus the number of bit flips in the input, for the ANN (blue line) and the SHA256 (orange line). Variance is not shown, but is approximately 0.001 for both hash functions.
 </center>
 
-It's very interesting to witness that the ANN and SHA256 performs very similarly. In fact, it's quite impressive that the neural network gives the same hamming distance for 1 bit flip, and 50, and we can conclude that the number of bit flip has no influence whatsover on the hamming distance, which is what you want for the ANN to be considered a candidate for a Hash function. Keep in mind that this is only true because we carefully selected the weights distribution to elicit chaos. Logically, for less chaotic networks, you will see that for 1 to 10 bit flips the hamming distance tends to be very low, and it will increase as the number of flip increases.
+The graph above illustrates a remarkable similarity in the performance of the ANN and SHA256. Notably, both systems maintain a consistent Hamming distance across a range of bit flips—from a single bit to fifty—underscoring their resilience and the absence of any direct correlation between the number of bit flips and the resultant Hamming distance. This consistency is indicative of optimal diffusion, a hallmark of a reliable cryptographic hash function.
 
-### Conclusion
+#### Implications for ANN as a Cryptographic Candidate
 
-We explored the potential of ANN to be used as Hash functions. We conduced a collision and diffusion test, in order to check the validity of our neural network as a potential candidate for a hash function. These tests proved to be conclusive, especially regarding the last comparison with the SHA256 function, however, these are far from enough to state that our neural network is sufficient. Many more tested could be conducted, along with mathematical proof that should be worked on. For example, we could conduce a collision attack, to check how many often it's possible that a different input leads to the same ouput. This is a typical attack that allows the hacker to identify malicious code as being the legitiame. 
+The neural network's comparable performance to SHA256, especially under conditions designed to elicit chaos, is both impressive and illuminating. It demonstrates that with the right parameters—specifically, a $\sigma$ tuned to $10^3$ to foster chaos—the ANN can achieve diffusion characteristics on par with SHA256. This finding suggests that the number of bit flips in the input does not materially affect the output's unpredictability, aligning with the desired attributes of a cryptographic hash function.
 
-At first, it might seem surprising that these AI algorithms could be use for this seemingly unrelated task. However, keep in mind that the Hash function is just a map with very complex duffusion processes iterated many times, which is exactly what neural networks are, as we show their mathematical operations. 
+However, it's important to acknowledge that this parity in performance hinges on the ANN's chaotic behavior, carefully orchestrated through weight distribution. Less chaotic networks exhibit a marked difference in diffusion, with lower Hamming distances for fewer bit flips, gradually increasing as more bits are altered. This behavior underscores the critical role of chaos in achieving cryptographic robustness.
 
-On the other hand, if you where to build your hash with a neural network, there is one interesting thing you can harness: the random genweration of synpatic weights. You can in fact generate random weights for each specific task you want, which make it even more difficult to guess how the neural network was built. For instance, in the next article we will build a package for generating a pair of private and public key, and we will use the private key, as a seed for generating the weigths. Changing the weights for each usecase create a space of parameter which is so big, that even a quantum computer could not guess it.  
+#### Conclusion: The Potential of Chaotic ANNs in Cryptography
+
+This comparative analysis with SHA256 not only validates the potential of chaotic artificial neural networks in cryptographic applications but also highlights the importance of chaos in ensuring uniform and unpredictable diffusion. As we conclude this exploration, it's evident that while traditional hash functions like SHA256 set a high standard, chaotic ANNs—when optimally tuned—emerge as viable candidates for advancing the field of cryptographic hashing.
+
+## Conclusion: Charting the Future of Cryptography with ANNs
+
+In our journey through the intricate landscape of artificial neural networks (ANNs) as potential cryptographic hash functions, we've delved deep into the realms of collision and diffusion tests. These explorations have not only illuminated the capabilities of ANNs in mimicking and potentially rivaling established hash functions like SHA256 but also highlighted the vast, untapped potential that lies within.
+
+#### The Verdict on ANNs in Cryptography
+
+While our findings are promising, especially the comparative analysis with SHA256, they represent just the tip of the iceberg. Cryptography demands rigor, not just in empirical testing but also in the mathematical underpinnings that guarantee security. Future endeavors should encompass exhaustive collision tests and the development of robust mathematical frameworks to affirm the viability of ANNs in this domain.
+
+#### The Surprising Versatility of ANNs
+
+The application of AI algorithms, particularly ANNs, in cryptography might initially seem like a leap. Yet, when we consider that both domains thrive on complex diffusion processes and iterative computations, the overlap becomes apparent. ANNs, with their intricate architectures and nonlinear processing capabilities, emerge as natural candidates for crafting sophisticated hash functions.
+
+#### A New Frontier: Customizable Cryptographic Keys
+
+One of the most compelling aspects of employing ANNs in cryptography lies in the potential for customization. The concept of using random synaptic weight generation, guided by specific keys or seeds, opens up a realm of possibilities. This approach not only adds an additional layer of security by obfuscating the construction of the neural network but also introduces a level of dynamism previously unseen in traditional cryptographic methods.
+
+#### Looking Ahead
+
+As we stand on the brink of a new era in classical cryptography, potentially threaten by quantum computers, the integration of ANNs presents both challenges and opportunities. The notion of generating unique, secure cryptographic keys through ANNs, tailored to specific tasks and resistant to even quantum computational attacks, is not just a theoretical possibility but a practical horizon we're beginning to glimpse.
+
+In our next exploration, we will venture further into this promising intersection of cryptography and neural networks. We aim to develop a framework for generating private and public key pairs, using the uniqueness of ANNs to our advantage. This approach, marrying the randomness of synaptic weights with the security requirements of cryptographic keys, could redefine the standards of digital security in the quantum age.
