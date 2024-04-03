@@ -3,99 +3,153 @@ title: "White-paper: Hash Function with Chaotic Artificial Neural networks  (Par
 layout: post
 categories: Quantum, Crypto
 comments: true
-image: /assets/article_images/2022-09-24-whitepaper-p3/whitepaper-cover.jpg
+image: /assets/article_images/2022-09-24-whitepaper-p2/whitepaper-cover.jpg
 ---
-
-# 
+ 
 
 # Hash Function with a Chaotic Neural Network
 
-Hi again everyone, I am glad you are here, because in this article we will dive further into an amazing topic: chaotic cryptology.
+Hi again, everyone! I'm thrilled you're here because we're about to dive deeper into an incredible topic: chaotic cryptology.
 
-Since this is the third article of the series on a potential Whitepaper in crypto, I really encourage you to read the first two articles on that subject:
+Since this is the third article in our series potentially leading to a whitepaper in cryptography, I strongly encourage you to read the first two articles on this subject:
 
-- Part1: [From ellipitic curve, to neural networks]()
-- Part2: [Artificial neural networks and percolation]()
+- Part1: [From ellipitic curve to neural networks](https://manuneuro.github.io/EmmanuelCalvet//quantum,/crypto/2022/09/01/whitepaper-p1.html)
+- Part2: [Artificial neural networks and percolation](https://manuneuro.github.io/EmmanuelCalvet//quantum,/crypto/2022/09/24/whitepaper-p2.html)
 
-In any case, I'm going to make a short recap of what we did in the previous articles.
+However, let's do a quick recap of our journey so far.
 
-## Hey, can you recap a bit for me?
+## A Quick Recap, Please?
 
-Previously, we built a neural network, and identified a regime above the percolation threshold, that gave us this nice phase transition, coming from quiscent to alive. 
+In our previous discussions, we constructed a neural network with with an input layer $X$, a hundred hidden layers, and an output layer $Y$ (see picture below).
 
-![The architecture of an ANN, you can specify the size of the input and output layers, as well as the number of hidden layers and their respective sizes.]({{ '/assets/article_images/2022-09-01-whitepaper-p1/ann.jpg' | relative_url }})
+![The architecture of an ANN, you can specify the size of the input and output layers, as well as the number of hidden layers and their respective sizes.]({{ '/assets/article_images/2022-09-24-whitepaper-p2/ann.jpg' | relative_url }})
 
-The picture above was obtained by playing with the variance of the weight distribution randomly generated. Each dot represented the average output of the network, over 10 realizations of the same distribution parameters with different seeds. Now in conclusion of the last article, I said that the noise we observe is due to the sensitivity on initial conditions, a.k.a. **chaos**, which is exactly what we need to accomplish our goal.
+By playing with the weights connecting neurons, we identified a regime above the percolation threshold, which led us to observe a fascinating phase transition from quiescent to active states:
 
-A bit from it, and mostly this is it.
+![We plot the output of the neural network as a fonction of the control parameter, which is the standard deviation of the weight distribution. The mean of the weights is -0.5, so for a low variance, the ouput only gives zero, since there is only negative weights in the network. As the variance increases, more and more weights becomes positive, and the output starts to have more and more active neurons]({{ '/assets/article_images/2022-09-24-whitepaper-p2/output.png' | relative_url }})
 
-## Sorry, what was our goal again?
+The image above was produced by manipulating the variance of a randomly generated weight distribution. Each dot represents the average output of the network over 10 realizations with different seeds but the same distribution parameters. Concluding our last article, I mentioned that the noise we observed is attributable to sensitivity to initial conditions, a phenomenon known as **chaos**. This chaos is precisely what we aim to harness for our objectives.
 
-Alright, since I am so kind, I'm going to quickly summarize what was our motivation:
+"And what was that objective again?"
 
-We wanted to design a function $F$, that could produce a deterministic input/output, relationship, for the creation of a $public\_key$, given a $private\_key$:
+## Refreshing Our Goal
 
-$$public\_key=F(private\_key)$$
+To refresh our memories kindly, our goal was to design a function $F$ that could establish a deterministic input/output relationship for creating a $public\_key$ from a given $private\_key$:
 
-But we can't just choose any function, because we want it to be secure, so we want it to be nearly impossible to find the inverse mapping $F^{-1}$:
+$$public\_key = F(private\_key)$$
+
+However, we couldn't settle for just any function because we needed one that would be secure, meaning it should be nearly impossible to find the inverse mapping $F^{-1}$:
 
 $$F^{-1}(private\_key) \neq public\_key$$
 
-Now you remember that we decided to use an Artificial Neural Network (ANN) to encode $F$, so basically we choose $F_{ANN}$ instead of say, a typical function in cryptography the $SHA256$.
+We decided to use an Artificial Neural Network (ANN) to encode $F$, opting for $F_{ANN}$ over traditional cryptographic functions like $SHA256$.
 
-Now, there are many more considerations to take into account for the design of $F$, such as *confusion* and *diffusion*, but essentially, this was our starting point, and rest assure that we will get to them as we study artificial neural network in more depth. 
+Essentially, this was our starting point, and now, there are many more considerations to take into account for the design of $F$, in order to make the encryption process more secure by making it harder to predict or reverse-engineer. Essentially we will talk about two key elements, the *confusion*, which tries to hides any relation and *diffusion* and rest assure that we will get to them as we study artificial neural network in more depth. In the following, we will define both terms, and our related objectives for the design of the neural network:
 
-So, shall we start now?
+- **Confusion** is property that makes the relationship between the input key and the ciphertext as complex as possible. 
+	- In other word **confusion** would be achieved by ensuring that the relationship between the input (e.g., a private key) and the output (e.g., a public key or hash) is highly nonlinear and sensitive to initial conditions, making it difficult to reverse-engineer the input from the output.
+- **Diffusion**, is the property that ensures that the influence of one plaintext symbol is spread over many ciphertext symbols, disguising the statistical properties of the plaintext.
+	- **Diffusion** would be implemented by designing the network such that small changes to the input (or changes in one part of the input) lead to significant and widespread changes in the output, ensuring that the output does not reveal patterns or structures of the input.
 
-### Artificial neural network
+Shall we begin?
 
-Alright let's jump right in now. One thing that I didn't mention in the previous article is the structure of the bit stream $Y$ we get at the output of the ANN, depending on the the weights $W$ and input $X$. So recall that we took the binary input vector $X$, and submit it in the input layer such that we obtain $Y=F_{ANN}(X)$. In the plot above, we measured $\langle Y \rangle$ the average overall output neurons. This just gave us a sense of how much neurons were activated, but it doesn't say anything about the usefulness of the this system for encryption, nor with the accurate termonlogy: the *confusion*.
+### Artificial Neural Network and the Essence of Confusion
 
-To obtain a good *confusion*, the output should gives no clue whatsoever about structure of the input. Generally it does it in a way that each bit of the output is a composition of the whole input sequence, rather than specific part of it, hiding any relationships between the two bit sequences. 
+In our journey through the realm of chaotic cryptology, one pivotal aspect we've yet to fully explore is the intricate structure of the bit stream $Y$, which emerges from the ANN based on the weights $W$ and the input $X$. Recall that we introduced a binary input vector $X$ into the input layer, aiming to achieve an output $Y=F_{ANN}(X)$. Previously, we visualized $\langle Y \rangle$, the average output across all neurons, to gauge the level of neuron activation. However, this measure alone doesn't illuminate the system's potential for encryption, particularly regarding the critical concept of *confusion*.
 
-Interestingly, and for the sake of clarity I will plot below an image of the ANN architecture we were using previously, ANN are feedforward architecture are extremely good candidates for such feat, since this, by design exactly what they are doing, composing, layer after layer, each of the inputs, recursively. 
+#### Achieving Optimal Confusion
 
-In a way, we could see each layer of the ANN as a function $F_l$ with given layer index $l$. Then we could rewrite the equation of $F_{ANN}$ as:
+For a cryptographic system to be effective, its output must obscure any discernible structure of the input. Ideally, each bit of the output is an amalgamation of the entire input sequence, rather than being attributable to specific segments of it. This obfuscation ensures that the relationship between the two bit sequences remains concealed.
 
-$$Y=F_{ANN}(X)= F_{100}(F_{99}(...F_2(F_1(X))...))$$
+Feedforward architectures of ANNs are particularly adept at this task. By design, they integrate inputs layer by layer, recursively, which aligns perfectly with our objective. To clarify, consider the following diagram of the ANN architecture we've been discussing:
 
-Which is a sucession of composition of function ultimately all acting on $X$. This is nice, but this alone is not sufficient to generate a good confusion, since of course it is dependant on what $F_l$ is actually doing. Speaking of which, remember that these functions also takes another parameter, the weights at each layer $W_l$. Now as always in machine learning, this is exactly what we need to fine tune, but this time, not using machine learning per say, because this by thinking a bit we can an elegant solution. 
+![]({{ '/assets/article_images/2024-04-01-whitepaper-p3/ann_layers.png' | relative_url }})
 
-## Confusion
+In essence, we can view each layer of the ANN as executing a specific function $F_l$ with a given layer index $l$. This allows us to express the operation of $F_{ANN}$ as a succession of function compositions:
 
-To be able to evaluate if our ANN performs well, we need something to measure the quality of the *confusion*, which shows how well the output is going to supress any types of patterns that could exist in the input signal. To do so, the optimal output should actually looks like noise, no structure at all, so that it doesn't give any information about the input. 
+$$
+Y=F_{ANN}(X)= F_{100}(F_{99}(...F_2(F_1(X))...))
+$$
 
-To do so, we will analyze the structure of said output $Y$ of our ANN's. One typical metric for analyzing binary string is the entropy, but as we will see in a second, this is not the best way. Instead we are going to use a very nice metric, the binary entropy $H_b$ [], or BiEntropy of bit streams. This function has very interesting features, that distinguished it from the well known Shanon entropy. So let's get ourselves some intuition of what it does. Let's say we obtain in output the two following 16-bit sequences:
+This representation underscores the layered complexity inherent in ANNs, which is fundamental to generating effective confusion. However, the efficacy of this approach is contingent upon the specific operations performed by each function $F_l$, which are, in turn, influenced by the weights $W_l$ at each layer.
 
-$$X_1 = 0101010101010101$$
-$$X_2 = 0110101001100101$$
+#### Looking Ahead
 
-If you were to compute the probability of obtaining a 1, and 0, in these two sequences, they would be the same, $P(1)=0.5$. This means that, the Shanon entropy of both sequences are the same $H(X_1)=H(X_2)=$. Intuitively, we rapidly feel that this is a problem, because these two sequences are not the same at all. One is purely periodic ($X_1$), and the other is rather difficult to predict ($X_2$). Fortunately, smart people worked on that issue, and proposed a nice way of differentiating these two sentences, using you guessed it, the binary entropy. Now it would be too long to explain how it is computed, so I am just going to give you the Binary entropy of these two bit sequences:
+As we venture further into the application of ANNs in cryptography, our next steps will involve a deeper examination of the functions $F_l$ and the strategic tuning of weights $W_l$. This exploration will be pivotal in harnessing the full potential of ANNs for cryptographic purposes, ensuring that our approach to creating confusion is not just theoretically sound but practically viable.
 
-$$H_b(X_1)=0$$
-$$H_b(X_2)=0.75$$
+#### Tuning Weights for Cryptographic Elegance
 
-Okay, this comes handy, because now we can differentiate between ordered and disoreded bit sequences. One very nice property of $H_b$ is that is comprised in $[0, 1]$: giving 0 for fully periodic signals, and 1 for totally disored ones. 
+The tuning of weights $W_l$ is a critical aspect of machine learning. Yet, in our context, we seek not just to optimize these weights for predictive accuracy but to sculpt them in a manner that maximizes cryptographic security. This endeavor requires a departure from conventional machine learning methodologies, prompting us to consider more nuanced, perhaps even theoretical, approaches to weight adjustment.
 
-Now why does it matter ? Well, remember, we need something to measure the quality of the *confusion*. To avoid giving away information about the input, the optimal output be as close as possible to noise. With $H_b$, the higher the disoreder, the closer to one, the better. This is why I propose to use this metric as a measure of performance for the confusion. 
+### Evaluating Confusion in ANNs
 
-## Chaos
+To accurately assess the effectiveness of our Artificial Neural Network (ANN) in achieving cryptographic confusion, we require a robust method for measuring how well the output conceals any patterns present in the input signal. Ideally, the output should resemble pure noise, devoid of any discernible structure, thereby ensuring that it reveals nothing about the input.
 
-The picture below shows the same phase transition as the plot in the [previous article](), but this time, as captured by the BiEntropy of the output. For each value of $\sigma(W)$ we ran 100 networks with different seeds. First, we see that the average of BiEntropy coincides perfectly with the average activity, while we transition from a quiescent and fully ordered regime with both $\langle Y \rangle$ and $\langle H_b\rangle$ equal to zero. The percolation threshold $\sigma_p$ as we called it in the previous article, is the point in parameter space $\sigma(W)$, where activity starts rising above zero. In our case it is around $\sigma_p \sim 1.7$. For values far higher than $\sigma_p$ we obtain a regime of chaos, where outputs are extremely disordered $\langle H_b\rangle \sim 1$.
+#### The Limitation of Traditional Entropy
 
-![image]({{ '/assets/article_images/2024-04-01-whitepaper-p3/bientropy.png' | relative_url }})
+A common approach to analyzing the structure of binary sequences is through entropy, specifically Shannon entropy. However, for our purposes, Shannon entropy may not provide the full picture. Consider two 16-bit sequences:
 
+$$
+X_1 = 0101010101010101
+$$
+
+$$
+X_2 = 0110101001100101
+$$
+
+At a glance, both sequences have an equal probability of producing a '1' or a '0', leading to the same Shannon entropy value. Yet, intuitively, we recognize a significant difference between the two: $X_1$ is perfectly periodic, while $X_2$ appears more random and unpredictable.
+
+#### Introducing Binary Entropy ($H_b$)
+
+To address this discrepancy and more accurately measure the quality of confusion, we turn to binary entropy ($H_b$), or BiEntropy, a metric specifically designed to evaluate bit streams. Unlike Shannon entropy, binary entropy excels at distinguishing between ordered and disordered sequences. Let's consider the binary entropy values for our example sequences:
+
+$$
+H_b(X_1) = 0
+$$
+
+$$
+H_b(X_2) = 0.75
+$$
+
+These values reveal that binary entropy can effectively differentiate between periodic and unpredictable sequences, assigning a value of 0 to fully periodic signals and a value closer to 1 for highly disordered ones. Now you might wonder how this works, and without being too technical, the Bientropy roughly computes the normalized entropy of the $n^th$ derivative of the binary signal, in other word, it quantifies how much predictible is the regularity of the variously spaced patterns in the signal. 
+
+#### The Significance of $H_b$ for Measuring Confusion
+
+The beauty of $H_b$ lies in its range of $[0, 1]$, where 0 indicates complete order and 1 signifies total disorder. This characteristic makes it an ideal metric for evaluating the *confusion* of an ANN's output. To prevent the leakage of information about the input, the output should be as indistinguishable from noise as possible. Thus, a higher $H_b$ value, indicating greater disorder, correlates with more effective confusion.
+
+By adopting $H_b$ as our performance metric, we can more accurately gauge the ANN's ability to obfuscate the input signal, ensuring that the output provides no clues about the original data. This approach not only enhances our understanding of the ANN's cryptographic robustness but also guides us in fine-tuning the network to maximize security.
+
+## The Role of Chaos in Cryptographic Security
+
+In our exploration of artificial neural networks (ANNs) for encryption, understanding the transition from order to chaos—captured through the lens of BiEntropy ($H_b$)—is key. This section delves into how varying the standard deviation of weights, $\sigma(W)$, influences ANNs' output behavior, crucial for optimizing cryptographic security.
+
+The picture below shows the same phase transition as the plot in the [previous article](https://manuneuro.github.io/EmmanuelCalvet//quantum,/crypto/2022/09/24/whitepaper-p2.html), but this time, as captured by the BiEntropy of the output. For each value of $\sigma(W)$ we ran 100 networks with different seeds. 
+
+![]({{ '/assets/article_images/2024-04-01-whitepaper-p3/bientropy.png' | relative_url }})
 <center>
 The statistics of the BiEntropy $H_b$ versus the standard deviation of weights $\sigma(W)$. The BiEntropy is computed on the output $Y$ of the ANNs. (upper) the average over 100 networks output generated with different seeds. (lower) the variance over the same 100 networks; Image generated by the author.
 </center>
 
-Interstingly, when we look at the variance of BiEntropy, we see a sharp spike, centered around the transition from order to disorder. This transition marks a regime where we obtain a variety of outputs structures, composed of a mixture of order and disorder. This regime is also known as the critical regime, and in the context of neural computation, it has been shown to be the perfect spot for memory [], seperability [], and information transmission []. 
+### Phase transition, from order to chaos
 
-However, in our context of encryption, this is the worst spot one can choose, as it is going to improve the mutual information betwen input and output []. In the quiscent and chaotic regime however, all outputs structures are the same, as indicated by a variance of zero. Hence it is now very trivial to decide the region where we should choose the weight statistics: the one that both maximize the average of H_b, and minimizing its variance. 
+First, we see that the average of BiEntropy (upper panel) coincides perfectly with the average activity showed in the recap section. The graph reveals a critical phase transition at the percolation threshold, $\sigma_p \sim 1.7$. Below $\sigma_p$, outputs remain ordered with minimal activity While we transition from a quiescent and fully ordered regime with both $\langle Y \rangle=0$ and $\langle H_b\rangle=0$. As $\sigma(W)$ crosses $\sigma_p$, the system enters a chaotic regime, characterized by highly disordered outputs ($\langle H_b\rangle \sim 1$), ideal for encryption due to the maximized confusion and minimized predictability.
+
+### The Critical Regime: A Double-Edged Sword
+
+The spike in theBiEntropy variance (lower panel) around $\sigma_p$ marks a "critical regime," where outputs blend order and disorder. This regime offers potential for neural computation, enhancing memory, separability, and information transmission. However, for encryption, this variability increases mutual information between input and output, potentially compromising security by making the encryption more predictable under certain conditions.
+
+### Optimizing Weight Selection for Encryption
+
+To leverage ANNs for robust cryptographic applications, selecting weight statistics that maximize $H_b$ while minimizing its variance is essential. This strategy ensures outputs remain as disordered as possible—enhancing security—while maintaining consistency across network initializations to reduce predictability.
 
 ### Okay what is happening here ?
 
-Remember we started with a distribution that has a negative mean, $\mu(W)=-0.5$. As such, for low values of $\sigma(W)$ only negative weights exist. Now as you increase the variance of $\sigma(W)$ you recruit more and more excitatory synapses, until you actually get a perfect balance between negative and positive weights, when $\sigma(W) \rightarrow \infty$. In turns, for high weights variance you have a competition between excitation and inhibition of random weights, projcted a in cascades of non-linear activation functions for each hundred neurons and a hundred layers, hence chaos. 
+Remember that we started with a distribution that has a negative mean, $\mu(W)=-0.5$. This initial setting ensures that, at lower values of $\sigma(W)$, the network is predominantly governed by inhibitory synapses, leading to a relatively ordered and predictable output.
+
+As we incrementally increase the variance $\sigma(W)$, the landscape of the network begins to transform. This increase gradually introduces more excitatory synapses into the mix, creating a richer, more complex interplay between excitatory and inhibitory forces within the network. Now as you increase the variance of $\sigma(W)$ you recruit more and more excitatory synapses, the pivotal moment occurs when the variance reaches a level where a perfect balance between negative and positive weights is achieved, marking the threshold beyond which the system begins to exhibit chaotic behavior.
+
+This is not magic, initially, the variance is negative and centered around -0.5, initially the distribution is more on the negative side. Now when the variance of $\sigma(W)$ increases, there's point where the distribution go above zero, and you recruit more and more excitatory synapses. When $\sigma(W) \rightarrow \infty$ it is reaching as far in the negative and positive, and it end up symetric around zero instead of the actual mean, which become insigniciant! In turns, for high weights variance you have a competition between excitation and inhibition of random weights, projcted a in cascades of non-linear activation functions for hundred of neurons in a hundred of layers, hence chaos. 
+
 
 ### What's next ?
 
@@ -105,8 +159,7 @@ In theory then, our best parameter is obtained when $\sigma(W) \rightarrow \inft
 
 In fact, we can show that the case $\mu(W)=0$ and $\sigma(W) \rightarrow \infty$ are strictly equal. We do that empirically on the next (upper) plot:
 
-![image]({{ '/assets/article_images/2024-04-01-whitepaper-p3/diffusion.png' | relative_url }})
-
+![]({{ '/assets/article_images/2024-04-01-whitepaper-p3/diffusion.png' | relative_url }})
 <center>
 The statistics of the BiEntropy $H_b$ versus the standard deviation of weights $\sigma(W)$. The BiEntropy is computed on the output $Y$ of the ANNs. (upper) the average over 100 networks output generated with different seeds. (lower) the average over 100 networks of the hamming distance between two outputs, as the inputs have exactly one bit which is flipped; Image generated by the author.
 </center>
@@ -136,8 +189,7 @@ In machine learning, we train the neural networks so that they are robust to suc
 
 Interestingly, chaos is very fit to the task, because of its core property: *the sensitivity to initial conditions*. In chaotic systems, changing just a tiny bit of the input can create a dramatic effect in the output. This is because of the phenomenon of avalanches, or cascading effect, in a space that is very complex. A small change, iterated a few times, is massively amplified, resulting in a completely different output. 
 
-![image]({{ '/assets/article_images/2024-04-01-whitepaper-p3/bitflip.png' | relative_url }})
-
+![]({{ '/assets/article_images/2024-04-01-whitepaper-p3/bitflip.png' | relative_url }})
 <center>
 The average over 100 networks of the hamming distance $D$ versus the standard deviation of weights $\sigma(W)$. (upper) The hamming distance is computed on the input and the output $Y$ of the ANNs (lower) The hamming distance between two outputs, as the inputs have exactly one bit flipped; Image generated by the author.
 </center>
@@ -152,8 +204,7 @@ Okay, so this analysis wouldn't be complete without a proper comparison to at le
 
 So, this time we compare the hash function diffusion against the one of a very chaotic artificial neural network. Since my tests showed a very similar BiEntropy value, close to 9.8 with the SHA256, I wanted to show a more interesting analysis, by making an a comparison with more bit flips, and along the way analyze the neural network diffusion when I choose a close to optimal parameter $\sigma=10^3$. 
 
-![image]({{ '/assets/article_images/2024-04-01-whitepaper-p3/comparison.jpg' | relative_url }})
-
+![]({{ '/assets/article_images/2024-04-01-whitepaper-p3/comparison.jpg' | relative_url }})
 <center>
 The average over 100 networks of the hamming distance $D$ versus the number of bit flip in the input, for the ANN (blue line) and the SHA256 (orange line). Variance is not shown, but is around 0.001 for both hash function.
 </center>
