@@ -1,5 +1,5 @@
 ---
-title: "White-paper: Hash Function with Chaotic Artificial Neural networks  (Part 3)"
+title: "White-Paper: Hash Function with Chaotic Artificial Neural Networks  (Part 3)"
 layout: post
 categories: Quantum, Crypto
 comments: true
