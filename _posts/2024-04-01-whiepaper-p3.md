@@ -22,7 +22,7 @@ However, let's do a quick recap of our journey so far.
 
 In our previous discussions, we constructed a neural network with with an input layer $X$, a hundred hidden layers, and an output layer $Y$ (see picture below).
 
-![The architecture of an ANN, you can specify the size of the input and output layers, as well as the number of hidden layers and their respective sizes.]({{ '/assets/article_images/2022-09-24-whitepaper-p2/ann.jpg' | relative_url }})
+![The architecture of an ANN, you can specify the size of the input and output layers, as well as the number of hidden layers and their respective sizes.]({{ '/assets/article_images/2022-09-24-whitepaper-p2/ann.png' | relative_url }})
 
 By playing with the weights connecting neurons, we identified a regime above the percolation threshold, which led us to observe a fascinating phase transition from quiescent to active states:
 
@@ -44,7 +44,7 @@ $$F^{-1}(private\_key) \neq public\_key$$
 
 We decided to use an Artificial Neural Network (ANN) to encode $F$, opting for $F_{ANN}$ over traditional cryptographic functions like $SHA256$.
 
-Essentially, this was our starting point, and now, there are many more considerations to take into account for the design of $F$, in order to make the encryption process more secure by making it harder to predict or reverse-engineer. Essentially we will talk about two key elements, the *confusion*, which tries to hides any relation and *diffusion* and rest assure that we will get to them as we study artificial neural network in more depth. In the following, we will define both terms, and our related objectives for the design of the neural network:
+Essentially, this was our starting point, and now, there are many more considerations to take into account for the design of $F$, in order to make the encryption process more secure by making it harder to predict or reverse-engineer. Essentially we will talk about two key elements, the *confusion* and *diffusion* which will be key for the design of the neural network:
 
 - **Confusion** is property that makes the relationship between the input key and the ciphertext as complex as possible. 
 	- In other word **confusion** would be achieved by ensuring that the relationship between the input (e.g., a private key) and the output (e.g., a public key or hash) is highly nonlinear and sensitive to initial conditions, making it difficult to reverse-engineer the input from the output.
@@ -53,7 +53,7 @@ Essentially, this was our starting point, and now, there are many more considera
 
 Shall we begin?
 
-### Artificial Neural Network and the Essence of Confusion
+## Artificial Neural Network and the Essence of Confusion
 
 In our journey through the realm of chaotic cryptology, one pivotal aspect we've yet to fully explore is the intricate structure of the bit stream $Y$, which emerges from the ANN based on the weights $W$ and the input $X$. Recall that we introduced a binary input vector $X$ into the input layer, aiming to achieve an output $Y=F_{ANN}(X)$. Previously, we visualized $\langle Y \rangle$, the average output across all neurons, to gauge the level of neuron activation. However, this measure alone doesn't illuminate the system's potential for encryption, particularly regarding the critical concept of *confusion*.
 
@@ -132,7 +132,7 @@ The statistics of the BiEntropy $H_b$ versus the standard deviation of weights $
 
 ### Phase transition, from order to chaos
 
-First, we see that the average of BiEntropy (upper panel) coincides perfectly with the average activity showed in the recap section. The graph reveals a critical phase transition at the percolation threshold, $\sigma_p \sim 1.7$. Below $\sigma_p$, outputs remain ordered with minimal activity While we transition from a quiescent and fully ordered regime with both $\langle Y \rangle=0$ and $\langle H_b\rangle=0$. As $\sigma(W)$ crosses $\sigma_p$, the system enters a chaotic regime, characterized by highly disordered outputs ($\langle H_b\rangle \sim 1$), ideal for encryption due to the maximized confusion and minimized predictability.
+First, we see that the average of BiEntropy (upper panel) coincides perfectly with the average activity showed in the recap section. The graph reveals a critical phase transition at the percolation threshold, $\sigma_p \sim 1.7$. Below $\sigma_p$, outputs remain ordered with minimal activity while we transition from a quiescent and fully ordered regime with both $\langle Y \rangle=0$ and $\langle H_b\rangle=0$. As $\sigma(W)$ crosses $\sigma_p$, the system enters a chaotic regime, characterized by highly disordered outputs ($\langle H_b\rangle \sim 1$), ideal for encryption due to the maximized confusion and minimized predictability.
 
 ### The Critical Regime: A Double-Edged Sword
 
@@ -140,20 +140,18 @@ The spike in theBiEntropy variance (lower panel) around $\sigma_p$ marks a "crit
 
 ### Optimizing Weight Selection for Encryption
 
-To leverage ANNs for robust cryptographic applications, selecting weight statistics that maximize $H_b$ while minimizing its variance is essential. This strategy ensures outputs remain as disordered as possible—enhancing security—while maintaining consistency across network initializations to reduce predictability.
+To leverage ANNs for robust cryptographic applications, selecting weight statistics that maximize $H_b$ while minimizing its variance is essential. This strategy ensures outputs remain as disordered as possible—enhancing security—while maintaining consistency across network initializations to reduce predictability. So according to our results, the parameter region that is best for encryption if starting from $\sigma > 4$, where the average BiEntropy is the highest, and the variance the lowest, insuring consistency among generaged output. It is important that the variance is low, because we don't a network that suddenly produce a more structured output pattern, since it could leak critical information to reverse engineer the hash function!
 
 ### Okay what is happening here ?
 
-Remember that we started with a distribution that has a negative mean, $\mu(W)=-0.5$. This initial setting ensures that, at lower values of $\sigma(W)$, the network is predominantly governed by inhibitory synapses, leading to a relatively ordered and predictable output.
+Remember that we started with a distribution that has a negative mean, $\mu(W)=-0.5$. This initial setting ensures that, at lower values of $\sigma(W)$, the network is predominantly governed by inhibitory synapses, leading to a relatively ordered and predictable output. Initially the weight distribution is only on the negative side. 
 
-As we incrementally increase the variance $\sigma(W)$, the landscape of the network begins to transform. This increase gradually introduces more excitatory synapses into the mix, creating a richer, more complex interplay between excitatory and inhibitory forces within the network. Now as you increase the variance of $\sigma(W)$ you recruit more and more excitatory synapses, the pivotal moment occurs when the variance reaches a level where a perfect balance between negative and positive weights is achieved, marking the threshold beyond which the system begins to exhibit chaotic behavior.
-
-This is not magic, initially, the variance is negative and centered around -0.5, initially the distribution is more on the negative side. Now when the variance of $\sigma(W)$ increases, there's point where the distribution go above zero, and you recruit more and more excitatory synapses. When $\sigma(W) \rightarrow \infty$ it is reaching as far in the negative and positive, and it end up symetric around zero instead of the actual mean, which become insigniciant! In turns, for high weights variance you have a competition between excitation and inhibition of random weights, projcted a in cascades of non-linear activation functions for hundred of neurons in a hundred of layers, hence chaos. 
+Now when the variance of $\sigma(W)$ increases, there's certain value of $\sigma$ where the distribution go above zero, and after whcih you recruit more and more excitatory synapses. Eventually, when $\sigma(W) \rightarrow \infty$, it is reaching as far in the negative than in the positive, and it gives a symetric excitatory-inhibitory balance. In turns, for high weights variance you have a competition between excitation and inhibition of random weights, projceted a in cascades of non-linear activation functions for hundred of neurons in a hundred of layers, hence **chaos**. 
 
 
 ### What's next ?
 
-Now, the last element that we must analyze is the symmetry of 1's and 0's in the output. Ideally we would like our output word to be composed of 50% of ones, and 0, such to avoid bias in any direction, that could otherwise give hints as to the internal frabric of our hash function. This can be achived again by looking at the plot of output average $\langle Y \rangle$ as a function of $\sigma(W)$. As one can see, as $\sigma(W) \rightarrow \infty$, the average output seems to converge towards a given value. This value, is in fact $0.5$. This is because, only when a perfect balance between excitation and inhibition is obtained, one can have a perfect symetry of ones and zeros. In fact, we can go further by stating that the ratio of positive and negative weights controls the ratio of ones and zeros in the output. 
+Now, the last element that we must analyze is the symmetry of 1's and 0's in the output. Ideally we would like our output word to be composed of 50% of ones, and 0, such to avoid bias in any direction, that could otherwise give hints as to the internal frabric of our hash function. This can be achived again by looking at the plot of output average $\langle Y \rangle$ as a function of $\sigma(W)$ (first figure in the recap section). As one can see, as $\sigma(W) \rightarrow \infty$, the average output seems to converge towards a given value. This value, is in fact $0.5$. This is because, only when a perfect balance between excitation and inhibition is obtained, one can have a perfect symetry of ones and zeros. In fact, we can go further by stating that the ratio of positive and negative weights controls the ratio of ones and zeros in the output. 
 
 In theory then, our best parameter is obtained when $\sigma(W) \rightarrow \infty$, which is, well, *problematic*. In practice, however, there is a much simpler way to obtain a symetric distribution, and you probably guessed it already: $\mu(W)=0$. This is obvious since the gaussian distribution is symetric itself, so when the mean is zero, we have the same amount of positive and negative weights on both side. 
 
