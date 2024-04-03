@@ -245,7 +245,7 @@ SHA256 stands as a cornerstone in cryptographic hashing, renowned for its robust
 
 In this comparative analysis, we focus on the diffusion aspect, particularly how each system responds to varying numbers of bit flips in the input. Our objective is to assess the uniformity and unpredictability of the output as we introduce incremental changes to the input.
 
-![]({{ '/assets/article_images/2024-04-01-whitepaper-p3/comparison.jpg' | relative_url }})
+![]({{ '/assets/article_images/2024-04-01-whitepaper-p3/comparison.png' | relative_url }})
 <center>
 The average over 100 networks of the Hamming distance $D$ versus the number of bit flips in the input, for the ANN (blue line) and the SHA256 (orange line). Variance is not shown, but is approximately 0.001 for both hash functions.
 </center>
