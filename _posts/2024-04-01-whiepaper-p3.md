@@ -26,7 +26,7 @@ In our previous discussions, we constructed a neural network with an input layer
 <br>
 By playing with the weights connecting neurons, we identified a regime above the percolation threshold, which led us to observe a fascinating phase transition from quiescent to active states:
 
-![We plot the output of the neural network as a fonction of the control parameter, which is the standard deviation of the weight distribution. The mean of the weights is -0.5, so for a low variance, the ouput only gives zero, since there is only negative weights in the network. As the variance increases, more and more weights becomes positive, and the output starts to have more and more active neurons]({{ '/assets/article_images/2022-09-24-whitepaper-p2/output.png' | relative_url }})
+![We plot the output of the neural network as a fonction of the control parameter, which is the standard deviation of the weight distribution. The mean of the weights is -0.5, so for a low variance, the ouput only gives zero, since there is only negative weights in the network. As the variance increases, more and more weights becomes positive, and the output starts to have more and more active neurons.]({{ '/assets/article_images/2022-09-24-whitepaper-p2/output.png' | relative_url }})
 <br>
 The image above was produced by manipulating the variance of a randomly generated weight distribution. Each dot represents the average output of the network over 10 realizations with different seeds but the same distribution parameters. Concluding our last article, I mentioned that the noise we observed is attributable to sensitivity to initial conditions, a phenomenon known as **chaos**. This chaos is precisely what we aim to harness for our objectives.
 
@@ -34,7 +34,7 @@ The image above was produced by manipulating the variance of a randomly generate
 
 ## Refreshing Our Goal
 
-To refresh our memories kindly, our goal was to design a function $F$ that could establish a deterministic input/output relationship for creating a $public\_key$ from a given $private\_key$:
+To refresh our memories kindly, our goal was to design a function $F$ that could establish a deterministic input/output relationship for creating a $public \_ key$ from a given $private \_ key$:
 
 $$public\_key = F(private\_key)$$
 
@@ -44,9 +44,9 @@ $$F^{-1}(private\_key) \neq public\_key$$
 
 We decided to use an Artificial Neural Network (ANN) to encode $F$, opting for $F_{ANN}$ over traditional cryptographic functions like $SHA256$.
 
-Essentially, this was our starting point, and now, there are many more considerations to take into account for the design of $F$, in order to make the encryption process more secure by making it harder to predict or reverse-engineer. Essentially we will talk about two key elements, the *confusion* and *diffusion* which will be key for the design of the neural network:
+Essentially, this was our starting point, and now, there are many more considerations to take into account for the design of $F$, in order to make the encryption process more secure by making it harder to predict or reverse-engineer. Essentially we will talk about two proprties, the *confusion* and *diffusion*, which will be key for the design of the neural network:
 
-- **Confusion** is property that makes the relationship between the input key and the ciphertext as complex as possible. 
+- **Confusion** is the property that makes the relationship between the input key and the ciphertext as complex as possible. 
 	- In other word **confusion** would be achieved by ensuring that the relationship between the input (e.g., a private key) and the output (e.g., a public key or hash) is highly nonlinear and sensitive to initial conditions, making it difficult to reverse-engineer the input from the output.
 - **Diffusion**, is the property that ensures that the influence of one plaintext symbol is spread over many ciphertext symbols, disguising the statistical properties of the plaintext.
 	- **Diffusion** would be implemented by designing the network such that small changes to the input (or changes in one part of the input) lead to significant and widespread changes in the output, ensuring that the output does not reveal patterns or structures of the input.
@@ -57,7 +57,7 @@ Shall we begin?
 
 In our journey through the realm of chaotic cryptology, one pivotal aspect we've yet to fully explore is the intricate structure of the bit stream $Y$, which emerges from the ANN based on the weights $W$ and the input $X$. Recall that we introduced a binary input vector $X$ into the input layer, aiming to achieve an output $Y=F_{ANN}(X)$. Previously, we visualized $\langle Y \rangle$, the average output across all neurons, to gauge the level of neuron activation. However, this measure alone doesn't illuminate the system's potential for encryption, particularly regarding the critical concept of *confusion*.
 
-#### Achieving Optimal Confusion
+### Achieving Optimal Confusion
 
 For a cryptographic system to be effective, its output must obscure any discernible structure of the input. Ideally, each bit of the output is an amalgamation of the entire input sequence, rather than being attributable to specific segments of it. This obfuscation ensures that the relationship between the two bit sequences remains concealed.
 
