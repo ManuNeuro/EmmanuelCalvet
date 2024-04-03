@@ -11,6 +11,8 @@ image: /assets/article_images/2022-09-24-whitepaper-p2/whitepaper-cover.jpg
 
 Hi again, everyone! I'm thrilled you're here because we're about to dive deeper into an incredible topic: chaotic cryptology.
 
+**You can find the code used for generating all the images in my [Github](https://github.com/ManuNeuro/whitepaper-p3).**
+
 Since this is the third article in our series potentially leading to a whitepaper in cryptography, I strongly encourage you to read the first two articles on this subject:
 
 - Part1: [From ellipitic curve to neural networks](https://manuneuro.github.io/EmmanuelCalvet//quantum,/crypto/2022/09/01/whitepaper-p1.html)
