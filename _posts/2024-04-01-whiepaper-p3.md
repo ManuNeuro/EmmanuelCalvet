@@ -142,7 +142,7 @@ The spike in theBiEntropy variance (lower panel) around $\sigma_p$ marks a "crit
 
 ### Optimizing Weight Selection for Encryption
 
-To leverage ANNs for robust cryptographic applications, selecting weight statistics that maximize $H_b$ while minimizing its variance is essential. This strategy ensures outputs remain as disordered as possible—enhancing security—while maintaining consistency across network initializations to reduce predictability. So according to our results, the parameter region that is best for encryption if starting from $\sigma > 4$, where the average BiEntropy is the highest, and the variance the lowest, insuring consistency among generaged output. It is important that the variance is low, because we don't a network that suddenly produce a more structured output pattern, since it could leak critical information to reverse engineer the hash function!
+To leverage ANNs for robust cryptographic applications, selecting weight statistics that maximize $H_b$ while minimizing its variance is essential. This strategy ensures outputs remain as disordered as possible—enhancing security—while maintaining consistency across network initializations to reduce predictability. So according to our results, the parameter region that is best for encryption is starting from $\sigma > 4$, where the average BiEntropy is the highest, and the variance the lowest, insuring consistency among generaged output. It is important that the variance is low, because we don't want a network that suddenly produce a more structured output pattern, since it could leak critical information to reverse engineer the hash function!
 
 As we venture further into optimizing our artificial neural network (ANN) for cryptographic applications, a critical consideration emerges—the symmetry between 1s and 0s in the output. Achieving a 50/50 distribution of ones and zeros is paramount to ensuring that no bias skews the output, potentially revealing insights into the underlying structure of our hash function.
 
@@ -283,3 +283,30 @@ One of the most compelling aspects of employing ANNs in cryptography lies in the
 As we stand on the brink of a new era in classical cryptography, potentially threaten by quantum computers, the integration of ANNs presents both challenges and opportunities. The notion of generating unique, secure cryptographic keys through ANNs, tailored to specific tasks and resistant to even quantum computational attacks, is not just a theoretical possibility but a practical horizon we're beginning to glimpse.
 
 In our next exploration, we will venture further into this promising intersection of cryptography and neural networks. We aim to develop a framework for generating private and public key pairs, using the uniqueness of ANNs to our advantage. This approach, marrying the randomness of synaptic weights with the security requirements of cryptographic keys, could redefine the standards of digital security in the quantum age.
+
+
+Opérationnel 
+- On va attendre les tests de bell
+- Et tester les systèmes QKD de manière indépendantes en condition réel
+- Demander à Bell Francois Raymond (longueur du lien, pertes du lien, et les tables de connexions de dans le patch panel)
+
+Patch panel, prendre une photo
+- Comment sont identifiés les ports
+- Est-ce qu'on 
+- Contacter matthieu pour 
+
+Fonctionnel: tout le matériel fonctionne, sans aucun soucis technique.
+Opérationnel: 
+- Landing pour utilisateur
+- Processus
+- Accès à distance et locale pour utilisateur
+
+
+Acheter du matériel
+- Acheter un UPS (pour protéger les équipements)
+- Les deux disques durs
+
+- Demander à Matthieu ce qu'il se passe quand l'électicité est coupé 
+-> Procédure, qui recoit un message quand ca se coupe?
+-> Est-ce qu'on a besoin d'une firme?
+
