@@ -1,5 +1,11 @@
-# Do you have to feed the beasts?
-
+---
+title: "Do you have to feed the beasts?"
+layout: post
+categories: Digital Mycelium, GAFAMS, Alternatives
+comments: true
+image: /assets/article_images/2025-01-24-feed_the_bests/network_cover.jpg
+---
+ 
 *An essay on the alternatives to GAFAMS solutions*
 
 ## Intro
