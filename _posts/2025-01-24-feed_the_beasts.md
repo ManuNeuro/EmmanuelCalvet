@@ -22,7 +22,7 @@ Fortunetaley, in shock, I abruptly woke up from the nightmare. Awakening from th
 
 Bear with me, courageous travellers of the digital, real seekers of freedom in the virtual. Follow me down this rabbit whole, I will show you one of the ways you can do this too.
 
-![Shai-Hulud (Arabic: شَيْء خُلُود Shayʾ-Khulud) translates as "Thing of Eternity". Shai-Hulud is a significant entity in the fictional universe of Frank Herbert’s “Dune” series, representing the sandworms of the desert planet Arrakis. These colossal creatures are revered by the Fremen as spiritual symbols and are considered physical embodiments of the One God in their religion]({{ '/assets/article_images/2025-04-25-feed_the_beasts/shai-hulud.jpg' | relative_url }})
+![Shai-Hulud (Arabic: شَيْء خُلُود Shayʾ-Khulud) translates as "Thing of Eternity". Shai-Hulud is a significant entity in the fictional universe of Frank Herbert’s “Dune” series, representing the sandworms of the desert planet Arrakis. These colossal creatures are revered by the Fremen as spiritual symbols and are considered physical embodiments of the One God in their religion.]({{ '/assets/article_images/2025-04-25-feed_the_beasts/shai-hulud.jpg' | relative_url }})
 
 ## The Internet isn't free
 
