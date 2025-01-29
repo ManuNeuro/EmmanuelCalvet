@@ -74,7 +74,7 @@ The premise of accessing the web, is having a browser. The browser constitutes a
 |• [Pale Moon](https://www.palemoon.org/) |&nbsp;&nbsp;<img src="https://imgs.search.brave.com/0BypfBz3dL3TybPIZ9_PtEaDGrDmmSSz5WviXmNpWpA/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vdGh1bWIv/YS9hMi9QYWxlX01v/b25fYnJvd3Nlcl9p/Y29uLnBuZy81MTJw/eC1QYWxlX01vb25f/YnJvd3Nlcl9pY29u/LnBuZw" width="20%" height="20%"> | 
 |• [Tor](https://www.torproject.org/) |&nbsp; ![](https://www.torproject.org/static/images/tor-logo@2x.png?h=16ad42bc) |  
 
-
+<br>
 
 Just to name a few that I personally use: **Brave**, focused on privacy, offers built-in ad and tracker blocking. **Firefox**, often considered the best Chrome alternative, is known for its balance of privacy, customization, and performance. **Pale Moon** is an open-source option that emphasizes efficiency and user choice. **Tor** is for those seeking the most secure browsing experience, prioritizing anonymity. 
 
