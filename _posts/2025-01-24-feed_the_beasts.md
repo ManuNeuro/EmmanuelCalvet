@@ -16,14 +16,16 @@ Every day of this epoch, human beings were unaware participants of a hidden squi
 
 ![Squid Game is a South Korean dystopian survival thriller, created by Hwang Dong-hyuk, the series follows a group of struggling individuals who are invited to participate in a series of deadly children’s games for a prize of 45.6 billion wons. The games are brutal and survival is uncertain, making the series a mix of suspense and violence.]({{ '/assets/article_images/2025-04-25-feed_the_beasts/squid_game.jpg' | relative_url }})
 
-In this data ocean, many sunk, carried away by these strong currents, swallowed by these digital Shai-Huluds. In polarizing avalanches, feedbacks looped likes snowballs, surging from catastrophic events. I was one among many, compulsively scrolling to this endless data stream, inside the belly of the beasts, now captured by a rhythmically, repetitive, unconscious movement. 
+In this data ocean, many sunk, carried away by these strong currents, swallowed by these digital Shai-Huluds. In polarizing avalanches, feedbacks looped likes snowballs, surging from catastrophic events. I was one among many, compulsively scrolling to this endless data stream, inside the belly of the beasts, now captured by a rhythmically, repetitive, unconscious movement.
+
+![Shai-Hulud (Arabic: شَيْء خُلُود Shayʾ-Khulud) translates as "Thing of Eternity". Shai-Hulud is a significant entity in the fictional universe of Frank Herbert’s “Dune” series, representing the sandworms of the desert planet Arrakis. These colossal creatures are revered by the Fremen as spiritual symbols and are considered physical embodiments of the One God in their religion.]({{ '/assets/article_images/2025-04-25-feed_the_beasts/shai-hulud.jpg' | relative_url }})
 
 Fortunetaley, in shock, I abruptly woke up from the nightmare. Awakening from the mass hypnosis after watching [The Billion Dollar Code](https://fr.wikipedia.org/wiki/The_Billion_Dollar_Code), I decided to walk away, by a syncopated, awkward step. Since these monsters could only understand the predictable, entropy was my biggest ally. For that, I had to explore uncharted, new territories. Get out of my digital comfort zones, my Gmail and Outlook, my Google clouds, my Chromes,  my Offices. From the predictable ease of these pipelines, I had to show myself a new way of relating to the mycelium, by respecting its fundamental DNA. 
 
 Bear with me, courageous travellers of the digital, real seekers of freedom in the virtual. Follow me down this rabbit whole, I will show you one of the ways you can do this too.
 
-![Shai-Hulud (Arabic: شَيْء خُلُود Shayʾ-Khulud) translates as "Thing of Eternity". Shai-Hulud is a significant entity in the fictional universe of Frank Herbert’s “Dune” series, representing the sandworms of the desert planet Arrakis. These colossal creatures are revered by the Fremen as spiritual symbols and are considered physical embodiments of the One God in their religion.]({{ '/assets/article_images/2025-04-25-feed_the_beasts/shai-hulud.jpg' | relative_url }})
-
+| | |
+|Axel Schmidt (middle right) and Pavel Meyer (middle left) showcase the Terravision project at their offices in 1994. Users navigated the planet using a large globe, as seen here. Image credit: ©Axel Schmidt. Google misappropriated the code and technology developed by the Terra Vision team, directly leading to the development of Google Earth. Their story is covered in the  [The Billion Dollar Code](https://fr.wikipedia.org/wiki/The_Billion_Dollar_Code) mini-serie. | ![](https://www.here.com/sites/g/files/odxslz256/files/2022-06/terravision-1994-the-billion-dollar-code-netflix-blog.jpeg)|
 ## The Internet isn't free
 
 Before we can begin to be fugitives, and run away from the devouring gluttonous programs, we need to equip ourselves with a few axioms, that will guide our quest and light our path when we are surrounded by darkness. 
