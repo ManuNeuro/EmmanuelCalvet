@@ -25,6 +25,7 @@ Fortunetaley, in shock, I abruptly woke up from the nightmare. Awakening from th
 Bear with me, courageous travellers of the digital, real seekers of freedom in the virtual. Follow me down this rabbit whole, I will show you one of the ways you can do this too.
 
 | | |
+| -- | --| 
 |Axel Schmidt (middle right) and Pavel Meyer (middle left) showcase the Terravision project at their offices in 1994. Users navigated the planet using a large globe, as seen here. Image credit: ©Axel Schmidt. Google misappropriated the code and technology developed by the Terra Vision team, directly leading to the development of Google Earth. Their story is covered in the  [The Billion Dollar Code](https://fr.wikipedia.org/wiki/The_Billion_Dollar_Code) mini-serie. | ![](https://www.here.com/sites/g/files/odxslz256/files/2022-06/terravision-1994-the-billion-dollar-code-netflix-blog.jpeg)|
 ## The Internet isn't free
 
