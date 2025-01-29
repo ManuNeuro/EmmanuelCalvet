@@ -6,7 +6,7 @@ comments: true
 image: /assets/article_images/2025-04-25-feed_the_beasts/network_cover.jpg
 ---
  
-*An essay on the alternatives to GAFAMS solutions*
+*An essay on the alternatives to GAFAMS solutions.*
 
 ## Intro
 
