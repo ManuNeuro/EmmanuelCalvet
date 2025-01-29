@@ -14,7 +14,7 @@ We are in 2025, the copper and optical mycelium covering planet earth, also know
 
 Every day of this epoch, human beings were unaware participants of a hidden squid game. Through tentacles of ones and zeros, the game was played against centralized beasts, embodied as silicon squids. The task of these quasi-living organisms, was to harvest the most precious substance in the human universe : their attention. Because at that time, attention was all you needed, ... to make money.  This grandiose symphony was modelling us, humanity, to then regurgitate what we wanted the most : the shocking, the buzzing, the cutest, the fearful, the pleasuring, the irresistible. 
 
-![Squid Game is a South Korean dystopian survival thriller, created by Hwang Dong-hyuk, the series follows a group of struggling individuals who are invited to participate in a series of deadly children’s games for a prize of 45.6 billion wons. The games are brutal and survival is uncertain, making the series a mix of suspense and violence.]({{ '/assets/article_images/2025-05-25-feed_the_bests/squid_game.jpg' | relative_url }})
+![Squid Game is a South Korean dystopian survival thriller, created by Hwang Dong-hyuk, the series follows a group of struggling individuals who are invited to participate in a series of deadly children’s games for a prize of 45.6 billion wons. The games are brutal and survival is uncertain, making the series a mix of suspense and violence.]({{ '/assets/article_images/2025-04-25-feed_the_bests/squid_game.jpg' | relative_url }})
 
 In this data ocean, many sunk, carried away by these strong currents, swallowed by these digital Shai-Huluds. In polarizing avalanches, feedbacks looping likes snowballs, surging from catastrophic events. I was one among many, compulsively scrolling to this endless data stream, inside the belly of the beasts, now captured by a rhythmically, repetitive, unconscious movement. 
 
@@ -64,7 +64,7 @@ The premise of accessing the web, is having a browser. The browser constitutes a
 | -- | --| 
 | ![](https://brave.com/static-assets/images/brave-logo-sans-text.svg)| [Brave](https://brave.com/)|
 | ![](https://www.mozilla.org/media/protocol/img/logos/firefox/logo.fedb52c912d6.svg) | [Firefox](https://www.mozilla.org/en-CA/firefox/new/)| 
-|<img src="https://imgs.search.brave.com/0BypfBz3dL3TybPIZ9_PtEaDGrDmmSSz5WviXmNpWpA/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vdGh1bWIv/YS9hMi9QYWxlX01v/b25fYnJvd3Nlcl9p/Y29uLnBuZy81MTJw/eC1QYWxlX01vb25f/YnJvd3Nlcl9pY29u/LnBuZw" width="25%" height="25%"> | [Pale Moon](https://www.palemoon.org/) |
+|<img src="https://imgs.search.brave.com/0BypfBz3dL3TybPIZ9_PtEaDGrDmmSSz5WviXmNpWpA/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vdGh1bWIv/YS9hMi9QYWxlX01v/b25fYnJvd3Nlcl9p/Y29uLnBuZy81MTJw/eC1QYWxlX01vb25f/YnJvd3Nlcl9pY29u/LnBuZw" width="20%" height="20%"> | [Pale Moon](https://www.palemoon.org/) |
 | ![](https://www.torproject.org/static/images/tor-logo@2x.png?h=16ad42bc) |  [Tor](https://www.torproject.org/)|
 
 
