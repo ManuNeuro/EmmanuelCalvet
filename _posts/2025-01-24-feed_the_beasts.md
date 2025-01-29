@@ -14,11 +14,15 @@ We are in 2025, the copper and optical mycelium covering planet earth, also know
 
 Every day of this epoch, human beings were unaware participants of a hidden squid game. Through tentacles of ones and zeros, the game was played against centralized beasts, embodied as silicon squids. The task of these quasi-living organisms, was to harvest the most precious substance in the human universe : their attention. Because at that time, attention was all you needed, ... to make money.  This grandiose symphony was modelling us, humanity, to then regurgitate what we wanted the most : the shocking, the buzzing, the cutest, the fearful, the pleasuring, the irresistible. 
 
+![Squid Game is a South Korean dystopian survival thriller, created by Hwang Dong-hyuk, the series follows a group of struggling individuals who are invited to participate in a series of deadly children’s games for a prize of 45.6 billion wons. The games are brutal and survival is uncertain, making the series a mix of suspense and violence.]({{ '/assets/article_images/2025-01-24-feed_the_bests/squid_game.jpg' | relative_url }})
+
 In this data ocean, many sunk, carried away by these strong currents, swallowed by these digital Shai-Huluds. In polarizing avalanches, feedbacks looping likes snowballs, surging from catastrophic events. I was one among many, compulsively scrolling to this endless data stream, inside the belly of the beasts, now captured by a rhythmically, repetitive, unconscious movement. 
 
 Fortunetaley, in shock, I abruptly woke up from the nightmare. Awakening from the mass hypnosis after watching "The social Dileama", I decided to walk away, by a syncopated, awkward step. Since these monsters could only understand the predictable, entropy was my biggest ally. For that, I had to explore uncharted, new territories. Get out of my digital comfort zones, my Gmail and Outlook, my Google clouds, my Chromes,  my Offices. From the predictable ease of these pipelines, I had to show myself a new way of relating to the mycelium, by respecting its fundamental DNA. 
 
 Bear with me, courageous travellers of the digital, real seekers of freedom in the virtual. Follow me down this rabbit whole, I will show you one of the ways you can do this too.
+
+![Shai-Hulud (Arabic: شَيْء خُلُود Shayʾ-Khulud) translates as "Thing of Eternity". Shai-Hulud is a significant entity in the fictional universe of Frank Herbert’s “Dune” series, representing the sandworms of the desert planet Arrakis. These colossal creatures are revered by the Fremen as spiritual symbols and are considered physical embodiments of the One God in their religion]({{ '/assets/article_images/2025-01-24-feed_the_bests/shai-hulud.jpg' | relative_url }})
 
 ## The Internet isn't free
 
