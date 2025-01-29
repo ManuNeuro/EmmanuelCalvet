@@ -38,7 +38,7 @@ From the first axiom, one might wonder why it is that companies put so much ener
 
 One must not confuse freedom, with free of charge. The universe is made in such a way that energy is conserved, that is to say, any action comes with a cost : if you want to protect yourself from a storm, you need to spend time and energy to build yourself a shelter. However, if you cannot or do not have the time to build it, you will need a community to do it for you, provided that in exchange you offer some good or services. This exchanged needs not to be equal, as in any cases, an exchange of energy occurs broadly, such that the total sum of energies is constant. This same rule applies to particles, living organism, the internet, and any services you use in there.
 
-Now, I do not want to give the impression that benevolence doesn't exist, as the Open-Source communities prove, but this example doesn't invalidate the axiom, as the cost is ... well, as said, implicit, paid by benevolence : time, energy, donations, sponsorship, etc. 
+Now, I don't want to suggest that benevolence is absent, as demonstrated by Open-Source communities, but this example doesn't invalidate the axiom. The cost is, as mentioned, implicit, paid through benevolence: time, energy, donations, sponsorships, and so on.
 
 This analogy with physics invites us to consider that, in whatever way, shape, or form, visible or invisible, the true cost of the service is being paid, directly, or indirectly. For instance, one bloody price for all our devices, is the extraction from the earth, of the very rare metals needed to build them. We all want the price to be as low as possible, so enslaved children in Congo and elsewhere pay the price for the discounts.  
 
