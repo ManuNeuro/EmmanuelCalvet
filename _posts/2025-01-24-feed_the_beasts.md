@@ -30,7 +30,7 @@ Before we can begin to be fugitives, and run away from the devouring gluttonous 
 
 ### 1. Information cannot be destroyed
 
-One thing that is true of the universe, and the sprawling internet, is that information never dies. This is shown at the quantum level, explaining why there is Hawking radiation from black holes, but this is also true of the internet, as every action you do, leaves a permanent trace, immediately stored in Akashic numerical records. Contrary to our grey matter, hard drives and SSDs never forget. They swallow everything that you do, watch and say. If one crashes, a raid of information has it already mirrored in another crystalline storage. 
+One thing that is true of the universe, and equally of the sprawling internet, is that information never dies. This is shown at the quantum level, explaining why there is Hawking radiation from black holes, but this is also true of the internet, as every action you do, leaves a permanent trace, immediately stored in Akashic numerical records. Contrary to our grey matter, hard drives and SSDs never forget. They swallow everything that you do, watch and say. If one crashes, a raid of information has it already mirrored in another crystalline storage. 
 
 From the first axiom, one might wonder why it is that companies put so much energy, money and resources to actually storing every bit of our lives. And if it might already be obvious to you, we will still take time to address this in the second axiom, as it is critical to examine it in more detail. 
 
