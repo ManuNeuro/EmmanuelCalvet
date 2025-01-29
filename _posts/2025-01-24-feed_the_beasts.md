@@ -1,5 +1,5 @@
 ---
-title: "Do you have to feed the beasts?"
+title: "Do You Have to Feed the Beasts?"
 layout: post
 categories: Digital Mycelium, GAFAMS, Alternatives
 comments: true
