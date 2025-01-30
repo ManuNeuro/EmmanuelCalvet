@@ -50,7 +50,7 @@ This analogy with physics invites us to consider that, in whatever way, shape, o
 Thus, enjoying free or affordable services without bearing the direct costs fosters a dangerously misleading notion of freedom. The misconception that our online actions are consequence-free, indeed propels a culture of carelessness.
 
 <a href="https://www.sciencedirect.com/science/article/pii/S009174352100253X" target="_blank">
-    <img src="/assets/article_images/2025-04-25-feed_the_beasts/article_cyber.png">
+    <img src="/assets/article_images/2025-04-25-feed_the_beasts/article_cyber.png" alt="">
 </a>
 <a><center>Another potent example of the hidden cost behind anonymity on the web. Cyberbullying is associated with increased risk of suicidal and self-harm behaviors in children and adolescents.</center></a>
 
