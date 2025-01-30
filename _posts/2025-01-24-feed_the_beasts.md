@@ -29,11 +29,9 @@ Bear with me, courageous travellers of the digital, real seekers of freedom in t
 |Google misappropriated the code and technology developed by the Terra Vision team, directly leading to the development of Google Earth. Their story is covered in the  [The Billion Dollar Code](https://fr.wikipedia.org/wiki/The_Billion_Dollar_Code) mini-serie. Axel Schmidt (middle right) and Pavel Meyer (middle left) showcase the Terravision project at their offices in 1994. Users navigated the planet using a large globe. Image credit: ©Axel Schmidt.  | <img src="https://www.here.com/sites/g/files/odxslz256/files/2022-06/terravision-1994-the-billion-dollar-code-netflix-blog.jpeg" width="75%" height="75%">
 |
 
+## Freedom is not free of charge
 
-
-## The Internet isn't free
-
-Before we can begin to be fugitives, and run away from the devouring gluttonous programs, we need to equip ourselves with a few axioms, that will guide our quest and light our path when we are surrounded by darkness. 
+Before we can begin to be fugitives, and run away from the devouring gluttonous programs, we need to equip ourselves with a few axioms and definitions, that will guide our quest and light our path when we are surrounded by darkness. 
 
 ### 1. Information cannot be destroyed
 
@@ -43,13 +41,15 @@ From the first axiom, one might wonder why it is that companies put so much ener
 
 ### 2.  If there is no explicit cost, the cost is implicit.
 
-One must not confuse freedom, with free of charge. The universe is made in such a way that energy is conserved, that is to say, any action comes with a cost : if you want to protect yourself from a storm, you need to spend time and energy to build yourself a shelter. However, if you cannot or do not have the time to build it, you will need a community to do it for you, provided that in exchange you offer some good or services. This exchanged needs not to be equal, as in any cases, an exchange of energy occurs broadly, such that the total sum of energies is constant. This same rule applies to particles, living organism, the internet, and any services you use in there.
+One must not confuse freedom, which involves making informed choices with potential consequences, with being 'free of charge,' which implies receiving without giving something in return. The universe is made in such a way that energy is conserved, that is to say, any action comes with a cost : if you want to protect yourself from a storm, you need to spend time and energy to build yourself a shelter. However, if you cannot or do not have the time to build it, you will need a community to do it for you, provided that in exchange you offer some good or services. This exchanged needs not to be equal, as in any cases, an exchange of energy occurs broadly, such that the total sum of energies is constant. This same rule applies to particles, living organism, the internet, and any services you use in there.
 
-Now, I don't want to suggest that benevolence is absent, as demonstrated by Open-Source communities, but this example doesn't invalidate the axiom. The cost is, as mentioned, implicit, paid through benevolence: time, energy, donations, sponsorships, and so on.
+Now, I don't want to suggest that benevolence is absent, as demonstrated by Open-Source communities, and this example doesn't invalidate the axiom. The cost is, as mentioned, implicit, paid through benevolence: time, energy, donations, sponsorships, and so on. 
 
-This analogy with physics invites us to consider that, in whatever way, shape, or form, visible or invisible, the true cost of the service is being paid, directly, or indirectly. For instance, one bloody price for all our devices, is the extraction from the earth, of the very rare metals needed to build them. We all want the price to be as low as possible, so enslaved children in Congo and elsewhere pay the price for the discounts.  
+This analogy with physics invites us to consider that, in whatever way, shape, or form, whether visible or invisible, the true cost of the service is always being paid—either directly or indirectly. A stark reality of our digital lives is the hefty toll of extracting rare metals necessary for manufacturing electronic devices. For instance, the extraction of these very rare metals needed to build our devices comes at a bloody price. We all want the price to be as low as possible, and as a result, enslaved children in Congo and elsewhere bear the grim cost for our discounts.
 
-Now, most of us know it, the reason why companies put so much effort into storing every bit of our life is the profit they make out of it; otherwise they obviously wouldn't do it. Data collection tracking : Name, email address, phone number, age, gender, language preferences, location, browsing history, search queries, click patterns, time spent on different pages, GPS data, IP address location, Wi-Fi and Bluetooth data, interaction with ads, videos watched, articles read, likes, comments, and shares .... And the list goes on and on. 
+Thus, enjoying free or affordable services without bearing the direct costs fosters a dangerously misleading notion of freedom. The misconception that our online actions are consequence-free, indeed propels a culture of carelessness.
+
+Most of us know it, the reason why companies put so much effort and resources into storing every bit of our life is the profit they make out of it; otherwise they obviously wouldn't. Data collection tracking : Name, email address, phone number, age, gender, language preferences, location, browsing history, search queries, click patterns, time spent on different pages, GPS data, IP address location, Wi-Fi and Bluetooth data, interaction with ads, videos watched, articles read, likes, comments, and shares .... And the list goes on and on. 
 
 This time, the miners extracting the data are another type of youth : machine learning algorithms. All this data leaks from you every time you move on the grid, and the movement, as free as it seems, generates profit for companies that sell it. This is the implicit cost of all these free services. I strongly dislike that sentence, but in this context, it is absolutely true : 
 
@@ -59,7 +59,7 @@ This time, the miners extracting the data are another type of youth : machine le
 
 Let's engage now with the true price of freedom because, maybe counterintuitively, at least it was to me, freedom has nothing to do with doing whatever you want free of charges, and everything about taking responsibility in full awareness.
 
-Yes, you can't be free on the internet if you are not aware of the hidden and implicit costs, and do not know you are actually the product of the social medias and their advertisements. These big machines are harnessing our attention at a massive scale. Did you watch the movie Matrix? Well, it's exactly that. Can you say you are free to compulsively respond to this post that enrages you? Can you say you are free to reshare this "sooo cute" cat picture? Are you free to dead scrolling, trolling, bashing, and what about watching this weird video and wondering why you are actually watching ?! Why is it that you fake a dream life to get validation through likes as a proxy, ... I have more questions than answers, but among the few I want to share, is my attempt to break, free. So let's get concrete now, and propose a few alternatives to our usual way of webbing into the mycellium that is the internet. 
+Yes, you can't be free on the internet if you are not aware of the hidden and implicit costs, and do not know you are actually the product of the social medias and their advertisement campaigns. These big machines are harnessing our attention at a massive scale. Did you watch the movie Matrix? Well, it's exactly that. Can you say you are free to compulsively respond to this post that enrages you? Can you say you are free to reshare this "sooo cute" cat picture? Are you free to dead scrolling, trolling, bashing, and what about watching this weird video and wondering why you are actually watching ?! Why is it that you fake a dream life to get validation through likes as a proxy, ... I have more questions than answers, but among the few I want to share, is my attempt to break, free. So let's get concrete now, and propose a few alternatives to our usual way of webbing into the mycellium that is the internet. 
 
 ### Surfing the internet
 
