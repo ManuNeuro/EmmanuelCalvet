@@ -49,6 +49,9 @@ This analogy with physics invites us to consider that, in whatever way, shape, o
 
 Thus, enjoying free or affordable services without bearing the direct costs fosters a dangerously misleading notion of freedom. The misconception that our online actions are consequence-free, indeed propels a culture of carelessness.
 
+![Another potent exemple of the hidden cost behind anonymity on the web. Cyberbullying is associated with increased risk of suicidal and self-harm behaviors in children and adolescents. Here is a [link](https://www.sciencedirect.com/science/article/pii/S009174352100253X) to the full article published in Elsevier.]({{ '/assets/article_images/2025-04-25-feed_the_beasts/article_cyber.png' | relative_url }})
+
+
 Most of us know it, the reason why companies put so much effort and resources into storing every bit of our life is the profit they make out of it; otherwise they obviously wouldn't. Data collection tracking : Name, email address, phone number, age, gender, language preferences, location, browsing history, search queries, click patterns, time spent on different pages, GPS data, IP address location, Wi-Fi and Bluetooth data, interaction with ads, videos watched, articles read, likes, comments, and shares .... And the list goes on and on. 
 
 This time, the miners extracting the data are another type of youth : machine learning algorithms. All this data leaks from you every time you move on the grid, and the movement, as free as it seems, generates profit for companies that sell it. This is the implicit cost of all these free services. I strongly dislike that sentence, but in this context, it is absolutely true : 
