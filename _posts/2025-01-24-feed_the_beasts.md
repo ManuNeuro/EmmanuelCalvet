@@ -52,7 +52,7 @@ Thus, enjoying free or affordable services without bearing the direct costs fost
 <a href="https://www.sciencedirect.com/science/article/pii/S009174352100253X" target="_blank">
     <img src="/assets/article_images/2025-04-25-feed_the_beasts/article_cyber.png" alt="">
 </a>
-<a><center>Another potent example of the hidden cost behind anonymity on the web. Cyberbullying is associated with increased risk of suicidal and self-harm behaviors in children and adolescents.</center></a>
+<p><center>Another potent example of the hidden cost behind anonymity on the web. Cyberbullying is associated with increased risk of suicidal and self-harm behaviors in children and adolescents.</center></p>
 
 Most of us know it, the reason why companies put so much effort and resources into storing every bit of our life is the profit they make out of it; otherwise they obviously wouldn't. Data collection tracking : Name, email address, phone number, age, gender, language preferences, location, browsing history, search queries, click patterns, time spent on different pages, GPS data, IP address location, Wi-Fi and Bluetooth data, interaction with ads, videos watched, articles read, likes, comments, and shares .... And the list goes on and on. 
 
