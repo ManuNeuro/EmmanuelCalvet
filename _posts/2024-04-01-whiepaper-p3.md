@@ -285,28 +285,3 @@ As we stand on the brink of a new era in classical cryptography, potentially thr
 In our next exploration, we will venture further into this promising intersection of cryptography and neural networks. We aim to develop a framework for generating private and public key pairs, using the uniqueness of ANNs to our advantage. This approach, marrying the randomness of synaptic weights with the security requirements of cryptographic keys, could redefine the standards of digital security in the quantum age.
 
 
-Opérationnel 
-- On va attendre les tests de bell
-- Et tester les systèmes QKD de manière indépendantes en condition réel
-- Demander à Bell Francois Raymond (longueur du lien, pertes du lien, et les tables de connexions de dans le patch panel)
-
-Patch panel, prendre une photo
-- Comment sont identifiés les ports
-- Est-ce qu'on 
-- Contacter matthieu pour 
-
-Fonctionnel: tout le matériel fonctionne, sans aucun soucis technique.
-Opérationnel: 
-- Landing pour utilisateur
-- Processus
-- Accès à distance et locale pour utilisateur
-
-
-Acheter du matériel
-- Acheter un UPS (pour protéger les équipements)
-- Les deux disques durs
-
-- Demander à Matthieu ce qu'il se passe quand l'électicité est coupé 
--> Procédure, qui recoit un message quand ca se coupe?
--> Est-ce qu'on a besoin d'une firme?
-
