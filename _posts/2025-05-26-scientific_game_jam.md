@@ -89,6 +89,7 @@ $$\frac{dx(t)}{dt} = \beta \frac{x(t-\tau)}{1 + x(t-\tau)^n} - \gamma x(t)$$
 |--|--|
 |![]({{ '/assets/article_images/2025-05-26-scientific_game_jam/mg_eq.png' | relative_url }})| On the right of the spaceship's dashboard, you have a screen displaying the mackey-glass non-linear dynamical equation, as controlled by the canon load, next converted as the time constant parameter of the equation. |
 
+<br>
 **Note**: The Mackey-Glass equation is used only for the dashboard visualization—the actual sun mechanics are governed by simpler dynamics.
 
 ## Sun State Dynamics
