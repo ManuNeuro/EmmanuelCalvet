@@ -76,7 +76,7 @@ The next step, consists in converting the Canon Entropy load into a parameter ($
   
   The Entropy Canon Load, is then converted, to control the Mackey-Glass delay differential equation’s time constant $\tau$:
 
-$$\tau=C_t * \tau_{max} / 100$$
+$$\tau=C_t \times \tau_{max} / 100$$
 
 $$\frac{dx(t)}{dt} = \beta \frac{x(t-\tau)}{1 + x(t-\tau)^n} - \gamma x(t)$$
   
@@ -99,9 +99,9 @@ Achieve stability by maintaining the sun's state between 40-60% for five seconds
 
 - **State Equation**:
 
-  $$\text{sun\_state}(t+1) = \text{canon\_influence}(t) + \text{momentum}(t)$$
+  $$\text{sun_state}(t+1) = \text{canon_influence}(t) + \text{momentum}(t)$$
 
-  $$\text{canon\_influence} = -(\text{sun\_state} - \text{canon\_load}) \times \Delta T$$
+  $$\text{canon_influence} = -(\text{sun_state} - \text{canon_load}) \times \Delta T$$
 
   $$\text{momentum}(t) =A\sin(\theta t + \phi) \times \Delta T$$
 
