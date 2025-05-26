@@ -86,6 +86,7 @@ $$\frac{dx(t)}{dt} = \beta \frac{x(t-\tau)}{1 + x(t-\tau)^n} - \gamma x(t)$$
 
 ![On the right of the spaceship's dashboard, you have a screen displaying the mackey-glass non-linear dynamical equation, as controlled by the canon load, next converted as the time constant parameter of the equation.]({{ '/assets/article_images/2025-05-26-scientific_game_jam/mg_eq.png' | relative_url }})
 
+**Note**: The Mackey-Glass equation is used only for the dashboard visualization—the actual sun mechanics are governed by simpler dynamics.
 
 ## Sun State Dynamics
 
@@ -106,10 +107,12 @@ Achieve stability by maintaining the sun's state between 40-60% for five seconds
   $$\text{momentum}(t) =A\sin(\theta t + \phi) \times \Delta T$$
 
 So, as you can see, the canon influence is not directly the mackey-glass equation, and it's more simply dependant on the $\text{canon\_load}$, in percentage, and the $\text{sun\_state}$ :
-- When $\text{sun\_state}$ is bigger than $\text{canon\_load}$, the sign is thus negative, and the canon influence will decrease the value of the sun state, hence favoring shrinking. 
-- On the other hand, when $\text{sun\_state}$ is smaller, we have a multiplication of two minus signs, ending up in a positive canon influence, in that case, the canon will make the sun grow. 
 
-So now that we revealed our tricks, we can see that the mechanic is actually very simplistic, and the Mackey-Glass equation is just here for the display of the screen in the spaceship!
+- If sun_state>canon_load\text{sun\_state} > \text{canon\_load}: cannon shrinks the sun.
+    
+- If sun_state<canon_load\text{sun\_state} < \text{canon\_load}: cannon inflates the sun.
+    
+Stability is achieved by keeping the sun between 40–60% for five seconds, three times in a row, as you can see in the mission phase display. Exceeding 100% or dropping below 0% results in a loss, either exploding or collapsing the sun!
 
 ## Thesis Connection
 
