@@ -93,6 +93,7 @@ The next step, consists in converting the Canon Entropy load into a parameter ($
   The Entropy Canon Load, is then converted, to control the Mackey-Glass delay differential equation’s time constant $\tau$:
 
 $$\tau=C_t * \tau_{max} / 100$$
+
 $$\frac{dx(t)}{dt} = \beta \frac{x(t-\tau)}{1 + x(t-\tau)^n} - \gamma x(t)$$
   
   - **Intuition**: Lower $\tau$ produces a state $x(t)$ that depends on the recent history, and tends to ellicit regular patterns, essential in stabilizing the sun. Higher $\tau$, on the other hand, means that $x(t)$ will depends on far distant memories, and tends to generate chaotic patterns. In between, $\tau$ ellicit semi periodic wave patterns. 
@@ -110,8 +111,11 @@ The $\text{sun\_state}$ is thus a function of two parameters, its **momentum**, 
 Achieve stability by maintaining the sun's state between 40-60% for five seconds, three times in succession, to win. Lose if the sun state exceeds 100% or drops below 0%.
 
 - **State Equation**:
+
   $$\text{sun\_state}(t+1) = \text{canon\_influence}(t) + \text{momentum}(t)$$
+
   $$\text{canon\_influence} = -(\text{sun\_state} - \text{canon\_load}) \times \Delta T$$
+
   $$\text{momentum}(t) =A\sin(\theta t + \phi) \times \Delta T$$
 
 So, as you can see, the canon influence is not directly the mackey-glass equation, and it's more simply dependant on the $\text{canon\_load}$, in percentage, and the $\text{sun\_state}$ :
