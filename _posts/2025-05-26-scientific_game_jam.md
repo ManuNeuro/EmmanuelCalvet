@@ -73,7 +73,7 @@ So the Canon Load is a percentage value between 0 to 100%. The $Sensitivity$ par
 ![On the left of the spaceship's dashboard, you have a screen indicating the canon load along with the sun state, both in percentage.]({{ '/assets/article_images/2025-05-26-scientific_game_jam/canon_load.png' | relative_url }})
 
 
-The next step, consists in converting the Canon Entropy load into a parameter ($\tau$), that controls the non-linear equation **Mackey-Glass**, one of the equation I personnaly used to train and test my neural networks in my two parpers, ([1], [2]). This equation is a well known benchmark in the field of reservoir computing, in part due to its richness, it can ellicit a wide range of dynamics, from regular to chaotic, depending on parameters. 
+The next step, consists in converting the Canon Entropy load into a parameter ($\tau$), that controls the non-linear equation **Mackey-Glass**, one of the equation I personnaly used to train and test my neural networks in my two parpers, ([1](https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2023.1223258/full), [2](https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2024.1348138/full)). This equation is a well known benchmark in the field of reservoir computing, in part due to its richness, it can ellicit a wide range of dynamics, from regular to chaotic, depending on parameters. 
   
   The Entropy Canon Load, is then converted, to control the Mackey-Glass delay differential equation’s time constant $\tau$:
 
