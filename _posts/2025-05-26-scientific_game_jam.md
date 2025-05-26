@@ -19,7 +19,7 @@ The only thing that stands against the desctruction of life, is you, your magnet
 <details>
 <summary>Click here to show a presentation of the game</summary>
 
-
+<markdown>
  Your mission, should you choose to accept it, is nothing short of celestial heroism: stabilize our aging sun to prevent its cataclysmic transformation into either a black hole or supernova.
   
 Fast forward 5 billion years, we find ourselves at the brink of solar collapse. Our mighty sun is erratic, oscillating wildly as it teeters on the edge of chaos. This instability threatens civilization itself. 
@@ -35,6 +35,7 @@ Entropy of your input directly influences the waveform: predictable key patterns
 Victory rests in your hands: master the cannon's entropy by balancing order and chaos. This delicate equilibrium counters the semi-random momentum of the sun itself, governed by a sinusoidal cycle initiated at a random phase each game—ensuring no two experiences are identical.
  
 For further cosmic inspiration, refer to [Emmanuel Calvet's thesis](https://savoirs.usherbrooke.ca/handle/11143/22542). His work in neural networks mirrors your task—balancing chaos and order to optimize information processing. This approach, known as reservoir computing, paves a promising path toward minimizing AI's energy and hardware demands.
+</markdown>
 
 </details>
 
@@ -65,6 +66,10 @@ In practice, this means that :
 Indeed, in the first case $H(X)=- 1 \times log_2(1)=0$, and in the second case, $H(X)=10 \times (1/10 \times log_2(10))=3.32$.
 
 If we considered a more balanced approach, for instance where we had two equally probable characters, like "AAAAABBBBB", we would have an entropy of $H(X)=2 \times (1/2 \times log_2(2))=1$, a value in between. **Take this into consideration when you try the game!**
+
+![The keyboard.]({{ '/assets/article_images/2025-05-26-scientific_game_jam/keyboard.png' | relative_url }})
+
+
 ### Entropy Normalization
 
 The computed entropy is then centered around zero and normalized:
