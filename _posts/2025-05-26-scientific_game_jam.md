@@ -23,8 +23,6 @@ Now, since this is a scientific blog, I’d like to dive into the mathematics be
 
 # Collapse is Near: The Mathematics Behind the Game
 
-## Overview
-
 **The Collapse is Near** is an interactive game where players must balance order and chaos to stabilize a dying sun. This challenge is grounded in mathematical principles that echo core ideas from my thesis on balancing order and chaos in recurrent neural networks.
 
 ## Game Mechanics and Mathematical Concepts
