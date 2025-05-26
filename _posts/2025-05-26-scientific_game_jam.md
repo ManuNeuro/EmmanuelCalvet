@@ -82,7 +82,7 @@ $$\tau=C_t \times \tau_{max} / 100$$
 $$\frac{dx(t)}{dt} = \beta \frac{x(t-\tau)}{1 + x(t-\tau)^n} - \gamma x(t)$$
   
   - **Intuition**: Lower $\tau$ produces a state $x(t)$ that depends on the recent history, and tends to ellicit regular patterns, essential in stabilizing the sun. Higher $\tau$, on the other hand, means that $x(t)$ will depends on far distant memories, and tends to generate chaotic patterns. In between, $\tau$ ellicit semi periodic wave patterns. 
-  - We have empirically set $\tau_{max}=60$, in order to **conserve the monotonicity of the influence of $\tau$** on the dynamic of $x$. Meaning that at some point, even though you continue increasing $\tau$, you will obtain back some regular dynamics. 
+  - We have empirically set $\tau_{max}=60$, in order to **conserve the monotonicity of the influence of $\tau$** on the dynamic of $x$. Meaning that at some point, even though you continue increasing $\tau$, you will obtain regular dynamics again. 
   - Remember that there are other parameters, $\beta$, $n$, $\gamma$, all creating very complex and non-linear relations, so controlling the dynamic is not as simple as just pushing a parameter in one or the other direction, hence why we restricted the range of $\tau$ to obtain the desired "linear" control. 
 
 |||
