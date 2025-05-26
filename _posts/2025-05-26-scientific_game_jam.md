@@ -41,7 +41,7 @@ Players interact through keyboard inputs, where we analyze the last 10 keys type
 
 For example:
 1. If you enter the same letter "AAAAAAAAAA", $p(A)=1$, and the entropy will be minimum, $H(X)=- 1 \times log_2(1)=0$.
-2. And if you only input distinct letters "QWERTYUIO", the entropy will be maximal, $p({Q, W, ...})=1/10$, and $H(X)=10 \times (1/10 \times log_2(10))=3.32$.
+2. If you only input distinct letters "QWERTYUIO", the entropy will be maximal, $p({Q, W, ...})=1/10$, and $H(X)=10 \times (1/10 \times log_2(10))=3.32$.
 3. If we considered a more balanced approach, for instance where we had two equally probable characters, like "AAAAABBBBB", we would have an entropy of $H(X)=2 \times (1/2 \times log_2(2))=1$, a value in between.
 
 **Take this into consideration when you try the game!**
