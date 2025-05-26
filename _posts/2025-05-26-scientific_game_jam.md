@@ -85,7 +85,9 @@ $$\frac{dx(t)}{dt} = \beta \frac{x(t-\tau)}{1 + x(t-\tau)^n} - \gamma x(t)$$
   - We have empirically set $\tau_{max}=60$, in order to **conserve the monotonicity of the influence of $\tau$** on the dynamic of $x$. Meaning that at some point, even though you continue increasing $\tau$, you will obtain back some regular dynamics. 
   - Remember that there are other parameters, $\beta$, $n$, $\gamma$, all creating very complex and non-linear relations, so controlling the dynamic is not as simple as just pushing a parameter in one or the other direction, hence why we restricted the range of $\tau$ to obtain the desired "linear" control. 
 
-![On the right of the spaceship's dashboard, you have a screen displaying the mackey-glass non-linear dynamical equation, as controlled by the canon load, next converted as the time constant parameter of the equation.]({{ '/assets/article_images/2025-05-26-scientific_game_jam/mg_eq.png' | relative_url }})
+|||
+|--|--|
+|![]({{ '/assets/article_images/2025-05-26-scientific_game_jam/mg_eq.png' | relative_url }})| On the right of the spaceship's dashboard, you have a screen displaying the mackey-glass non-linear dynamical equation, as controlled by the canon load, next converted as the time constant parameter of the equation. |
 
 **Note**: The Mackey-Glass equation is used only for the dashboard visualization—the actual sun mechanics are governed by simpler dynamics.
 
