@@ -69,6 +69,7 @@ So the Canon Load is a percentage value between 0 to 100%. The $Sensitivity$ par
 1. If you take a **very high value,** the last 10 keys will have a huge influence, and it means you will have to fine tune directly at the keyboard the level of order and disorder, **favoring messages with a balanced entropy, close to zero**.
 2. If you take a **very small value**, it means the last ten digit entropy doesn't influence much, so if you want to influence the overall canon load, **you should input either very ordered / disordered messages**, to change the dynamic of the magnetic wave.
 
+
 ![On the left of the spaceship's dashboard, you have a screen indicating the canon load along with the sun state, both in percentage.]({{ '/assets/article_images/2025-05-26-scientific_game_jam/canon_load.png' | relative_url }})
 
 
@@ -108,9 +109,9 @@ Achieve stability by maintaining the sun's state between 40-60% for five seconds
 
 So, as you can see, the canon influence is not directly the mackey-glass equation, and it's more simply dependant on the $\text{canon\_load}$, in percentage, and the $\text{sun\_state}$ :
 
-- If sun_state>canon_load\text{sun_state} > \text{canon_load}: cannon shrinks the sun.
+- If $\text{sun_state} > \text{canon_load}$: cannon shrinks the sun.
     
-- If sun_state<canon_load\text{sun_state} < \text{canon_load}: cannon inflates the sun.
+- If $\text{sun_state} < \text{canon_load}$: cannon inflates the sun.
     
 Stability is achieved by keeping the sun between 40–60% for five seconds, three times in a row, as you can see in the mission phase display. Exceeding 100% or dropping below 0% results in a loss, either exploding or collapsing the sun!
 
