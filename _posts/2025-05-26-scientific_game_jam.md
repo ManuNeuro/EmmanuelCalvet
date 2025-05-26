@@ -14,6 +14,9 @@ Thanks to my dear colleague and organizer Floriant Sauges from Numana, I had the
 
 Despite its ominous name, The Collapse is Near is not about the collapse of civilization caused by the current catastrophic meta-crisis. Instead, it throws you 5 billion years into the future, where your mission is to save civilization from the imminent collapse of the sun.
 
+![If you lose, the star will either inflate and end up in a supernovae, or it will collide and finishi in a black hole!]({{ '/assets/article_images/2025-05-26-scientific_game_jam/black_hole.png' | relative_url }})
+
+
 The only thing standing between life and destruction is you, your magnetic cannon, and your dexterity in balancing the sun’s state on the razor’s edge of chaos—finding the right amount of order and disorder to load into magnetic waves, displayed on your spaceship’s dashboard. Each second you hold the balance gives Earth a bit more time to survive. Of course, any resemblance to real events is purely coincidental.
 
 Now, since this is a scientific blog, I’d like to dive into the mathematics behind the game, which connect nicely to a key concept from my thesis: the **edge of chaos**.
