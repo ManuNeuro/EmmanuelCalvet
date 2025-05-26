@@ -8,13 +8,13 @@ image: /assets/article_images/2025-05-26-scientific_game_jam/cover.jpg
 
  # The Collapse is Near : a video game explaining my thesis
 
-Thanks to my dear colleague and organizer, Floriant Sauges from Numana, I participated at the [2025 Scientific Game Jam, in Montreal](https://www.scientificgamejam.org/home/), where I teamed up with game designers to explicits my [research thesis](https://savoirs.usherbrooke.ca/handle/11143/22542) into a ludical experience : *a video game*. After two days of hard work, and many ulterior evenings finetuning the gameplay, we produced "**The collapse is Near**".
+Thanks to my dear colleague and organizer Floriant Sauges from Numana, I had the opportunity to participate in the [2025 Scientific Game Jam, in Montreal](https://www.scientificgamejam.org/home/), where I teamed up with game designers to translate my [research thesis](https://savoirs.usherbrooke.ca/handle/11143/22542) into a playful experience: a video game. After two intense days of development and several more evenings fine-tuning the gameplay, we created "**The Collapse is Near**."
 
 - [Itch.io : The Collapse Is Near by CogNoman, ManuNeuro, Mounk, and AlexiaChampain](https://cognoman.itch.io/the-collapse-is-near)
 
-The collapse is near, despite its name, is not a game about the end of civilisation due to the catstrophic meta-crisis we are currently in, no, it's a game that catapults you 5 billion years in the future, to save civilization from the near collapse of the sun. 
+Despite its ominous name, The Collapse is Near is not about the collapse of civilization caused by the current catastrophic meta-crisis. Instead, it throws you 5 billion years into the future, where your mission is to save civilization from the imminent collapse of the sun.
 
-The only thing that stands against the desctruction of life, is you, your magnetic canon, and your dexterity at balancing the sun's state, at the rathor's edge of chaos, finding the right amount or order, and discorder to load in the magnetic waves, displayed in the dashboard of your spacechip, ..., each second giving extra time to life on earth to be saved. Obviously, resemblance with any real event is purely accidental.
+The only thing standing between life and destruction is you, your magnetic cannon, and your dexterity in balancing the sun’s state on the razor’s edge of chaos—finding the right amount of order and disorder to load into magnetic waves, displayed on your spaceship’s dashboard. Each second you hold the balance gives Earth a bit more time to survive. Of course, any resemblance to real events is purely coincidental.
 
 <details>
 <summary>Click here to show a presentation of the game</summary>
