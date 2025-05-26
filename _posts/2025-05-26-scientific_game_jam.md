@@ -69,6 +69,9 @@ So the Canon Load is a percentage value between 0 to 100%. The $Sensitivity$ par
 1. If you take a **very high value,** the last 10 keys will have a huge influence, and it means you will have to fine tune directly at the keyboard the level of order and disorder, **favoring messages with a balanced entropy, close to zero**.
 2. If you take a **very small value**, it means the last ten digit entropy doesn't influence much, so if you want to influence the overall canon load, **you should input either very ordered / disordered messages**, to change the dynamic of the magnetic wave.
 
+![On the left of the spaceship's dashboard, you have a screen indicating the canon load along with the sun state, both in percentage.]({{ '/assets/article_images/2025-05-26-scientific_game_jam/canon_load.png' | relative_url }})
+
+
 The next step, consists in converting the Canon Entropy load into a parameter ($\tau$), that controls the non-linear equation **Mackey-Glass**, one of the equation I personnaly used to train and test my neural networks in my two parpers, ([1], [2]). This equation is a well known benchmark in the field of reservoir computing, in part due to its richness, it can ellicit a wide range of dynamics, from regular to chaotic, depending on parameters. 
   
   The Entropy Canon Load, is then converted, to control the Mackey-Glass delay differential equation’s time constant $\tau$:
