@@ -53,9 +53,7 @@ Now, since this is a scientific blog, I felt like diving a bit into the mathemat
 Players contribute via keyboard inputs, where we analyze the last 10 keys pressed, with the **Shanon entropy**:
 
 - This measures the uncertainty or randomness in the sequence of keys.
-  $$
-  H(X) = -\sum p(x) \log_2 p(x)
-  $$
+  $$H(X) = -\sum p(x) \log_2 p(x)$$
   
   Where $p(x)$ is the probability of character $x$ appearing in the input. Intuitively, higher entropy indicates more unpredictability in your keystrokes (less repetition), which impacts the game's progression.
 
@@ -74,9 +72,7 @@ If we considered a more balanced approach, for instance where we had two equally
 
 The computed entropy is then centered around zero and normalized:
 
-$$
-H_{norm} = \frac{2 \cdot (H(X) - H_{min})}{H_{max} - H_{min}} - 1
-$$
+$$H_{norm} = \frac{2 \cdot (H(X) - H_{min})}{H_{max} - H_{min}} - 1$$
 
 This transformation ensures entropy values lie between -1 and 1, reflecting the balance between chaos and order, a perfectly balance entropy have a value of zero. If you look at the gage next to the keyboard in the spaceship, it will reflect the entropy of the last 10 characters, **after you pressed the key ENTER**. 
 
@@ -96,12 +92,8 @@ The next step, consists in converting the Canon Entropy load into a parameter ($
   
   The Entropy Canon Load, is then converted, to control the Mackey-Glass delay differential equation’s time constant $\tau$:
 
-$$
-  \tau=C_t * \tau_{max} / 100
-$$
-  $$
-  \frac{dx(t)}{dt} = \beta \frac{x(t-\tau)}{1 + x(t-\tau)^n} - \gamma x(t)
-  $$
+$$\tau=C_t * \tau_{max} / 100$$
+$$\frac{dx(t)}{dt} = \beta \frac{x(t-\tau)}{1 + x(t-\tau)^n} - \gamma x(t)$$
   
   - **Intuition**: Lower $\tau$ produces a state $x(t)$ that depends on the recent history, and tends to ellicit regular patterns, essential in stabilizing the sun. Higher $\tau$, on the other hand, means that $x(t)$ will depends on far distant memories, and tends to generate chaotic patterns. In between, $\tau$ ellicit semi periodic wave patterns. 
   - We have empirically set $\tau_{max}=60$, in order to **conserve the monotonicity of the influence of $\tau$** on the dynamic of $x$. Meaning that at some point, even though you continue increasing $\tau$, you will obtain back some regular dynamics. 
@@ -118,15 +110,9 @@ The $\text{sun\_state}$ is thus a function of two parameters, its **momentum**, 
 Achieve stability by maintaining the sun's state between 40-60% for five seconds, three times in succession, to win. Lose if the sun state exceeds 100% or drops below 0%.
 
 - **State Equation**:
-  $$
-  \text{sun\_state}(t+1) = \text{canon\_influence}(t) + \text{momentum}(t)
-  $$
-$$
-  \text{canon\_influence} = -(\text{sun\_state} - \text{canon\_load}) \times \Delta T
-  $$
-$$
-\text{momentum}(t) =A\sin(\theta t + \phi) \times \Delta T
-$$
+  $$\text{sun\_state}(t+1) = \text{canon\_influence}(t) + \text{momentum}(t)$$
+  $$\text{canon\_influence} = -(\text{sun\_state} - \text{canon\_load}) \times \Delta T$$
+  $$\text{momentum}(t) =A\sin(\theta t + \phi) \times \Delta T$$
 
 So, as you can see, the canon influence is not directly the mackey-glass equation, and it's more simply dependant on the $\text{canon\_load}$, in percentage, and the $\text{sun\_state}$ :
 - When $\text{sun\_state}$ is bigger than $\text{canon\_load}$, the sign is thus negative, and the canon influence will decrease the value of the sun state, hence favoring shrinking. 
