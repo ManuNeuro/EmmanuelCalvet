@@ -3,7 +3,7 @@ title: "The Collapse is Near : a Video Game Explaining my Thesis"
 layout: post
 categories: 
 comments: true
-image: /assets/article_images/2025-05-26-scientific_game_jam/cover.jpg
+image: /assets/article_images/2025-05-26-scientific_game_jam/cover.png
 ---
 
  # The Collapse is Near : a video game explaining my thesis
