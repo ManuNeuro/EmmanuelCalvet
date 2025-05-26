@@ -16,30 +16,8 @@ Despite its ominous name, The Collapse is Near is not about the collapse of civi
 
 The only thing standing between life and destruction is you, your magnetic cannon, and your dexterity in balancing the sun’s state on the razor’s edge of chaos—finding the right amount of order and disorder to load into magnetic waves, displayed on your spaceship’s dashboard. Each second you hold the balance gives Earth a bit more time to survive. Of course, any resemblance to real events is purely coincidental.
 
-<details>
-<summary>Click here to show a presentation of the game</summary>
-
-<markdown>
- Your mission, should you choose to accept it, is nothing short of celestial heroism: stabilize our aging sun to prevent its cataclysmic transformation into either a black hole or supernova.
-  
-Fast forward 5 billion years, we find ourselves at the brink of solar collapse. Our mighty sun is erratic, oscillating wildly as it teeters on the edge of chaos. This instability threatens civilization itself. 
-
-Fortunately, your spacecraft is armed with a formidable magnetic cannon capable of influencing the sun’s state. Through its power, you can regulate the sun's size. But tread carefully—there are moments when the sun's instability requires you to intensify your cannon's output to counteract its unpredictable expansions.
-
-The cannon fires waves at the sun, the patterns of which are depicted on your right-hand display. These waves adhere to the non-linear Mackey-Glass equation, capable of producing everything from harmonious consistency to utter chaos, dictated by your input via a keyboard. 
-
-The keyboard is your instrument of influence, transmitting directives to the cannon’s central command. The system quantifies the entropy of your messages—a measure of signal predictability. Consider "AAAAAAAAAA," with an entropy of zero due to its utter predictability. Contrast this with "ASDFGHJKLM," where each character is equally likely and entropy is maximized.
-
-Entropy of your input directly influences the waveform: predictable key patterns yield regular waveforms, while chaotic patterns unlock chaos.
-
-Victory rests in your hands: master the cannon's entropy by balancing order and chaos. This delicate equilibrium counters the semi-random momentum of the sun itself, governed by a sinusoidal cycle initiated at a random phase each game—ensuring no two experiences are identical.
- 
-For further cosmic inspiration, refer to [Emmanuel Calvet's thesis](https://savoirs.usherbrooke.ca/handle/11143/22542). His work in neural networks mirrors your task—balancing chaos and order to optimize information processing. This approach, known as reservoir computing, paves a promising path toward minimizing AI's energy and hardware demands.
-</markdown>
-
-</details>
-
 Now, since this is a scientific blog, I felt like diving a bit into the mathematic of the game, which nicely connect to one of the deeper aspect of my thesis : **the edge of chaos**. 
+
 # Collapse is Near: The Mathematics Behind the Game
 
 ## Overview
