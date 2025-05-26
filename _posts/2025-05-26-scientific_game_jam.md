@@ -17,7 +17,7 @@ Despite its ominous name, The Collapse is Near is not about the collapse of civi
 ![If you lose, the star will either inflate and end up in a supernovae, or it will collapse as a black hole!]({{ '/assets/article_images/2025-05-26-scientific_game_jam/black_hole.png' | relative_url }})
 
 
-The only thing standing between life and destruction is you, your magnetic cannon, and your dexterity in balancing the sun’s state on the razor’s edge of chaos—finding the right amount of order and disorder to load into magnetic waves, displayed on your spaceship’s dashboard. Each second you hold the balance gives Earth a bit more time to survive. Of course, any resemblance to real events is purely coincidental.
+The only thing standing between life and destruction is you, your magnetic cannon, and your dexterity in balancing the sun’s state on the razor’s edge of chaos, finding the right amount of order and disorder to load into magnetic waves, displayed on your spaceship’s dashboard. Each second you hold the balance gives Earth a bit more time to survive. Of course, any resemblance to real events is purely coincidental.
 
 Now, since this is a scientific blog, I’d like to dive into the mathematics behind the game, which connect nicely to a key concept from my thesis: the **edge of chaos**.
 
@@ -90,7 +90,7 @@ $$\frac{dx(t)}{dt} = \beta \frac{x(t-\tau)}{1 + x(t-\tau)^n} - \gamma x(t)$$
 |![]({{ '/assets/article_images/2025-05-26-scientific_game_jam/mg_eq.png' | relative_url }})| On the right of the spaceship's dashboard, you have a screen displaying the mackey-glass non-linear dynamical equation, as controlled by the canon load, next converted as the time constant parameter of the equation. |
 
 <br>
-**Note**: The Mackey-Glass equation is used only for the dashboard visualization—the actual sun mechanics are governed by simpler dynamics.
+**Note**: The Mackey-Glass equation is used only for the dashboard visualization, the actual sun mechanics are governed by simpler dynamics.
 
 ## Sun State Dynamics
 
