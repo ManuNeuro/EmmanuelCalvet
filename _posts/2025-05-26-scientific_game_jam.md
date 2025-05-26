@@ -10,7 +10,7 @@ image: /assets/article_images/2025-05-26-scientific_game_jam/cover.png
 
 Thanks to my dear colleague and organizer Floriant Sauges from Numana, I had the opportunity to participate in the [2025 Scientific Game Jam, in Montreal](https://www.scientificgamejam.org/home/), where I teamed up with game designers to translate my research thesis into a playful experience: a video game. After two intense days of development and several more evenings fine-tuning the gameplay, we created "**The Collapse is Near**."
 
-- [Itch.io : The Collapse Is Near by CogNoman, ManuNeuro, Mounk, and AlexiaChampain](https://cognoman.itch.io/the-collapse-is-near)
+- [Itch.io : The Collapse Is Near by CogNoman, ManuNeuro, Mounk, Julie and Alexia](https://cognoman.itch.io/the-collapse-is-near)
 
 Despite its ominous name, The Collapse is Near is not about the collapse of civilization caused by the current catastrophic meta-crisis. Instead, it throws you 5 billion years into the future, where your mission is to save civilization from the imminent collapse of the sun.
 
