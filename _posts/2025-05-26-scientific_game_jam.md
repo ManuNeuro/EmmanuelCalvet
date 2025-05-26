@@ -108,9 +108,9 @@ Achieve stability by maintaining the sun's state between 40-60% for five seconds
 
 So, as you can see, the canon influence is not directly the mackey-glass equation, and it's more simply dependant on the $\text{canon\_load}$, in percentage, and the $\text{sun\_state}$ :
 
-- If sun_state>canon_load\text{sun\_state} > \text{canon\_load}: cannon shrinks the sun.
+- If sun_state>canon_load\text{sun_state} > \text{canon_load}: cannon shrinks the sun.
     
-- If sun_state<canon_load\text{sun\_state} < \text{canon\_load}: cannon inflates the sun.
+- If sun_state<canon_load\text{sun_state} < \text{canon_load}: cannon inflates the sun.
     
 Stability is achieved by keeping the sun between 40–60% for five seconds, three times in a row, as you can see in the mission phase display. Exceeding 100% or dropping below 0% results in a loss, either exploding or collapsing the sun!
 
