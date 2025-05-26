@@ -16,32 +16,30 @@ Despite its ominous name, The Collapse is Near is not about the collapse of civi
 
 The only thing standing between life and destruction is you, your magnetic cannon, and your dexterity in balancing the sun’s state on the razor’s edge of chaos—finding the right amount of order and disorder to load into magnetic waves, displayed on your spaceship’s dashboard. Each second you hold the balance gives Earth a bit more time to survive. Of course, any resemblance to real events is purely coincidental.
 
-Now, since this is a scientific blog, I felt like diving a bit into the mathematic of the game, which nicely connect to one of the deeper aspect of my thesis : **the edge of chaos**. 
+Now, since this is a scientific blog, I’d like to dive into the mathematics behind the game, which connect nicely to a key concept from my thesis: the **edge of chaos**.
 
 # Collapse is Near: The Mathematics Behind the Game
 
 ## Overview
 
-**Collapse is Near** is an interactive game where players must balance order and chaos to stabilize an unstable sun. This challenge is based on mathematical concepts woven into gameplay, providing an engaging way to explore some principles from my thesis on balancing order and chaos within recurrent neural networks.
+**The Collapse is Near** is an interactive game where players must balance order and chaos to stabilize a dying sun. This challenge is grounded in mathematical principles that echo core ideas from my thesis on balancing order and chaos in recurrent neural networks.
 
 ## Game Mechanics and Mathematical Concepts
 
 ### Input and Shannon Entropy
 
-Players contribute via keyboard inputs, where we analyze the last 10 keys pressed, with the **Shanon entropy**:
+Players interact through keyboard inputs, where we analyze the last 10 keys typed using **Shanon entropy**:
 
 - This measures the uncertainty or randomness in the sequence of keys.
+  
   $$H(X) = -\sum p(x) \log_2 p(x)$$
   
   Where $p(x)$ is the probability of character $x$ appearing in the input. Intuitively, higher entropy indicates more unpredictability in your keystrokes (less repetition), which impacts the game's progression.
 
-In practice, this means that :
-1. If you enter the same letter "AAAAAAAAAA", the entropy will be minimum, $p(A)=1$, 
-2. And if you only input distinct letters "QWERTYUIO", the entropy will be maximal, $p({Q, W, ...})=1/10$. 
-
-Indeed, in the first case $H(X)=- 1 \times log_2(1)=0$, and in the second case, $H(X)=10 \times (1/10 \times log_2(10))=3.32$.
-
-If we considered a more balanced approach, for instance where we had two equally probable characters, like "AAAAABBBBB", we would have an entropy of $H(X)=2 \times (1/2 \times log_2(2))=1$, a value in between. **Take this into consideration when you try the game!**
+For example:
+1. If you enter the same letter "AAAAAAAAAA", $p(A)=1$, and the entropy will be minimum, $H(X)=- 1 \times log_2(1)=0$.
+2. And if you only input distinct letters "QWERTYUIO", the entropy will be maximal, $p({Q, W, ...})=1/10$, and $H(X)=10 \times (1/10 \times log_2(10))=3.32$.
+3. If we considered a more balanced approach, for instance where we had two equally probable characters, like "AAAAABBBBB", we would have an entropy of $H(X)=2 \times (1/2 \times log_2(2))=1$, a value in between. **Take this into consideration when you try the game!**
 
 ![The keyboard.]({{ '/assets/article_images/2025-05-26-scientific_game_jam/keyboard.png' | relative_url }})
 
