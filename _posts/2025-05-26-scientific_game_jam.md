@@ -98,8 +98,6 @@ Players manipulate wave patterns to regulate the sun's state by managing the Ent
 
 The $\text{sun\_state}$ is thus a function of two parameters, its **momentum**, and the **canon influence**. It is a quantity, in percentage, that controls the size of the sun, meaning that 0% the sun has completely shrinked, and at 100%, it is completely inflated.
 
-Achieve stability by maintaining the sun's state between 40-60% for five seconds, three times in succession, to win. Lose if the sun state exceeds 100% or drops below 0%.
-
 - **State Equation**:
 
   $$\text{sun_state}(t+1) = \text{canon_influence}(t) + \text{momentum}(t)$$
