@@ -89,7 +89,7 @@ Obsessed that we are by naming, calling, labelling, we are now teaching our obse
 
 So yes, a mechanical system can reproduce your thinking. But it can never, **never**, give it meaning.
 
-> We will always need *you*, for this. 
+> We will always need *you*, to give meaning. 
 
 
 
