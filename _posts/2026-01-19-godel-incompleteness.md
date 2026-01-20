@@ -110,6 +110,7 @@ So yes, a mechanical system might reproduce your thinking. But will it ever, giv
 > We will always need *you*, for that. 
 
 
+~ Special mention to my wife for inspiring this vision. In shaping my thinking and refining the weaving of my technological and scientific background, with a touch of more than human wisdom. <3
 
 
 
