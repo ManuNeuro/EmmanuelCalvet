@@ -1,4 +1,4 @@
----
+,---
 title: "Consciousnetic agents: consciousness with cybernetics interfaces"
 layout: post
 comments: true
@@ -7,11 +7,28 @@ image: /assets/article_images/2023-08-09-smartdca/cover.png
 
 # Consciousnetic agents: consciousness with cybernetics interfaces
 
+I was recently invited to present at the conference *Quanta To Qualia*, hosted at *ÉTS Montréal*. There I met incredible people working on all sorts of things related to quantum, artificial intelligence, consciousness, and sometimes mixing all of it in one study. Not only was Gilles Brassard speaking just after my team, but I also met Aneil Mallavarapu, who explained his incredible theory about consciousness to me, and what it can or cannot be. As we were speaking, he shared with me his (at the time) preprint article ([A No-Go Theorem for Process Theories of Consciousness](https://osf.io/preprints/psyarxiv/w3n6v_v1)). Interestingly, it resonated strongly with a conceptual framework (not a mathematical one) that I started building a few months ago with the help of Claude. Encouraged by the strong parallels his idea had with mine, and since I lack the time to expand on it further, I decided to publish my unfinished essay here.
+
+Before I introduce the framework, I'd like to share with you the story behind this essay. It actually started during a vivid dream where concepts and thoughts were weaving in a sort of whirlwind, after I had watched a podcast the evening before, [What Is Consciousness? – A Question of Science with Brian Cox](https://www.youtube.com/watch?v=aynzcAYnnJU&t=2406s) by *The Francis Crick Institute*. Suddenly it was something like 5 am, and I woke up with a word clearly formulated in my mind: **Consciousnetics**. It was obvious by then that this was a conceptual fusion of cybernetics and consciousness. Then I immediately left the bedroom and went to my computer to start writing about it. After a while I got curious, and I logged onto Claude to ask him: "I just created this word, if you were to analyze it etymologically, what would it mean?" From there started a very interesting discussion, where we elaborated the proposed framework.
+
+The etymology is fairly simple. *Cybernetics* comes from the Greek *kybernētēs*, meaning "steersman", and was popularized by Norbert Wiener in the late 1940s as the study of control and communication in animals and machines. Fused with *consciousness*, it suggests something like the steering, or regulation, of consciousness. As the framework developed, however, the meaning I settled on became more specific, and this is where the parallel with Aneil's work comes in.
+
+As I understand it, his argument is that consciousness, whatever it is, is not a function of time and is stateless, an idea he formalized in his paper. The parallel I draw is the following: I call *consciousnetic* the stateless, non-changing quality of "pure presence". A *consciousnetics agent* is then the combination of a consciousnetic with a cybernetic interface.
+
+On a personal note, I find it fascinating that Claude had presumably never seen the word "Consciousnetics" in his training set, yet immediately got what it meant. Part of the explanation is probably mechanical: the word is built from familiar pieces ("conscious" + "-netics"), and language models handle compositional words like this very well. But I wonder if that is the whole story. Perhaps the word, even though non-existent, already had a position in the latent space, which sufficed to make the ripe fruit visible and within reach. I truly wonder how much of this ripe fruit exists in this invisible latent space, waiting for us to make the association.
+
+**Notes**
+- I wrote "as I understand it" before Aneil's claim, since I haven't read his paper and you're paraphrasing a conversation. It's worth checking the wording against his abstract so you don't misrepresent him.
+- I used *consciousnetic* for the quality and *consciousnetics* for the framework or field, following your usage. If that's your intent, a short line stating it explicitly would help readers.
+- Cybernetics is fundamentally about feedback, state, and change over time, so your agent pairs a stateless element with a deeply stateful interface. Readers will probably ask how the two couple, so a teaser sentence on that would make the transition into the framework stronger.
+ 
+
+## The framework in brief
+
 Almost every experiment in consciousness science works the same way: show someone a stimulus, ask them to report, discriminate, or respond, and see what their brain does. It has been enormously productive. But it quietly assumes that consciousness is something you find in what a system *does*.
 
 In my [recent essay](https://ManuNeuro.github.io/EmmanuelCalvet/assets/publications/2026-02-12-Consciousnetics-agents.pdf) (co-written with the help of CLaude), I argue that this assumption blurs three different things. When we measure a report, a broadcast, or a prediction error, we are measuring *regulation*. We are not measuring *presence*: the bare fact that experience appears at all. Much of the long-running stalemate around the hard problem, we suggest, comes from asking regulation-level tools to answer a presence-level question.
 
-## The framework in brief
 
 The essay proposes three levels, each with a different relationship to experience:
 
@@ -61,4 +78,4 @@ A few things in the manuscript are worth mentionning, for those who know the lit
 
 - **Wheeler's delayed-choice experiments.** The claim that present observations "retroactively determine the past" is a common popularization but most physicists read these experiments differently.
 - **The quantum-idealism link.** "No observer-independent world" is a contested interpretive claim, not a settled consequence of quantum physics.
-- **Formal notation.** The logic symbols in the formal summary are for illustrative purposes and do not constitute a solid formalism. I am aware of the existence of No-Go theorems about consciousness and the closest to this "conceptual work", is the one by Aneil Mallavarapu (A No-Go TheoremforProcess Theoriesof Consciousness). 
+- **Formal notation.** The logic symbols in the formal summary are for illustrative purposes and do not constitute a solid formalism.  
