@@ -21,7 +21,7 @@ On a personal note, I find it fascinating that Claude had presumably never seen 
 
 Almost every experiment in consciousness science works the same way: show someone a stimulus, ask them to report, discriminate, or respond, and see what their brain does. It has been enormously productive. But it quietly assumes that consciousness is something you find in what a system *does*.
 
-In my [recent essay](https://ManuNeuro.github.io/EmmanuelCalvet/assets/publications/2026-02-12-Consciousnetics-agents.pdf) (co-written with the help of CLaude), I argue that this assumption blurs three different things. When we measure a report, a broadcast, or a prediction error, we are measuring *regulation*. We are not measuring *presence*: the bare fact that experience appears at all. Much of the long-running stalemate around the hard problem, we suggest, comes from asking regulation-level tools to answer a presence-level question.
+In my [recent essay](https://ManuNeuro.github.io/EmmanuelCalvet/assets/publications/2026-02-12-Consciousnetics-agents.pdf) (co-written with the help of Claude), I argue that this assumption blurs three different things. When we measure a report, a broadcast, or a prediction error, we are measuring *regulation*. We are not measuring *presence*: the bare fact that experience appears at all. Much of the long-running stalemate around the hard problem, we suggest, comes from asking regulation-level tools to answer a presence-level question.
 
 
 The essay proposes three levels, each with a different relationship to experience:
