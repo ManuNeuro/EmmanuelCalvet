@@ -1,4 +1,4 @@
-,---
+---
 title: "Consciousnetic agents: consciousness with cybernetics interfaces"
 layout: post
 comments: true
