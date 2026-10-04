@@ -15,13 +15,7 @@ The etymology is fairly simple. *Cybernetics* comes from the Greek *kybernētēs
 
 As I understand it, his argument is that consciousness, whatever it is, is not a function of time and is stateless, an idea he formalized in his paper. The parallel I draw is the following: I call *consciousnetic* the stateless, non-changing quality of "pure presence". A *consciousnetics agent* is then the combination of a consciousnetic with a cybernetic interface.
 
-On a personal note, I find it fascinating that Claude had presumably never seen the word "Consciousnetics" in his training set, yet immediately got what it meant. Part of the explanation is probably mechanical: the word is built from familiar pieces ("conscious" + "-netics"), and language models handle compositional words like this very well. But I wonder if that is the whole story. Perhaps the word, even though non-existent, already had a position in the latent space, which sufficed to make the ripe fruit visible and within reach. I truly wonder how much of this ripe fruit exists in this invisible latent space, waiting for us to make the association.
-
-**Notes**
-- I wrote "as I understand it" before Aneil's claim, since I haven't read his paper and you're paraphrasing a conversation. It's worth checking the wording against his abstract so you don't misrepresent him.
-- I used *consciousnetic* for the quality and *consciousnetics* for the framework or field, following your usage. If that's your intent, a short line stating it explicitly would help readers.
-- Cybernetics is fundamentally about feedback, state, and change over time, so your agent pairs a stateless element with a deeply stateful interface. Readers will probably ask how the two couple, so a teaser sentence on that would make the transition into the framework stronger.
- 
+On a personal note, I find it fascinating that Claude had presumably never seen the word "Consciousnetics" in his training set, yet immediately got what it meant. Part of the explanation is probably mechanical: the word is built from familiar pieces ("conscious" + "-netics"), and language models handle compositional words like this very well. But I wonder if that is the whole story. Perhaps the word, even though non-existent, already had a position in the latent space, which sufficed to make the ripe fruit visible and within reach. I truly wonder how much of this ripe fruit exists in this invisible latent space, waiting for us to make the association. 
 
 ## The framework in brief
 
