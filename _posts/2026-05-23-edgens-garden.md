@@ -2,7 +2,7 @@
 title: "Eden's Garden: A Universe of Pure Conservation"
 layout: post
 comments: true
-image: /assets/article_images/2026-05-23-edgens-garden/edens_garden.webp
+image: /assets/article_images/2026-05-23-edgens-garden/edens_garden.png
 ---
 
 *Image from Jan Bruegel The Elder.*
