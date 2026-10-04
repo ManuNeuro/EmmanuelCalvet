@@ -2,7 +2,7 @@
 title: "Consciousnetic agents: consciousness with cybernetics interfaces"
 layout: post
 comments: true
-image: /assets/article_images/2023-08-09-smartdca/cover.png
+image: /assets/article_images/2026-08-22-consciousnetics-agents/consciousnetics.jpg
 ---
 
 # Consciousnetic agents: consciousness with cybernetics interfaces
