@@ -1,5 +1,5 @@
 ---
-title: "The Physics of Economy: the Surprising Result of a Simple Transaction Model (Part 1)"
+title: "The Physics of Economy: the Surprising Result of a Simple Transaction Model"
 layout: post
 categories: Finance
 comments: true
