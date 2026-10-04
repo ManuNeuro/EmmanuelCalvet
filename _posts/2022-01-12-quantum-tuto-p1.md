@@ -1,5 +1,5 @@
 ---
-title: "Hands on Quantum Computing in Qiskit: programming your first quantum circuit (Part 1)"
+title: "Hands on Quantum Computing in Qiskit: programming your first quantum circuit"
 layout: post
 categories: Quantum
 comments: true
