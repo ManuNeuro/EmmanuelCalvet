@@ -52,6 +52,8 @@ The organism has a finite budget, $E_{avail} = E_{total} - \sum W_{maint}$. As c
 
 *A caution: the stronger claim that avoidant or agreeable personality causes cancer (the "Type C" hypothesis) is poorly supported in large prospective studies. The defensible claim is about cumulative wear and vulnerability, not personality-caused disease.*
 
+<iframe src="{{ '/assets/sim/landscape.html' | relative_url }}" width="100%" height="560" loading="lazy" title="Dam and anchor simulation"></iframe>
+
 ## The outburst is a percolation threshold
 
 Treat the landscape as a lattice of pathways, each either dammed (probability $p$) or open. Below a critical open fraction, any flow that leaks stays local. Above it, a spanning cluster appears and the reservoir connects to everything. For site percolation on a square lattice this happens at an open fraction of about 0.593, so at a dam density of about 0.41, and the transition is sharp.
