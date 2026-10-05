@@ -21,7 +21,7 @@ Here $\xi$ is the current state and the $x_i$ are stored patterns. Ramsauer et a
 
 When flowing toward some region is repeatedly punished, the system learns to stay out. In attention terms, pattern $i$ gets a barrier $B_i$:
 
-$$\LARGE a_i = \mathrm{softmax}_i\big(\beta\, x_i\!\cdot\!\xi - B_i\big)$$
+$$\LARGE a_i = \mathrm{softmax}_i\big(\beta x_i \cdot \xi - B_i\big)$$
 
 The pull of the pattern is untouched. Only its access is blocked. The pressure behind the dam is the gap between what attention would give pattern $i$ and what it gets, $P_i = a_i^{(0)} - a_i$.
 
