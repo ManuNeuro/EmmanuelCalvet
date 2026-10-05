@@ -54,6 +54,35 @@ The organism has a finite budget, $E_{avail} = E_{total} - \sum W_{maint}$. As c
 
 <iframe src="{{ '/assets/sim/landscape.html' | relative_url }}" width="100%" height="560" loading="lazy" title="Dam and anchor simulation"></iframe>
 
+### Four scenarios, no math required
+
+The simulation below has four preset buttons. Each one answers the same question: what happens when life presses on a memory?
+
+Two things vary. One is whether the person has built a defense around that memory: a **high dam** (the memory is hard to approach) held by a **stiff structure** (the landscape is kept from changing). The other is whether something in life is **pressing on that memory** right now.
+
+| | **No pressure** | **Pressure on the memory** |
+|---|---|---|
+| **Traumatized** (high dam, stiff structure) | **A.** Holds, at a high cost | **B.** Budget drains, memory floods back |
+| **Not traumatized** (low dam, loose structure) | **C.** Calm, free to wander | **D.** Gradual, affordable change |
+
+**A. Traumatized, no pressure.** The dam is high and the structure is rigid, so most of the energy budget goes into holding. But nothing is pushing against it, so the cost stays just under what the body can replenish. From the outside, everything looks fine. There is no margin, though: the system is solvent, not safe.
+
+**B. Traumatized, pressure on the memory.** Now something presses on the dammed region: a similar situation, an intimate relationship, a crisis, or therapy done too fast. The stiff structure must push back, and holding hard against a real force is expensive. The budget drains quickly. As it empties, the dam weakens, then fails all at once, and the memory is experienced again, with the pressure that had been building behind it. Nothing in the person changed. The budget ran out.
+
+**C. Not traumatized, no pressure.** The dam is low and the structure is loose, so upkeep is tiny. Flow can drift into that region now and then. It is just another place on the landscape, with no alarm attached.
+
+**D. Not traumatized, pressure on the same memory.** The same push arrives, but there is no stiff structure to hold against it. The landscape is allowed to move, the budget stays healthy, and flow reaches the region gradually. The same event that breaks B is, in D, a manageable one.
+
+### What to take from it
+
+- **The event is the same in B and D. The structure around it is different.** What breaks the system is the cost of holding against the pressure, not the pressure alone.
+- **A looks like D from the outside, and it isn't.** Both are calm. One is calm because nothing presses, the other because nothing needs holding.
+- **B ends in a sudden breach, and D doesn't.** Gradual release spends a little at a time. A rigid defense saves it all for one failure.
+- **The way out of B is to move toward D:** lower the pressure, loosen the structure slowly, and let small amounts of flow through while the budget is still healthy.
+
+*One caveat: this is a one-dimensional cartoon. The numbers are tuned so each scenario is visible, not measured from real people.*
+
+
 ## The outburst is a percolation threshold
 
 Treat the landscape as a lattice of pathways, each either dammed (probability $p$) or open. Below a critical open fraction, any flow that leaks stays local. Above it, a spanning cluster appears and the reservoir connects to everything. For site percolation on a square lattice this happens at an open fraction of about 0.593, so at a dam density of about 0.41, and the transition is sharp.
