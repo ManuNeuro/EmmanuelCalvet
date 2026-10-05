@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dam percolation</title>
+<style>
+:root{--bg:#f2f5f4;--ink:#1b2a2f;--mute:#5d6f74;--water:#2a7ba0;--dam:#8b5a3c;--line:#cfdada}
+@media (prefers-color-scheme:dark){:root{--bg:#101a1d;--ink:#e3ecec;--mute:#93a6aa;--water:#58b4dc;--dam:#c58a62;--line:#2b3c40}}
+body{margin:0;padding:10px;background:var(--bg);color:var(--ink);font:14px/1.4 system-ui,sans-serif}
+canvas{width:100%;display:block}#plot{height:80px;margin-top:8px}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+input[type=range]{flex:1;min-width:140px;accent-color:var(--water)}
+button{font:inherit;padding:5px 10px;background:var(--bg);color:var(--ink);border:1px solid var(--line);cursor:pointer}
+button:hover,button:focus-visible{border-color:var(--water);outline:none}
+#stat{color:var(--mute);margin-top:6px}
+</style></head><body>
+<canvas id="grid" width="640" height="400" role="img" aria-label="Lattice of dams and flooded cells"></canvas>
+<canvas id="plot" width="640" height="80" role="img" aria-label="Flooded fraction versus dam density"></canvas>
+<div class="row"><label for="p">Dam density</label><input id="p" type="range" min="0" max="1" step="0.005" value="0.55"><span id="pv"></span></div>
+<div class="row"><button id="erode">Let erosion run</button><button id="redam">Re-dam (+10%)</button><button id="new">New terrain</button></div>
+<div id="stat"></div>
+<script>
+const W=64,H=40,N=W*H;let u=[],p=0.55,timer=null,curve=[];
+const $=id=>document.getElementById(id),css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+function newTerrain(){u=Array.from({length:N},()=>Math.random());curve=[];for(let i=0;i<=100;i++)curve.push(flood(i/100).frac);draw()}
+function flood(d){const wet=new Uint8Array(N),st=[];
+for(let y=0;y<H;y++){const i=y*W;if(u[i]>=d){wet[i]=1;st.push(i)}}
+while(st.length){const i=st.pop(),x=i%W,y=(i-x)/W;
+for(const j of [x>0?i-1:-1,x<W-1?i+1:-1,y>0?i-W:-1,y<H-1?i+W:-1])if(j>=0&&!wet[j]&&u[j]>=d){wet[j]=1;st.push(j)}}
+let c=0,far=false;for(let i=0;i<N;i++)if(wet[i]){c++;if(i%W===W-1)far=true}
+return{wet,frac:c/N,far}}
+function draw(){const r=flood(p),g=$("grid"),x=g.getContext("2d"),s=10;x.clearRect(0,0,g.width,g.height);
+for(let i=0;i<N;i++){x.fillStyle=u[i]<p?css("--dam"):r.wet[i]?css("--water"):css("--line");x.fillRect((i%W)*s,Math.floor(i/W)*s,s-1,s-1)}
+const q=$("plot"),y=q.getContext("2d");y.clearRect(0,0,q.width,q.height);y.strokeStyle=css("--water");y.lineWidth=2;y.beginPath();
+curve.forEach((f,i)=>{const px=i/100*(q.width-8)+4,py=q.height-6-f*(q.height-12);i?y.lineTo(px,py):y.moveTo(px,py)});y.stroke();
+y.strokeStyle=css("--dam");y.beginPath();const mx=p*(q.width-8)+4;y.moveTo(mx,0);y.lineTo(mx,q.height);y.stroke();
+y.fillStyle=css("--mute");y.font="12px sans-serif";y.fillText("flooded fraction vs dam density",8,12);
+$("p").value=p;$("pv").textContent=p.toFixed(3);
+$("stat").textContent="Flooded: "+(r.frac*100).toFixed(1)+"% of cells. "+(r.far?"Flow reached the far wall: the system has percolated.":"Flow is contained.")}
+$("p").oninput=e=>{p=+e.target.value;draw()};
+$("erode").onclick=e=>{if(timer){clearInterval(timer);timer=null;e.target.textContent="Let erosion run";return}
+e.target.textContent="Pause erosion";timer=setInterval(()=>{p=Math.max(0,p-0.004);draw();if(p<=0){clearInterval(timer);timer=null;e.target.textContent="Let erosion run"}},120)};
+$("redam").onclick=()=>{p=Math.min(1,p+0.1);draw()};$("new").onclick=newTerrain;newTerrain();
+</script></body></html>
