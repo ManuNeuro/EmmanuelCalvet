@@ -46,6 +46,8 @@ When the defense directly opposes the push ($\theta \approx 0$), everything is p
 - **Cost scales with $\lambda$ and with the size of the push.** Rigidity is cheap in a quiet life and ruinous in a changing one. Therapy, a loving relationship or a crisis all raise $g$, and the bill rises with it.
 - **Stored energy grows too.** The anchor holds $\tfrac12\lambda\|\Delta X\|^2$ in reserve, and if it lets go, that is released at once.
 
+---
+
 ## Erosion: the body pays
 
 The organism has a finite budget, $E_{avail} = E_{total} - \sum W_{maint}$. As containment takes more, less is left for repair, immunity and growth. This is allostatic load: HPA-axis dysregulation, sustained sympathetic tone, low-grade inflammation. Adverse childhood experiences and chronic stress are associated with later autoimmune and cardiovascular disease, and emotional suppression has been linked to higher mortality in some prospective data.
@@ -60,10 +62,6 @@ The simulation below has four preset buttons. Each one answers the same question
 
 Two things vary. One is whether the person has built a defense around that memory: a **high dam** (the memory is hard to approach) held by a **stiff structure** (the landscape is kept from changing). The other is whether something in life is **pressing on that memory** right now.
 
-| | **No pressure** | **Pressure on the memory** |
-|---|---|---|
-| **Traumatized** (high dam, stiff structure) | **A.** Holds, at a high cost | **B.** Budget drains, memory floods back |
-| **Not traumatized** (low dam, loose structure) | **C.** Calm, free to wander | **D.** Gradual, affordable change |
 
 **A. Traumatized, no pressure.** The dam is high and the structure is rigid, so most of the energy budget goes into holding. But nothing is pushing against it, so the cost stays just under what the body can replenish. From the outside, everything looks fine. There is no margin, though: the system is solvent, not safe.
 
@@ -82,6 +80,7 @@ Two things vary. One is whether the person has built a defense around that memor
 
 *One caveat: this is a one-dimensional cartoon. The numbers are tuned so each scenario is visible, not measured from real people.*
 
+---
 
 ## The outburst is a percolation threshold
 
