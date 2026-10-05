@@ -54,13 +54,13 @@ The organism has a finite budget, $E_{avail} = E_{total} - \sum W_{maint}$. As c
 
 *A caution: the stronger claim that avoidant or agreeable personality causes cancer (the "Type C" hypothesis) is poorly supported in large prospective studies. The defensible claim is about cumulative wear and vulnerability, not personality-caused disease.*
 
-<iframe src="{{ '/assets/sim/landscape.html' | relative_url }}" width="100%" height="560" loading="lazy" title="Dam and anchor simulation"></iframe>
-
-### Four scenarios, no math required
-
 The simulation below has four preset buttons. Each one answers the same question: what happens when life presses on a memory?
 
 Two things vary. One is whether the person has built a defense around that memory: a **high dam** (the memory is hard to approach) held by a **stiff structure** (the landscape is kept from changing). The other is whether something in life is **pressing on that memory** right now.
+
+<iframe src="{{ '/assets/sim/landscape.html' | relative_url }}" width="100%" height="560" loading="lazy" title="Dam and anchor simulation"></iframe>
+
+
 
 
 **A. Traumatized, no pressure.** The dam is high and the structure is rigid, so most of the energy budget goes into holding. But nothing is pushing against it, so the cost stays just under what the body can replenish. From the outside, everything looks fine. There is no margin, though: the system is solvent, not safe.
