@@ -21,7 +21,7 @@ Here $\xi$ is the current state and the $x_i$ are stored patterns. Ramsauer et a
 
 When flowing toward some region is repeatedly punished, the system learns to stay out. In attention terms, pattern $i$ gets a barrier $B_i$:
 
-$$a_i = \mathrm{softmax}_i\big(\beta\, x_i\!\cdot\!\xi - B_i\big)$$
+$$\LARGE a_i = \mathrm{softmax}_i\big(\beta\, x_i\!\cdot\!\xi - B_i\big)$$
 
 The pull of the pattern is untouched. Only its access is blocked. The pressure behind the dam is the gap between what attention would give pattern $i$ and what it gets, $P_i = a_i^{(0)} - a_i$.
 
@@ -29,11 +29,11 @@ The pull of the pattern is untouched. Only its access is blocked. The pressure b
 
 A dam also resists *reshaping*. New experience acts as an external field $h$ that deforms the landscape, pulling the stored patterns $X$ toward something new. A defended system pulls them back toward the original $X_0$, the landscape the defense was built to preserve:
 
-$$J(X) = E(\xi; X) - h^\top\xi + \frac{\lambda}{2}\,\|X - X_0\|_F^2$$
+$$\LARGE J(X) = E(\xi; X) - h^\top\xi + \frac{\lambda}{2}\,\|X - X_0\|_F^2$$
 
 The last term is an anchor, a spring of stiffness $\lambda$. Setting $\partial J/\partial X = 0$ gives the equilibrium
 
-$$X^* = X_0 + \frac{1}{\lambda}\, g, \qquad g = -\frac{\partial (E - h^\top\xi)}{\partial X}$$
+$$\LARGE X^* = X_0 + \frac{1}{\lambda}\, g, \qquad g = -\frac{\partial (E - h^\top\xi)}{\partial X}$$
 
 where $g$ is the force that experience exerts on the memories. Deformation is push divided by rigidity. A flexible system (small $\lambda$) lets the landscape move. A rigid one barely moves, which is the clinical picture of corrective experiences being discounted and the old shape persisting after the environment has changed.
 
