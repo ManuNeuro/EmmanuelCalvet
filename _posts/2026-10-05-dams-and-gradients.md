@@ -58,7 +58,7 @@ The simulation below has four preset buttons. Each one answers the same question
 
 Two things vary. One is whether the person has built a defense around that memory: a **high dam** (the memory is hard to approach) held by a **stiff structure** (the landscape is kept from changing). The other is whether something in life is **pressing on that memory** right now.
 
-<iframe src="{{ '/assets/sim/landscape.html' | relative_url }}" width="100%" height="560" loading="lazy" title="Dam and anchor simulation"></iframe>
+<iframe src="{{ '/assets/sim/landscape.html' | relative_url }}" width="100%" height="600" loading="lazy" title="Dam and anchor simulation"></iframe>
 
 
 
