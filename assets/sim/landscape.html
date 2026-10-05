@@ -71,7 +71,7 @@ const SC={
 A:{g:0,l:3,b:4,t:"Traumatized, no pressure. The dam is high and the anchor is stiff. Holding costs almost all the budget, but nothing pushes, so it holds. Everything looks fine, with no margin."},
 B:{g:1.45,l:3,b:4,t:"Traumatized, pressure on the memory. Holding a stiff structure against a real push is expensive. The budget drains fast, and when it runs out the memory floods back."},
 C:{g:0,l:.1,b:0.0,t:"Not traumatized, no pressure. Low dam, loose anchor, tiny cost. Flow can wander into the valley now and then. It is just another place."},
-D:{g:0.5,l:.2,b:0.0,t:"Not traumatized, pressure on the same memory. The landscape is allowed to move, the budget stays healthy, and flow reaches the valley gradually, without a breach."}};
+D:{g:1.45,l:.2,b:0.0,t:"Not traumatized, pressure on the same memory. The landscape is allowed to move, the budget stays healthy, and flow reaches the valley gradually, without a breach."}};
 document.querySelectorAll("[data-s]").forEach(el=>el.onclick=()=>{const s=SC[el.dataset.s];
 $("g").value=s.g;$("l").value=s.l;$("b").value=s.b;reset();run=true;$("play").textContent="Pause";$("cap").textContent=s.t});
 reset();requestAnimationFrame(frame);
