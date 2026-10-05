@@ -7,7 +7,7 @@ image: /assets/article_images/2026-10-05-dams-and-gradients/psycho_theory.png
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-*A free-energy, Hopfield and percolation sketch of why defenses cost so much, and why the nice guy explodes. This is thinking out loud: the equations are heuristics, not measurements.*
+In this article I am exploring ideas of psychology and proposing a toy model for trauma and self energy. I have been thinking a lot about physics, throughout this blog and in my life, and I love to explore transversal connections between various fields. Recently I learned about the [Internal Family System model](https://en.wikipedia.org/wiki/Internal_Family_Systems_Model) from Richard C. Schwartz, stating that the psyche is composed of parts with various roles, and binding them all is the self energy, that is the embodied state, characterized by the 8 C’s: Calm, Curiosity, Compassion, Clarity, Confidence, Courage, Creativity, and Connectedness. In this essay I am juggling around with various concepts: energy based models, physics and psychology, to propose a sort of phenomenological model of the self, self-energy, and trauma parts. 
 
 ## The landscape is a memory
 
