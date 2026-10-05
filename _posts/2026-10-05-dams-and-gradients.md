@@ -13,7 +13,7 @@ image: /assets/article_images/2026-10-05-dams-and-gradients/psycho_theory.png
 
 Picture Self Energy as water: vital, expressive, relational drive, running downhill and minimizing free energy. The terrain is not a generic hillside. It is an associative memory, with habits, schemas and remembered affordances as its valleys. The modern Hopfield energy makes this precise:
 
-$$E(\xi) = -\beta^{-1}\log\sum_i \exp(\beta\, x_i\!\cdot\!\xi) + \tfrac12\|\xi\|^2$$
+$$\LARGE E(\xi) = -\beta^{-1}\log\sum_i \exp(\beta\, x_i\!\cdot\!\xi) + \tfrac12\|\xi\|^2$$
 
 Here $\xi$ is the current state and the $x_i$ are stored patterns. Ramsauer et al. (2020), *Hopfield Networks is All You Need*, showed that the retrieval step $\xi \leftarrow X\,\mathrm{softmax}(\beta X^\top\xi)$ is exactly transformer attention. So "flowing downhill" and "attending" are the same motion, and $\beta$, the inverse temperature, is precision. High $\beta$ means winner-take-all, stereotyped retrieval. Low $\beta$ means blended, flexible retrieval. Trauma plausibly raises $\beta$ in the regions it touches.
 
@@ -39,7 +39,7 @@ where $g$ is the force that experience exerts on the memories. Deformation is pu
 
 The spring pushes back with force $F = \lambda\,\Delta X$, where $\Delta X = X^* - X_0$, and must hold that for as long as the push lasts. This is the original $W = F\,d\cos\theta$ made precise:
 
-$$W = \lambda\,\|\Delta X\|\,\|d\|\cos\theta, \qquad \theta = \angle(\text{restoring force},\ \text{push})$$
+$$\LARGE W = \lambda\,\|\Delta X\|\,\|d\|\cos\theta, \qquad \theta = \angle(\text{restoring force},\ \text{push})$$
 
 When the defense directly opposes the push ($\theta \approx 0$), everything is paid for: rigid suppression, "just don't feel it". When it works across the push ($\theta \to 90^\circ$), it steers rather than blocks: sublimation, reappraisal, channeling. So redirective defenses should be cheaper than suppressive ones, which fits Gross's emotion-regulation findings. Two consequences:
 
