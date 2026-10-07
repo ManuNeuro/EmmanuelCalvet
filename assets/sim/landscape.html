@@ -28,7 +28,7 @@ button:hover,button:focus-visible{border-color:var(--water);outline:none}
 <div id="msg"></div><div id="stat"></div>
 <script>
 const $=id=>document.getElementById(id),css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
-const S=1.5,T=0.45,SP=2,XA0=2,XD0=8,XM=5;
+const S=1.7,T=0.45,SP=2,XA0=2,XD0=8,XM=5;
 let dD,E,ball,hop,inD,breached,run=true,last=0,mult=0;
 function sq(v){return v*v}
 function U(x,dd,Be){return -3*Math.exp(-sq(x-XA0)/(2*S*S))-3*dd*Math.exp(-sq(x-XD0)/(2*S*S))+Be*Math.exp(-sq(x-XM)/(2*.25))}
@@ -69,9 +69,9 @@ $("reset").onclick=reset;
 $("redam").onclick=()=>{const b=$("b");b.value=Math.min(5,+b.value+.4);dD=1;E=100;hop=false;inD=false;breached=false;ball=XA0;$("msg").textContent="Re-dammed, thicker than before. The cycle restarts."};
 const SC={
 A:{g:0,l:3,b:4,t:"Traumatized, no pressure. The dam is high and the anchor is stiff. Holding costs almost all the budget, but nothing pushes, so it holds. Everything looks fine, with no margin."},
-B:{g:1.45,l:3,b:4,t:"Traumatized, pressure on the memory. Holding a stiff structure against a real push is expensive. The budget drains fast, and when it runs out the memory floods back."},
-C:{g:0,l:.1,b:0.0,t:"Not traumatized, no pressure. Low dam, loose anchor, tiny cost. Flow can wander into the valley now and then. It is just another place."},
-D:{g:1.45,l:.2,b:0.0,t:"Not traumatized, pressure on the same memory. The landscape is allowed to move, the budget stays healthy, and flow reaches the valley gradually, without a breach."}};
+B:{g:1.3,l:3,b:4,t:"Traumatized, pressure on the memory. Holding a stiff structure against a real push is expensive. The budget drains fast, and when it runs out the memory floods back."},
+C:{g:0,l:.5,b:.2,t:"Not traumatized, no pressure. Low dam, loose anchor, tiny cost. Flow can wander into the valley now and then. It is just another place."},
+D:{g:1.3,l:.5,b:0.0,t:"Not traumatized, pressure on the same memory. The landscape is allowed to move, the budget stays healthy, and flow reaches the valley gradually, without a breach."}};
 document.querySelectorAll("[data-s]").forEach(el=>el.onclick=()=>{const s=SC[el.dataset.s];
 $("g").value=s.g;$("l").value=s.l;$("b").value=s.b;reset();run=true;$("play").textContent="Pause";$("cap").textContent=s.t});
 reset();requestAnimationFrame(frame);
